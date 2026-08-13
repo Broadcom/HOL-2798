@@ -1,0 +1,602 @@
+name: vdefendfirewalldemo
+vms:
+- name: CORPClients
+  placement: external
+  network_settings:
+    ip_address: 192.168.10.10
+    managed: true
+    nb_ips: 1
+  view_config:
+    position_x: -844
+    position_y: 136
+  os: Linux
+- name: InternetClients
+  placement: internet
+  network_settings:
+    ip_address: 192.0.0.2,192.0.0.3,192.0.0.4,192.0.0.5,192.0.0.6,192.0.0.7,192.0.0.8,192.0.0.9,192.0.0.10,192.0.0.11
+    managed: true
+    nb_ips: 10
+  view_config:
+    position_x: -845
+    position_y: 302
+  os: Linux
+  type: undefined
+- name: web01a
+  placement: web-seg-a
+  network_settings:
+    ip_address: 10.1.13.11
+    managed: true
+    nb_ips: 1
+  tags:
+  - 7075c57c-83ee-4c0f-8c79-6ffffa6ec39b
+  push_tags: true
+  view_config:
+    position_x: -380
+    position_y: -115
+  os: Linux
+  type: undefined
+- name: web02a
+  placement: web-seg-a
+  network_settings:
+    ip_address: 10.1.13.12
+    managed: true
+    nb_ips: 1
+  tags:
+  - 7075c57c-83ee-4c0f-8c79-6ffffa6ec39b
+  push_tags: true
+  view_config:
+    position_x: -386
+    position_y: 63
+  os: Linux
+- name: web03a
+  placement: web-seg-a
+  network_settings:
+    ip_address: 10.1.13.13
+    managed: true
+    nb_ips: 1
+  tags:
+  - 7075c57c-83ee-4c0f-8c79-6ffffa6ec39b
+  push_tags: true
+  view_config:
+    position_x: -387
+    position_y: 327
+  os: Linux
+- name: app01a
+  placement: app-seg-a
+  network_settings:
+    ip_address: 10.1.14.141
+    managed: true
+    nb_ips: 1
+  tags:
+  - ae5957ac-05d2-4479-bfc1-7361cb60fd90
+  push_tags: true
+  view_config:
+    position_x: -111
+    position_y: 26
+  os: Linux
+- name: app02a
+  placement: app-seg-a
+  network_settings:
+    ip_address: 10.1.14.142
+    managed: true
+    nb_ips: 1
+  tags:
+  - ae5957ac-05d2-4479-bfc1-7361cb60fd90
+  push_tags: true
+  view_config:
+    position_x: -109
+    position_y: 242
+  os: Linux
+- name: db01a
+  placement: db-seg-a
+  network_settings:
+    ip_address: 10.1.14.11
+    managed: true
+    nb_ips: 1
+  tags:
+  - a8a8fa4a-1064-45fc-8fb7-783abb28cf2e
+  push_tags: true
+  view_config:
+    position_x: 208
+    position_y: 10
+  os: Linux
+- name: embargo-IR
+  placement: external-ir
+  network_settings:
+    ip_address: 5.190.1.21,5.190.1.22,5.190.1.23,5.190.1.24,5.190.1.25
+    managed: true
+    nb_ips: 5
+  view_config:
+    position_x: -848
+    position_y: -63
+  os: Linux
+  type: undefined
+- name: embargo-NK
+  placement: external-nk
+  network_settings:
+    ip_address: 175.45.176.9,175.45.176.10,175.45.176.11,175.45.176.12,175.45.176.13
+    managed: true
+    nb_ips: 5
+  view_config:
+    position_x: -857
+    position_y: -189
+  os: Linux
+flows:
+- id: 183d92de-b8e3-4ff8-8c0d-ae618781a1ba
+  source: app02a
+  destination: db01a
+  protocol: TCP
+  port: 3306
+  interval: 10000
+  payload: APPID - MySQL
+  description: app02a to db01 mysql
+  data_format: template
+  type: baseline
+  children: 1
+- id: e79dca15-4d06-43f4-b029-c2427e4b76d9
+  source: app01a
+  destination: db01a
+  protocol: TCP
+  port: 3306
+  interval: 12000
+  payload: APPID - MySQL
+  description: app01a to db01a mysql
+  data_format: template
+  type: baseline
+  children: 1
+- id: 9faac1ba-5fae-4f3a-962f-dfa0a5fad23b
+  source: app01a
+  destination: app02a
+  protocol: TCP
+  port: 22
+  interval: 15000
+  payload: APPID - SSH v2
+  description: app01a to app02a - ssh
+  data_format: template
+  type: baseline
+  children: 1
+- id: cf1cc29b-3fc8-43a1-90db-293d7e81c79a
+  source: EmbargoClients
+  destination: web02a
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - HTTP
+  description: Embargo to web02a
+  data_format: template
+  type: baseline
+  children: 1
+  tls: true
+  tls_version: "1.2"
+  tls_cipher: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+  certificate_id: b20d35b5-be7f-4022-a839-338f7e1f1daf
+- id: 85af1d6b-7e6d-4694-b5b7-4f892ac05bc4
+  source: CORPClients
+  destination: web01a
+  protocol: TCP
+  port: 443
+  interval: 15000
+  payload: APPID - TLS v1.2
+  data_format: template
+  type: baseline
+  children: 1
+- id: 38704ae0-a80a-4b29-b7a2-ba0fd86efcc3
+  source: CORPClients
+  destination: web02a
+  protocol: TCP
+  port: 80
+  interval: 25000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: f212395c-34c1-4348-9e76-f683c5302cff
+  source: CORPClients
+  destination: web03a
+  protocol: TCP
+  port: 443
+  interval: 20000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8739f9ba-e489-4312-a207-8c8cb1655370
+  source: InternetClients
+  destination: web01a
+  protocol: TCP
+  port: 443
+  interval: 15000
+  payload: APPID - TLS v1.2
+  data_format: template
+  type: baseline
+  children: 10
+- id: d3db706d-bdc3-473e-a6b3-9a5cbc8eb137
+  source: InternetClients
+  destination: web03a
+  protocol: TCP
+  port: 443
+  interval: 10000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 10
+- id: fd874cb7-dd98-458b-a049-e26c8c6ff5b2
+  source: web03a
+  destination: web02a
+  protocol: TCP
+  port: 80
+  interval: 18000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8297729c-4d69-46dc-a5b4-3a9272007106
+  source: web02a
+  destination: web03a
+  protocol: TCP
+  port: 3389
+  interval: 25000
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 1
+- id: aa7a0b87-e2a0-4417-bc4d-17a0d9a3a53d
+  source: web02a
+  destination: app01a
+  protocol: TCP
+  port: 3389
+  interval: 10000
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 1
+- id: fbcdba9a-19ff-46bf-abc2-885046e9aa91
+  source: web01a
+  destination: db01a
+  protocol: TCP
+  port: 3389
+  interval: 20000
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 1
+- id: b932f8e6-8c96-429d-8600-26c8f15404d3
+  source: InternetClients
+  destination: web02a
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: default
+  data_format: template
+  type: baseline
+  children: 10
+- id: bf10189a-dba1-40f9-8be8-0fb332d400cb
+  source: web01a
+  destination: web02a
+  protocol: TCP
+  port: 445
+  interval: 20000
+  payload: APPID - SMB
+  data_format: template
+  type: baseline
+  children: 1
+- id: c14e82fb-93e2-489c-a917-ac10c7f2b348
+  source: embargo-ir
+  destination: web03a
+  protocol: TCP
+  port: 443
+  interval: 10000
+  payload: APPID - TLS v1.2
+  data_format: template
+  type: baseline
+  children: 1
+- id: 48c4380a-d471-471f-8efa-994ab3d50756
+  source: web01a
+  destination: app02a
+  protocol: TCP
+  port: 8080
+  interval: 17000
+  payload: default
+  data_format: template
+  type: baseline
+  children: 1
+- id: c1c15084-d269-40b0-96db-06a1cef85696
+  source: web02a
+  destination: app01a
+  protocol: TCP
+  port: 8080
+  interval: 18000
+  payload: default
+  data_format: template
+  type: baseline
+  children: 1
+- id: 5cf6c941-0915-4b79-853a-64ceaa6c136f
+  source: web02a
+  destination: app02a
+  protocol: TCP
+  port: 8080
+  interval: 19000
+  payload: default
+  data_format: template
+  type: baseline
+  children: 1
+- id: 7979c6e9-a71d-4683-a029-6f5329145eff
+  source: web03a
+  destination: app01a
+  protocol: TCP
+  port: 8080
+  interval: 16000
+  payload: default
+  data_format: template
+  type: baseline
+  children: 1
+- id: 5544ab49-f875-4846-ab65-53e3ad8d176d
+  source: web03a
+  destination: app02a
+  protocol: TCP
+  port: 8080
+  interval: 20000
+  payload: default
+  data_format: template
+  type: baseline
+  children: 1
+- id: b50ff865-666e-464e-81f8-e30ef8a69ea6
+  source: embargo-IR
+  destination: web01a
+  protocol: TCP
+  port: 443
+  interval: 15000
+  payload: default
+  data_format: template
+  type: baseline
+  children: 5
+- id: 2eb3ba28-bbbb-48f2-aa05-7c14575aacde
+  source: web01a
+  destination: app01a
+  protocol: TCP
+  port: 8080
+  interval: 15000
+  payload: default
+  data_format: template
+  type: baseline
+  children: 1
+- id: b51dac77-33bb-4ff3-bdfd-554273ae987a
+  source: embargo-NK
+  destination: web01a
+  protocol: TCP
+  port: 443
+  interval: 10000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 5
+- id: d1187945-041f-4c27-b2f6-4f7921fb0c1f
+  source: embargo-IR
+  destination: web02a
+  protocol: TCP
+  port: 443
+  interval: 10000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 5
+- id: 089b36c4-fe54-44f8-bd94-21f3b544f4c7
+  source: embargo-NK
+  destination: web02a
+  protocol: TCP
+  port: 443
+  interval: 11000
+  payload: APPID - TLS v1.2
+  data_format: template
+  type: baseline
+  children: 5
+- id: e695d8e5-a189-4722-bedc-d39e17c1bf6e
+  source: CORPClients
+  destination: web02a
+  protocol: TCP
+  port: 443
+  interval: 10000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 6a830d39-6860-4a50-96df-a2aebbde493b
+  source: InternetClients
+  destination: web02a
+  protocol: TCP
+  port: 443
+  interval: 13000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 10
+campaign:
+  name: default
+  blocking: true
+  flow_ids: []
+tags:
+- id: ae5957ac-05d2-4479-bfc1-7361cb60fd90
+  scope: tier
+  value: app-seg-a
+- id: 7075c57c-83ee-4c0f-8c79-6ffffa6ec39b
+  scope: tier
+  value: web-seg-a
+- id: a8a8fa4a-1064-45fc-8fb7-783abb28cf2e
+  scope: tier
+  value: db-seg-a
+certificates:
+- id: b20d35b5-be7f-4022-a839-338f7e1f1daf
+  name: vDefend
+  tls_server_certificate: |
+    -----BEGIN CERTIFICATE-----
+    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
+    -----END CERTIFICATE-----
+  tls_server_private_key: |
+    -----BEGIN RSA PRIVATE KEY-----
+    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
+    -----END RSA PRIVATE KEY-----
+- id: 26b0a64f-1a59-4fa2-9486-d1a4ef98dd49
+  name: vDefend-Cert
+  tls_server_certificate: |
+    -----BEGIN CERTIFICATE-----
+    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
+    -----END CERTIFICATE-----
+  tls_server_private_key: |
+    -----BEGIN RSA PRIVATE KEY-----
+    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
+    -----END RSA PRIVATE KEY-----
+nsx_api_calls: []

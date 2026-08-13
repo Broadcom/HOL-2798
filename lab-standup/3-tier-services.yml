@@ -1,0 +1,20 @@
+--- 
+
+- name: Update Service Group
+  nsxt_security_services:
+    hostname: "{{ nsxt_wld01_hostname }}"
+    username: "{{ nsxt_wld01_username }}"
+    password: "{{ nsxt_wld01_password }}"
+    mgr_type: "local"
+    validate_certs: false
+    display_name: "HTTP-8080"
+    state: "present"
+    service_entries:
+    - display_name: TCP
+      resource_type: L4PortSetServiceEntry
+      l4_protocol: TCP
+      destination_ports:
+      - '8080'
+    id: "http_8080"
+    description: "Tomcat 8080 HTTP port"
+

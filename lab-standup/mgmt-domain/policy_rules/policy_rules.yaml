@@ -1,0 +1,24 @@
+---
+
+- name: Update Security Policy
+  nsxt_policy_security_policy:
+    hostname: "{{ NSXT_CREDENTIALS.node }}"
+    username: "{{ NSXT_CREDENTIALS.username }}"
+    password: "{{ NSXT_CREDENTIALS.password }}"
+    mgr_type: "{{ MGR_TYPE }}"
+    validate_certs: False
+    id: "{{ DFW.id }}"
+    display_name: "{{ DFW.display_name }}"
+    state: "{{ STATE }}"
+    domain_id: "{{ DFW.domain_id | default('default')  }}"
+    locked: False
+    category: "{{ DFW.category }}"
+    scope: "{{ DFW.scope }}"
+    description: "{{ DFW.description }}"
+    sequence_number: "{{ DFW.sequence_number }}"
+    rules: "{{ DFW.rules }}"
+
+
+
+ 
+

@@ -1,0 +1,17 @@
+---
+
+# if this fails, it is most likely because of a/many service, group or context profile doesnt exist.
+
+- name: Update Security Group
+  nsxt_policy_group:
+    hostname: "{{ NSXT_CREDENTIALS.node }}"
+    username: "{{ NSXT_CREDENTIALS.username }}"
+    password: "{{ NSXT_CREDENTIALS.password }}"
+    mgr_type: "{{ MGR_TYPE }}"
+    display_name: "{{ SEC.display_name }}"
+    state: "{{ STATE }}"
+    domain_id: "{{ SEC.domain_id | default('default') }}"
+    validate_certs: false
+    expression: "{{ SEC.expression }}"
+    id: "{{ SEC.id }}"
+    description: "{{ SEC.description }}"

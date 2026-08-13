@@ -1,0 +1,10 @@
+---
+
+  - include_vars: context_profiles_variables.yml
+
+  - name: Initiate Context Profiles | Loop Context Profiles
+    include_tasks: 
+      file: ./context_profiles.yaml
+    loop: "{{ Context_Profile }}"
+    loop_control:
+      loop_var: CTX

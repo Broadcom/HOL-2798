@@ -1,0 +1,1284 @@
+Firewall:
+- display_name: VCF Fleet
+  sequence_number: 0
+  rules:
+  - sequence_number: 0
+    display_name: VCF Fleet to DNS Servers
+    id: VCF_Fleet_to_DNS_Servers
+    description: VCF components to VCF DNS Services
+    source_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    destination_groups:
+    - /infra/domains/default/groups/SG_DNS_SVC
+    profiles:
+    - /infra/context-profiles/DNS
+    services:
+    - /infra/services/DNS
+    - /infra/services/DNS-UDP
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 10
+    display_name: VCF Fleet to NTP Servers
+    id: VCF_Fleet_to_NTP_Servers
+    description: VCF components to VCF NTP Services
+    source_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    destination_groups:
+    - /infra/domains/default/groups/SG_NTP_SVC
+    services:
+    - /infra/services/NTP
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 20
+    display_name: VCF Fleet to DHCP Servers
+    id: VCF_Fleet_to_DHCP_Servers
+    description: VCF components to VCF DHCP Services
+    source_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    destination_groups:
+    - /infra/domains/default/groups/SG_DHCP_SVC
+    services:
+    - /infra/services/DHCP_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 30
+    display_name: VCF Fleet to Active Directory
+    id: VCF_Fleet_to_Active_Directory
+    description: VCF components to Active Directory
+    source_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    destination_groups:
+    - /infra/domains/default/groups/SG_AD_SVC
+    services:
+    - /infra/services/Active_Directory_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 40
+    display_name: Active Directory to VCF Fleet
+    id: Active_Directory_to_VCF_Fleet
+    description: Active Directory to VCF components
+    source_groups:
+    - /infra/domains/default/groups/SG_AD_SVC
+    destination_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    services:
+    - /infra/services/Active_Directory_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 70
+    display_name: VCF Fleet to LOGS
+    id: VCF_Fleet_to_LOGS
+    description: VCF Components to LOGS
+    source_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_MSVC
+    - /infra/domains/default/groups/SG_SYSLOG_SVC
+    services:
+    - /infra/services/VCF_LOG_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 80
+    display_name: VCF Fleet Lockdown
+    id: VCF_Fleet_Lockdown
+    description: VCF Fleet Infrastructure Lockdown
+    source_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    destination_groups:
+    - ANY
+    services:
+    - /infra/services/DNS
+    - /infra/services/DNS-UDP
+    - /infra/services/NTP
+    - /infra/services/DHCP_Services
+    - /infra/services/VCF_LOG_Services
+    action: DROP
+    logged: true
+    scope:
+    - ANY
+    disabled: true
+  category: Infrastructure
+  scope:
+  - /infra/domains/default/groups/SG_VCF_FLEET
+  description: Firewall Section for VCF Fleet Infrastructure Services Access
+  domain_id: default
+  id: VCF_Fleet
+- display_name: VCF Fleet Environment
+  sequence_number: 10
+  rules:
+  - sequence_number: 0
+    display_name: BASTION JH to VCF Fleet
+    id: BASTION_JH_to_VCF_Fleet
+    description: Bastion JH to VCF Fleet Servers
+    source_groups:
+    - /infra/domains/default/groups/SG_BASTION
+    destination_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    services:
+    - /infra/services/BASTION_Jump_Server
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 10
+    display_name: TOOLS to VCF Fleet
+    id: TOOLS_to_VCF_Fleet
+    description: TOOLS Servers to VCF Fleet Servers
+    source_groups:
+    - /infra/domains/default/groups/SG_TOOLS
+    destination_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    services:
+    - /infra/services/HTTPS
+    - /infra/services/SSH
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 20
+    display_name: Any to VCF Automation
+    id: Any_to_VCF_Automation
+    description: VCF Automation Access
+    source_groups:
+    - ANY
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_VCFA
+    services:
+    - /infra/services/HTTPS
+    action: JUMP_TO_APPLICATION
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 30
+    display_name: VCF Fleet to Backup Servers
+    id: VCF_Fleet_to_Backup_Servers
+    description: VCF components to Backup Servers
+    source_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    destination_groups:
+    - /infra/domains/default/groups/SG_BACKUP_SERVERS
+    services:
+    - /infra/services/BACKUP_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 40
+    display_name: Backup Servers to VCF Fleet
+    id: Backup_Servers_to_VCF_Fleet
+    description: Backup Servers to VCF components
+    source_groups:
+    - /infra/domains/default/groups/SG_BACKUP_SERVERS
+    destination_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    services:
+    - /infra/services/BACKUP_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 50
+    display_name: VCF Fleet to SMTP Servers
+    id: VCF_Fleet_to_SMTP_Servers
+    description: VCF Components to SMTP Servers
+    source_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    destination_groups:
+    - /infra/domains/default/groups/SG_SMTP_SVC
+    services:
+    - /infra/services/SMTP
+    - /infra/services/SMTP_TLS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 60
+    display_name: VCF Fleet Internet Access
+    id: VCF_Fleet_Internet_Access
+    description: VCF Components Internet Access
+    source_groups:
+    - /infra/domains/default/groups/SG_VCF_FLEET
+    destination_groups:
+    - ANY
+    profiles:
+    - /infra/context-profiles/INTERNET_FQDN
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  category: Environment
+  scope:
+  - /infra/domains/default/groups/SG_VCF_FLEET
+  description: Firewall Section for VCF Fleet Environment Services Access
+  domain_id: default
+  id: VCF_Fleet_Environment
+- display_name: VCF Fleet Management
+  sequence_number: 20
+  rules:
+  - sequence_number: 0
+    display_name: VCF Fleet Management to VCF Fleet Management
+    id: VCF_Fleet_Management_to_VCF_Fleet_Management
+    description: VCF Fleet Management Servers Access
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_MGMT
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_MGMT
+    services:
+    - ANY
+    action: JUMP_TO_APPLICATION
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 10
+    display_name: VCF Fleet Management to VCF WLDs
+    id: VCF_Fleet_Management_to_VCF_WLDs
+    description: VCF Fleet Management to VCF WLDs
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_MGMT
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 20
+    display_name: VCF SDDC to VCF WLDs
+    id: VCF_SDDC_to_VCF_WLDs
+    description: VCF SDDC to VCF WLDs
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_SDDC
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - /infra/services/SDDC_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 30
+    display_name: VCF Cloud Proxy to VCF WLDs
+    id: VCF_Cloud_Proxy_to_VCF_WLDs
+    description: VCF Cloud Proxy to VCF WLDs
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPS_COL
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_MGMT
+    - /infra/domains/default/groups/SG_M01
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - /infra/services/ICMP_Echo_Request
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 40
+    display_name: VCF WLDs to Fleet MGMT Services
+    id: VCF_WLDs_to_Fleet_MGMT_Services
+    description: VCF WLDs to Fleet MGMT Services
+    source_groups:
+    - /infra/domains/default/groups/SG_M01
+    - /infra/domains/default/groups/SG_W01
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_MSVC
+    services:
+    - /infra/services/VCF_FM_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 50
+    display_name: VCF WLDs to OPS NET Collectors
+    id: VCF_WLDs_to_OPS_NET_Collectors
+    description: VCF WLDs to OPS NET Collectors
+    source_groups:
+    - /infra/domains/default/groups/SG_M01
+    - /infra/domains/default/groups/SG_W01
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPSNET_COL
+    services:
+    - /infra/services/OPS_NET_CN_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 60
+    display_name: WLD Supervisors to OPS Cloud Proxy
+    id: WLD_Supervisors_to_OPS_Cloud_Proxy
+    description: WLD Supervisors to OPS Cloud Proxy
+    source_groups:
+    - /infra/domains/default/groups/SG_W01_SUP
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPS_COL
+    services:
+    - /infra/services/VCF_SUP_Outbound_Access
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 70
+    display_name: WLD Supervisors to VCF Automation
+    id: WLD_Supervisors_to_VCF_Automation
+    description: WLD Supervisors to VCF Automation
+    source_groups:
+    - /infra/domains/default/groups/SG_W01_SUP
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_VCFA
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 80
+    display_name: VCF Automation to VCF Supervisor
+    id: VCF_Automation_to_VCF_Supervisor
+    description: VCF Automation to VCF Supervisor
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_VCFA
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01_SUP
+    services:
+    - /infra/services/VCF_SUP_Inbound_Access
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 90
+    display_name: VCF License Hub  to WLDs
+    id: VCF_License_Hub__to_WLDs
+    description: VCF License Hub  to MGMT Domain
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_LIC_SER
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - /infra/services/FLEET_LH
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 100
+    display_name: vDefend License Hub  to WLDs
+    id: vDefend_License_Hub__to_WLDs
+    description: vDefend License Hub  to MGMT Domain
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_LIC_HUB
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - /infra/services/VDEF_LH
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 120
+    display_name: VCF Fleet Management Lockdown
+    id: VCF_Fleet_Management_Lockdown
+    description: VCF Fleet Management Lockdown
+    source_groups:
+    - ANY
+    destination_groups:
+    - ANY
+    services:
+    - ANY
+    action: DROP
+    logged: true
+    scope:
+    - ANY
+    disabled: true
+  category: Environment
+  scope:
+  - /infra/domains/default/groups/SG_VCF_FLEET
+  description: Firewall Section for VCF Fleet Management Services Access
+  domain_id: default
+  id: VCF_Fleet_Management
+- display_name: VCF Management Domain
+  sequence_number: 30
+  rules:
+  - sequence_number: 0
+    display_name: VCF MGMT WLD to VCF MGMT WLD
+    id: VCF_MGMT_WLD_to_VCF_MGMT_WLD
+    description: VCF MGMT WLD to VCF MGMT WLD
+    source_groups:
+    - /infra/domains/default/groups/SG_M01
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01
+    services:
+    - ANY
+    action: JUMP_TO_APPLICATION
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 10
+    display_name: VCF Fleet Management to VCF MGMT WLD
+    id: VCF_Fleet_Management_to_VCF_MGMT_WLD
+    description: VCF Fleet Management to VCF MGMT WLD
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_MGMT
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 20
+    display_name: VCF SDDC to VCF MGMT WLD
+    id: VCF_SDDC_to_VCF_MGMT_WLD
+    description: VCF SDDC to VCF MGMT WLD
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_SDDC
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01
+    services:
+    - /infra/services/SDDC_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 30
+    display_name: VCF Cloud Proxy to VCF FM WLD
+    id: VCF_Cloud_Proxy_to_VCF_FM_WLD
+    description: VCF Cloud Proxy to VCF FM WLD
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPS_COL
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_MGMT
+    - /infra/domains/default/groups/SG_M01
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - /infra/services/ICMP_Echo_Request
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 40
+    display_name: VCF WLDs to Fleet MGMT Services
+    id: VCF_WLDs_to_Fleet_MGMT_Services
+    description: VCF WLDs to Fleet MGMT Services
+    source_groups:
+    - /infra/domains/default/groups/SG_M01
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_MSVC
+    services:
+    - /infra/services/VCF_FM_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 50
+    display_name: VCF MGMT WLD to OPS NET Collectors
+    id: VCF_MGMT_WLD_to_OPS_NET_Collectors
+    description: VCF MGMT WLD to OPS NET Collectors
+    source_groups:
+    - /infra/domains/default/groups/SG_M01
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPSNET_COL
+    services:
+    - /infra/services/OPS_NET_CN_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 60
+    display_name: License Hub to VCF WLDs
+    id: License_Hub_to_VCF_WLDs
+    description: License Hub  to VCF WLDs
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_LIC_SER
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - /infra/services/FLEET_LH
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 70
+    display_name: vDefend License Hub to MGMT WLD
+    id: vDefend_License_Hub_to_MGMT_WLD
+    description: vDefend License Hub to MGMT Domain
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_LIC_HUB
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01
+    services:
+    - /infra/services/VDEF_LH
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 80
+    display_name: VCF Management Lockdown
+    id: VCF_Management_Lockdown
+    description: VCF Management Lockdown
+    source_groups:
+    - ANY
+    destination_groups:
+    - ANY
+    services:
+    - ANY
+    action: DROP
+    logged: true
+    scope:
+    - ANY
+    disabled: true
+  category: Environment
+  scope:
+  - /infra/domains/default/groups/SG_M01
+  description: Firewall Section for VCF Management Domain Services Access
+  domain_id: default
+  id: VCF_Management_Domain
+- display_name: VCF WLD W01
+  sequence_number: 40
+  rules:
+  - sequence_number: 0
+    display_name: VCF WLD 01 to VCF WLD 01
+    id: VCF_WLD_01_to_VCF_WLD_01
+    description: VCF WLD 01 to VCF WLD 01
+    source_groups:
+    - /infra/domains/default/groups/SG_W01
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - ANY
+    action: JUMP_TO_APPLICATION
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 10
+    display_name: VCF Fleet Management to VCF WLD 01
+    id: VCF_Fleet_Management_to_VCF_WLD_01
+    description: VCF Fleet Management to VCF WLD 01
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_MGMT
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 20
+    display_name: VCF SDDC to VCF WLD 01
+    id: VCF_SDDC_to_VCF_WLD_01
+    description: VCF SDDC to VCF WLD 01
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_SDDC
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - /infra/services/SDDC_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 30
+    display_name: VCF Cloud Proxy to VCF FM WLD
+    id: VCF_Cloud_Proxy_to_VCF_FM_WLD
+    description: VCF Cloud Proxy to VCF FM WLD
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPS_COL
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_MGMT
+    - /infra/domains/default/groups/SG_M01
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - /infra/services/ICMP_Echo_Request
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 40
+    display_name: VCF WLDs to Fleet MGMT Services
+    id: VCF_WLDs_to_Fleet_MGMT_Services
+    description: VCF WLDs to Fleet MGMT Services
+    source_groups:
+    - /infra/domains/default/groups/SG_W01
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_MSVC
+    services:
+    - /infra/services/VCF_FM_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 50
+    display_name: VCF WLD 01 to OPS NET Collectors
+    id: VCF_WLD_01_to_OPS_NET_Collectors
+    description: VCF WLD 01 to OPS NET Collectors
+    source_groups:
+    - /infra/domains/default/groups/SG_W01
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPSNET_COL
+    services:
+    - /infra/services/OPS_NET_CN_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 60
+    display_name: License Hub to WLD W01
+    id: License_Hub_to_WLD_W01
+    description: License Hub  to VCF WLDs
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_LIC_SER
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - /infra/services/FLEET_LH
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 70
+    display_name: vDefend License Hub to WLD W01
+    id: vDefend_License_Hub_to_WLD_W01
+    description: vDefend License Hub  to MGMT Domain
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_LIC_HUB
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01
+    services:
+    - /infra/services/VDEF_LH
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 80
+    display_name: VCF WLD 01 Lockdown
+    id: VCF_WLD_01_Lockdown
+    description: VCF WLD 01 Lockdown
+    source_groups:
+    - ANY
+    destination_groups:
+    - ANY
+    services:
+    - ANY
+    action: DROP
+    logged: true
+    scope:
+    - ANY
+    disabled: true
+  category: Environment
+  scope:
+  - /infra/domains/default/groups/SG_W01
+  description: Firewall Section for VCF WLD W01 Services Access
+  domain_id: default
+  id: VCF_WLD_W01
+- display_name: VCF Operations
+  sequence_number: 50
+  rules:
+  - sequence_number: 0
+    display_name: FLEET OPS to FLEET
+    id: FLEET_OPS_to_FLEET
+    description: FLEET OPS to FLEET
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPS
+    - /infra/domains/default/groups/SG_FLEET_OPS_COL
+    - /infra/domains/default/groups/SG_FLEET_MSVC
+    - /infra/domains/default/groups/SG_FLEET_SDDC
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPS
+    - /infra/domains/default/groups/SG_FLEET_OPS_COL
+    - /infra/domains/default/groups/SG_FLEET_MSVC
+    - /infra/domains/default/groups/SG_FLEET_SDDC
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 10
+    display_name: SG_FLEET_OPS to FLEET OPS
+    id: SG_FLEET_OPS_to_FLEET_OPS
+    description: SG_FLEET_OPS to FLEET OPS
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPS
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_VCFA
+    - /infra/domains/default/groups/SG_FLEET_MSVC
+    - /infra/domains/default/groups/SG_FLEET_OPSNET
+    #- /infra/domains/default/groups/SG_FLEET_VCFA
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 20
+    display_name: FLEET MSVC to FLEET OPS
+    id: SG_FLEET_MSVC_to_SG_FLEET_OPS
+    description: FLEET MSVC to FLEET OPS
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_MSVC
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPS
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 30
+    display_name: Fleet Managers to FLEET Automation
+    id: Fleet_Managers_to_FLEET_Automation
+    description: Fleet Managers to FLEET Automation
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_MSVC
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_VCFA
+    services:
+    - /infra/services/VCF_FM_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 40
+    display_name: VFLEET OPS NET to FLEET OPS NET
+    id: VFLEET_OPS_NET_to_FLEET_OPS_NET
+    description: VFLEET OPS NET to FLEET OPS NET
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPSNET
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPSNET
+    services:
+    - ANY
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 50
+    display_name: FLEET OPSNET Collectors to FLEET OPSNET
+    id: FLEET_OPS_NET_Collectors_to_FLEET_OPS_NET
+    description: FLEET OPSNET Collectors to FLEET OPSNET
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPSNET_COL
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_OPSNET
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 60
+    display_name: FLEET Fleet Managers to FLEET Automation
+    id: FLEET_Fleet_Managers_to_FLEET_Automation
+    description: FLEET Fleet Managers to FLEET Automation
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_MSVC
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_VCFA
+    services:
+    - /infra/services/VCF_FM_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 70
+    display_name: FLEET Automation to FLEET Automation
+    id: FLEET_Automation_to_FLEET_Automation
+    description: FLEET Automation to FLEET Automation
+    source_groups:
+    - /infra/domains/default/groups/SG_FLEET_VCFA
+    destination_groups:
+    - /infra/domains/default/groups/SG_FLEET_VCFA
+    services:
+    - ANY
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 80
+    display_name: FLEET Lockdown
+    id: FLEET_Lockdown
+    description: FLEET Lockdown
+    source_groups:
+    - ANY
+    destination_groups:
+    - ANY
+    services:
+    - ANY
+    action: DROP
+    logged: true
+    scope:
+    - ANY
+    disabled: true
+  category: Application
+  scope:
+  - /infra/domains/default/groups/SG_VCF_FLEET
+  description: Firewall Section for VCF Operations Suite Services Access
+  domain_id: default
+  id: VCF_Operations
+- display_name: Management Domain
+  sequence_number: 80
+  rules:
+  - sequence_number: 0
+    display_name: VCF vCenter RDU
+    id: VCF_vCenter_RDU
+    description: VCF vCenter Reduce Downtime Upgrade
+    source_groups:
+    - /infra/domains/default/groups/SG_VCF_MGMT
+    destination_groups:
+    - /infra/domains/default/groups/SG_VCF_MGMT
+    services:
+    - /infra/services/vCenter_RDU
+    action: ALLOW
+    logged: true
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 10
+    display_name: MGMT Domain vCenter to MGMT Domain
+    id: MGMT_Domain_vCenter_to_MGMT_Domain
+    description: MGMT Domain vCenter to MGMT Domain
+    source_groups:
+    - /infra/domains/default/groups/SG_M01_VC
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01_ESX_IP
+    - /infra/domains/default/groups/SG_M01_NSX
+    - /infra/domains/default/groups/SG_M01_SUP
+    - /infra/domains/default/groups/SG_M01_VC
+    services:
+    - /infra/services/ESXi_Inbound_Access
+    action: ALLOW
+    logged: true
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 20
+    display_name: MGMT Domain ESXi to MGMT Domain
+    id: MGMT_Domain_ESXi_to_MGMT_Domain
+    description: MGMT Domain ESXi to MGMT Domain
+    source_groups:
+    - /infra/domains/default/groups/SG_M01_ESX_IP
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01_VC
+    - /infra/domains/default/groups/SG_M01_NSX
+    - /infra/domains/default/groups/SG_M01_ESX_IP
+    services:
+    - /infra/services/ESXi_Outbound_Access
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 30
+    display_name: MGMT Domain NSX to MGMT Domain
+    id: MGMT_Domain_NSX_to_MGMT_Domain
+    description: MGMT Domain NSX to MGMT Domain
+    source_groups:
+    - /infra/domains/default/groups/SG_M01_NSX
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01_VC
+    - /infra/domains/default/groups/SG_M01_NSX
+    - /infra/domains/default/groups/SG_M01_ESX_IP
+    services:
+    - /infra/services/NSX_Outbound_Access
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 40
+    display_name: MGMT Domain SSPI to MGMT Domain
+    id: MGMT_Domain_SSPI_to_MGMT_Domain
+    description: MGMT Domain SSPI to MGMT Domain
+    source_groups:
+    - /infra/domains/default/groups/SG_M01_SSPI
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01_VC
+    - /infra/domains/default/groups/SG_M01_SSP
+    services:
+    - /infra/services/SSPI_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 50
+    display_name: MGMT Domain AVI Controller to MGMT Domain
+    id: MGMT_Domain_AVI_Controller_to_MGMT_Domain
+    description: MGMT Domain AVI Controller to MGMT Domain
+    source_groups:
+    - /infra/domains/default/groups/SG_M01_AVI
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01_VC
+    - /infra/domains/default/groups/SG_M01_NSX
+    - /infra/domains/default/groups/SG_M01_AVI
+    - /infra/domains/default/groups/SG_M01_AVISE
+    - /infra/domains/default/groups/SG_M01_ESX_IP
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 60
+    display_name: MGMT Domain SUP to NSX and vCenter
+    id: MGMT_Domain_SUP_to_NSX_and_vCenter
+    description: MGMT Domain SUP to NSX and vCenter
+    source_groups:
+    - /infra/domains/default/groups/SG_M01_SUP
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01_VC
+    - /infra/domains/default/groups/SG_M01_NSX
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 70
+    display_name: MGMT vSphere to MGMT SSPM
+    id: MGMT_vSphere_to_MGMT_SSPM
+    description: MGMT vSphere to MGMT SSPM
+    source_groups:
+    - /infra/domains/default/groups/SG_M01_VC
+    - /infra/domains/default/groups/SG_M01_NSX
+    - /infra/domains/default/groups/SG_M01_ESX_IP
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01_SSP_SVC_IP
+    services:
+    - /infra/services/SSPM_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 80
+    display_name: MGMT Domain SSP to MGMT Domain
+    id: MGMT_Domain_SSP_to_MGMT_Domain
+    description: MGMT Domain SSP to MGMT Domain
+    source_groups:
+    - /infra/domains/default/groups/SG_M01_SSP
+    destination_groups:
+    - ANY
+    services:
+    - ANY
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 90
+    display_name: MGMT Domain SSP to MGMT Domain SSP
+    id: MGMT_Domain_SSP_to_MGMT_Domain_SSP
+    description: MGMT Domain SSP to MGMT Domain SSP
+    source_groups:
+    - /infra/domains/default/groups/SG_M01_SSP
+    destination_groups:
+    - /infra/domains/default/groups/SG_M01_SSP
+    services:
+    - ANY
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 100
+    display_name: MGMT Domain Lockdown
+    id: MGMT_Domain_Lockdown
+    description: MGMT Domain Lockdown
+    source_groups:
+    - ANY
+    destination_groups:
+    - ANY
+    services:
+    - ANY
+    action: DROP
+    logged: true
+    scope:
+    - ANY
+    disabled: true
+  category: Application
+  scope:
+  - /infra/domains/default/groups/SG_M01
+  description: Firewall Section for Management Domain Services Access
+  domain_id: default
+  id: Management_Domain
+- display_name: WLD W01
+  sequence_number: 90
+  rules:
+  - sequence_number: 0
+    display_name: VCF vCenter RDU
+    id: VCF_vCenter_RDU
+    description: VCF vCenter Reduce Downtime Upgrade
+    source_groups:
+    - /infra/domains/default/groups/SG_VCF_MGMT
+    destination_groups:
+    - /infra/domains/default/groups/SG_VCF_MGMT
+    services:
+    - /infra/services/vCenter_RDU
+    action: ALLOW
+    logged: true
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 10
+    display_name: WLD W01 vCenter to WLD W01
+    id: WLD_W01_vCenter_to_WLD_W01
+    description: WLD W01 vCenter to WLD W01
+    source_groups:
+    - /infra/domains/default/groups/SG_W01_VC
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01_ESX_IP
+    - /infra/domains/default/groups/SG_W01_NSX
+    - /infra/domains/default/groups/SG_W01_SUP
+    - /infra/domains/default/groups/SG_W01_VC
+    services:
+    - /infra/services/ESXi_Inbound_Access
+    action: ALLOW
+    logged: true
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 20
+    display_name: WLD W01 ESXi to WLD W01
+    id: WLD_W01_ESXi_to_WLD_W01
+    description: WLD W01 ESXi to WLD W01
+    source_groups:
+    - /infra/domains/default/groups/SG_W01_ESX_IP
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01_VC
+    - /infra/domains/default/groups/SG_W01_NSX
+    - /infra/domains/default/groups/SG_W01_ESX_IP
+    services:
+    - /infra/services/ESXi_Outbound_Access
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 30
+    display_name: WLD W01 NSX to WLD W01
+    id: WLD_W01_NSX_to_WLD_W01
+    description: WLD W01 NSX to WLD W01
+    source_groups:
+    - /infra/domains/default/groups/SG_W01_NSX
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01_VC
+    - /infra/domains/default/groups/SG_W01_NSX
+    - /infra/domains/default/groups/SG_W01_ESX_IP
+    services:
+    - /infra/services/NSX_Outbound_Access
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 40
+    display_name: WLD W01 SSPI to WLD W01
+    id: WLD_W01_SSPI_to_WLD_W01
+    description: WLD W01 SSPI to WLD W01
+    source_groups:
+    - /infra/domains/default/groups/SG_W01_SSPI
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01_VC
+    - /infra/domains/default/groups/SG_W01_SSP
+    services:
+    - /infra/services/SSPI_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 50
+    display_name: WLD W01 AVI Controller to WLD W01
+    id: WLD_W01_AVI_Controller_to_WLD_W01
+    description: WLD W01 AVI Controller to WLD W01
+    source_groups:
+    - /infra/domains/default/groups/SG_W01_AVI
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01_VC
+    - /infra/domains/default/groups/SG_W01_NSX
+    - /infra/domains/default/groups/SG_W01_AVI
+    - /infra/domains/default/groups/SG_W01_AVISE
+    - /infra/domains/default/groups/SG_W01_ESX_IP
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 60
+    display_name: WLD W01 vSphere to WLD W01 vSphere
+    id: WLD_W01_vSphere_to_WLD_W01_vSphere
+    description: WLD W01 vSphere to WLD W01 vSphere
+    source_groups:
+    - /infra/domains/default/groups/SG_W01_VC
+    - /infra/domains/default/groups/SG_W01_NSX
+    - /infra/domains/default/groups/SG_W01_ESX_IP
+    - /infra/domains/default/groups/SG_W01_EDGE_IP
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01_VC
+    - /infra/domains/default/groups/SG_W01_NSX
+    - /infra/domains/default/groups/SG_W01_ESX_IP
+    - /infra/domains/default/groups/SG_W01_EDGE_IP
+    services:
+    - /infra/services/NSX_Messaging
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 70
+    display_name: WLD W01 SUP to NSX and vCenter
+    id: WLD_W01_SUP_to_NSX_and_vCenter
+    description: WLD W01 SUP to NSX and vCenter
+    source_groups:
+    - /infra/domains/default/groups/SG_W01_SUP
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01_VC
+    - /infra/domains/default/groups/SG_W01_NSX
+    services:
+    - /infra/services/HTTPS
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 80
+    display_name: WLD W01 vSphere to WLD W01 SSPM
+    id: WLD_W01_vSphere_to_WLD_W01_SSPM
+    description: WLD W01 vSphere to WLD W01 SSPM
+    source_groups:
+    - /infra/domains/default/groups/SG_W01_VC
+    - /infra/domains/default/groups/SG_W01_NSX
+    - /infra/domains/default/groups/SG_W01_ESX_IP
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01_SSP_SVC_IP
+    services:
+    - /infra/services/SSPM_Services
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 90
+    display_name: WLD W01 SSP to WLD W01
+    id: WLD_W01_SSP_to_WLD_W01
+    description: WLD W01 SSP to WLD W01
+    source_groups:
+    - /infra/domains/default/groups/SG_W01_SSP
+    destination_groups:
+    - ANY
+    services:
+    - ANY
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 100
+    display_name: WLD W01 SSP to WLD W01 SSP
+    id: WLD_W01_SSP_to_WLD_W01_SSP
+    description: WLD W01 SSP to WLD W01 SSP
+    source_groups:
+    - /infra/domains/default/groups/SG_W01_SSP
+    destination_groups:
+    - /infra/domains/default/groups/SG_W01_SSP
+    services:
+    - ANY
+    action: ALLOW
+    logged: false
+    scope:
+    - ANY
+    disabled: true
+  - sequence_number: 110
+    display_name: WLD W01 Lockdown
+    id: WLD_W01_Lockdown
+    description: WLD W01 Lockdown
+    source_groups:
+    - ANY
+    destination_groups:
+    - ANY
+    services:
+    - ANY
+    action: DROP
+    logged: true
+    scope:
+    - ANY
+    disabled: true
+  category: Application
+  scope:
+  - /infra/domains/default/groups/SG_W01
+  description: Firewall Section for WLD01 Services Access
+  domain_id: default
+  id: WLD_W01

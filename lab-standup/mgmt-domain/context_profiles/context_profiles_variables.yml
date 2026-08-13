@@ -1,0 +1,28 @@
+Context_Profile:
+- display_name: INTERNET_FQDN
+  attributes:
+  - key: DOMAIN_NAME
+    datatype: STRING
+    value:
+    - depot.broadcom.com
+    - hostupdate.vmware.com
+    - vapp-updates.vmware.com
+    - vcsa.vmware.com
+    - feedback.esp.vmware.com
+    - vcgw-updates.vmware.com
+    - partnerweb.vmware.com
+    - '*.esp.vmware.com'
+    - '*.prod.nsxti.vmware.com'
+  id: INTERNET_FQDN
+  description: VMware Sites
+- display_name: Avi_Pulse_FQDNs
+  attributes:
+  - key: DOMAIN_NAME
+    datatype: STRING
+    value:
+    - portal.avipulse.vmware.com
+    - downloads.avipulse.vmware.com
+    - cdn.prod.nsxti.vmware.com
+    - avisupportdata-prod.s3.us-west-1.amazonaws.com
+  id: Avi_Pulse_FQDNs
+  description: AVI Pulse Sites

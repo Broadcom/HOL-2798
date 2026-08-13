@@ -1,0 +1,57 @@
+vsphere:
+- host: m01-vc01.vcf01.ans.lab
+  username: administrator@vsphere.local
+  password: ***
+  datacenter: m01-dc01
+  rootpwd: ******
+  sshkey: ""
+clusters:
+- name: m01-cl01
+  vcenter: m01-vc01.vcf01.ans.lab
+  datastore: m01-cl01-vsan
+  frozenvmname: frozen-ext
+  frozennetwork:
+    name: m01-cl01-vds01-pg-vmotion
+    reference: DistributedVirtualPortgroup:dvportgroup-22
+- name: w01-cl01
+  vcenter: m01-vc01.vcf01.ans.lab
+  datastore: esx-04a-ds
+  frozenvmname: frozen-int
+  frozennetwork:
+    name: m01-cl01-vds01-pg-vmotion
+    reference: DistributedVirtualPortgroup:dvportgroup-22
+placements:
+- name: default
+  cluster: w01-cl01
+  network:
+    name: vmf
+    reference: DistributedVirtualPortgroup:dvportgroup-6005
+  netmask: 24
+  default_gateway: 10.0.0.1
+  ip_address_start: 10.0.0.2
+  ip_address_end: 10.0.0.254
+- name: external
+  cluster: m01-cl01
+  network:
+    name: external
+    reference: DistributedVirtualPortgroup:dvportgroup-6069
+  netmask: 5
+  default_gateway: 192.0.0.1
+  ip_address_start: 192.168.0.2
+  ip_address_end: 192.168.255.254
+- name: internet
+  cluster: m01-cl01
+  network:
+    name: external
+    reference: DistributedVirtualPortgroup:dvportgroup-6069
+  netmask: 5
+  default_gateway: 192.0.0.1
+  ip_address_start: 192.0.0.2
+  ip_address_end: 192.167.255.255
+nsx:
+  host: m01-nsx01.vcf01.ans.lab
+  username: admin
+  password: ******
+system:
+  username: admin
+  password: ******

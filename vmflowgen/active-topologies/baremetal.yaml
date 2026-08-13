@@ -1,0 +1,60 @@
+name: baremetal
+vms:
+- name: web-bm-demo-01
+  placement: web-seg-a
+  network_settings:
+    ip_address: 10.1.13.11
+    managed: true
+    nb_ips: 1
+  tags:
+  - 7d2506a4-ec78-498c-b10b-d2b4d49e4441
+  push_tags: true
+  view_config:
+    position_x: -121.76203
+    position_y: 31.252779
+  os: Linux
+  type: undefined
+- name: web-bm-demo-02
+  placement: web-seg-a
+  network_settings:
+    ip_address: 10.1.13.12
+    managed: true
+    nb_ips: 1
+  tags:
+  - 7d2506a4-ec78-498c-b10b-d2b4d49e4441
+  push_tags: true
+  view_config:
+    position_x: 17.33095
+    position_y: 24.501457
+  os: Linux
+flows:
+- id: 1095c51a-3044-42ad-8639-7d8e168a7e98
+  source: web-bm-demo-01
+  destination: web-bm-demo-02
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: on-demand
+  children: 1
+- id: c629afca-6513-4625-bcd2-7820a7a92f4c
+  source: web-bm-demo-02
+  destination: web-bm-demo-01
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: on-demand
+  children: 1
+campaign:
+  name: default
+  blocking: true
+  flow_ids: []
+tags:
+- id: 7d2506a4-ec78-498c-b10b-d2b4d49e4441
+  scope: application
+  value: web-bm-demo
+certificates: []
+nsx_api_calls: []

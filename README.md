@@ -9,65 +9,86 @@
 \_| |_/\__,_|_| |_|\__,_||___/ \___/|_| |_| \_____/\__,_||_.__/|___/
 ```
 
-## REMOVE THIS BLOCK BEFORE PUBLISHING
-
-THIS IS AN EXAMPLE. REPLACE THIS WITH YOUR OWN README.md using the pattern below.
-
-This is customer facing so please make it look professional. Thanks.
-
-This file can be updated and will be copied to the console desktop at startup.
-
-> **NOTE:** this file is public so NEVER include passwords. The official HOL Password is stored in the PASSWORD.txt that is copied to the console at boot.
 
 ## Lab Details
 
 ```plain
 * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - *
-*                       HOL-2798                  *
+*                                      HOL-2770                                 *
 * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - *
 ```
 
 ###  Primary benefits of your lab
 
-Provide information about the lab here
+This is the primary lab for VMware vDefend focusing on distributed firewall capabilities and Security Services Platform features.
 
 ### Featured Product(s)
 
 More detail about your lab: Products/Features covered in this lab.
 
-* Product 1
-* Product 2
-* Feature 1
-* Feature 2
+* VMware vDefend Distributed Firewall
+* VMware vDefend Gateway Firewall
+* Security Inteligence
+* VMware vDefend Advanced Threat Prevention
 
-Additional notes and "interesting" facts about your lab. (pre-release code, simulated data, etc.)
+The current build is using pre-release code of Security Services Platform 5.2
 
-## Modules
+## Lab Credentials
 
-Please record account names for this lab. All acccounts use the standard Hands-on Labs password.
+The password for all appliances and applications can be found in the passwords.txt file on the desktop.
 
-### === Module 1 ===
+Unless specified below the username will be admin
 
-Credentials for all vCenter Operations Manager Instances:
-User name: admin
+* vc-mgmt: administrator@vsphere.local
+* vc-wld01-a: administrator@wld.sso
 
-For vCenter Server Administration Console:
-User name: root
+## Labs
 
-For the vSphere Client, use:
-User name: administrator@vsphere.local
+This lab will cover 5 differnt topics in 5 different manuals
 
-### === Module 2 ===
+* Security Journey - Leverage the Security Journey workflow to tag, group, and implement policies for a simulated data center
+* Advanced Threat Prevention - Leverage IDPS, NTA, NRD, and MPS to defend against different threat vectors
+* Secure VCF Infrastructure - Use Distributed and Gateway firewalls to proivde a complete security model for VCF Infrastructure
+* vDefend Operations - Leverage SSP and NSX dashboards to operationalize vDefend
+* vDefend Firewall Deep Dive - Manually configure security L4 through L7 security policies for a 3-Tier application.
 
-big long command line that nobody wants to type
+### === HOL-2770-01: Getting Started with vDefend Firewall – Taking the Security Journey ===
 
-## Lab Authors
+This lab will take the user through the Security Journey. A prescriptive 4 stage workflow that helps infrastructure security administrators systematically strengthen their datacenter segmentation towards zero trust deployment using VMware vDefend Distributed Firewall and Security Intelligence.
+
+
+### === HOL-2770-02: Multi-layer Defense against AI-driven Cyberattacks with vDefend ===
+
+This lab will take the ues throug the Advanced Threat Prevention capabilities of defend to learn how to leverage vDefend ATP to defend against AI-driven cyberattacks. The user will learn how to leverage Virtual Patching to protect against known/disclosed vulnerabilites in workloads running in the virtual evironment, and NTA/NDR to defend against zero day threats.
+
+### === HOL-2770-03: Secure VCF Infrastructure with VMware vDefend Firewall ===
+
+This lab will take the user through the best practices to secure their VCF environmement with vDefend. The user will enable predefined security policies and understand how these policies protect their environment. 
+
+### === HOL-2770-04: Operationalizing vDefend Firewall ===
+
+This lab will take the user through all the available tool within vDefend and VCF to help operationalize their vDefend deployment.
+
+### === HOL-2770-05: VMware vDefend Firewall Technology Deep Dive ===
+
+This lab will take the user on a deepdive on how to manually configure, tags, groups, policies, and firewall rules for a 3-tier application. They will then learn how to layer additional levels of security such as L7 distributed firewall rules.
+
+## 2027 Group 4 Team
 
 ### Principal
 
-* Principal Name:
+* Frank Snyder
+* Nick Robbins
 
-### Captain(s)
+### Captains
 
-* Captain:
-* Captain:
+* Lead: Quinton Coehlo 
+* Lynne Dark
+* Josh Newton
+
+### Associate Captains
+* Al Granville
+* Bhavik Metha
+* Britton Johnson
+* Apoorv Malmane
+* Ted Romer

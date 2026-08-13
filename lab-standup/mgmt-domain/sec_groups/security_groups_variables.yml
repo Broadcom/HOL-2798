@@ -1,0 +1,476 @@
+sec_groups:
+- display_name: SG_VCF_MGMT
+  expression:
+  - resource_type: PathExpression
+    paths:
+    - /infra/segments/945c23fa-06b2-48d4-bbf8-54f819f1a228:dvportgroup-25
+  domain_id: default
+  id: SG_VCF_MGMT
+  description: Security Group consisting of VCF MGMT Segment
+- display_name: SG_FLEET_SDDC
+  expression:
+  - resource_type: NestedExpression
+    expressions:
+    - key: Tag
+      member_type: VirtualMachine
+      operator: EQUALS
+      resource_type: Condition
+      value: application|SDDC
+    - conjunction_operator: AND
+      resource_type: ConjunctionOperator
+    - key: Tag
+      member_type: VirtualMachine
+      operator: EQUALS
+      resource_type: Condition
+      value: environment|FLEET_MGMT
+  domain_id: default
+  id: SG_FLEET_SDDC
+  description: Security Group consisting of all FLEET SDDC VMs
+- display_name: SG_FLEET_OPS
+  expression:
+  - resource_type: NestedExpression
+    expressions:
+    - key: Tag
+      member_type: VirtualMachine
+      operator: EQUALS
+      resource_type: Condition
+      value: application|VCF_OPS
+    - conjunction_operator: AND
+      resource_type: ConjunctionOperator
+    - key: Tag
+      member_type: VirtualMachine
+      operator: EQUALS
+      resource_type: Condition
+      value: environment|FLEET_MGMT
+  domain_id: default
+  id: SG_FLEET_OPS
+  description: Security Group consisting of all FLEET OPS VMs
+- display_name: SG_FLEET_OPS_COL
+  expression:
+  - resource_type: NestedExpression
+    expressions:
+    - key: Tag
+      member_type: VirtualMachine
+      operator: EQUALS
+      resource_type: Condition
+      value: application|OPS_COL
+    - conjunction_operator: AND
+      resource_type: ConjunctionOperator
+    - key: Tag
+      member_type: VirtualMachine
+      operator: EQUALS
+      resource_type: Condition
+      value: environment|FLEET_MGMT
+  - conjunction_operator: OR
+    resource_type: ConjunctionOperator
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.41
+  domain_id: default
+  id: SG_FLEET_OPS_COL
+  description: Security Group consisting of all FLEET OPS VMs
+- display_name: SG_FLEET_OPSNET
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: opsnet-
+  domain_id: default
+  id: SG_FLEET_OPSNET
+  description: Security Group consisting of all FLEET OPS NET VMs
+- display_name: SG_FLEET_OPSNET_COL
+  expression:
+  - resource_type: NestedExpression
+    expressions:
+    - key: Tag
+      member_type: VirtualMachine
+      operator: EQUALS
+      resource_type: Condition
+      value: application|OPSNET_COL
+    - conjunction_operator: AND
+      resource_type: ConjunctionOperator
+    - key: Tag
+      member_type: VirtualMachine
+      operator: EQUALS
+      resource_type: Condition
+      value: environment|FLEET_MGMT
+  - conjunction_operator: OR
+    resource_type: ConjunctionOperator
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.62
+  domain_id: default
+  id: SG_FLEET_OPSNET_COL
+  description: Security Group consisting of all FLEET OPS NET COLLECTOR VMs
+- display_name: SG_FLEET_VCFA
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: vcf-a
+  domain_id: default
+  id: SG_FLEET_VCFA
+  description: Security Group consisting of all FLEET Automation VMs
+- display_name: SG_FLEET_LIC_SER
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: license-a
+  domain_id: default
+  id: SG_FLEET_LIC_SER
+  description: Security Group consisting of all FLEET Licensing VMs
+- display_name: SG_FLEET_LIC_HUB
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: license-hub
+  domain_id: default
+  id: SG_FLEET_LIC_HUB
+  description: Security Group consisting of all vDefend Licensing VMs
+- display_name: SG_FLEET_MSVC
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: vsp-
+  domain_id: default
+  id: SG_FLEET_MSVC
+  description: Security Group consisting of all FLEET Management Services VMs
+- display_name: SG_M01_VC
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: vc-mgmt-
+  domain_id: default
+  id: SG_M01_VC
+  description: Security Group consisting of all MGMT VC VMs
+- display_name: SG_M01_NSX
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: nsx-mgmt-
+  domain_id: default
+  id: SG_M01_NSX
+  description: Security Group consisting of all MGMT NSX VMs
+- display_name: SG_M01_ESX_IP
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.101-10.1.1.104
+  domain_id: default
+  id: SG_M01_ESX_IP
+  description: Security Group consisting of all MGMT ESXi IPs
+- display_name: SG_M01_EDGE_IP
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.180
+    - 10.1.1.181
+  domain_id: default
+  id: SG_M01_EDGE_IP
+  description: Security Group consisting of all MGMT EDGE IPs
+- display_name: SG_M01_SSPI
+  expression:
+  - resource_type: NestedExpression
+    expressions:
+    - key: Tag
+      member_type: VirtualMachine
+      operator: EQUALS
+      resource_type: Condition
+      value: application|SSPI
+    - conjunction_operator: AND
+      resource_type: ConjunctionOperator
+    - key: Tag
+      member_type: VirtualMachine
+      operator: EQUALS
+      resource_type: Condition
+      value: environment|M01
+  domain_id: default
+  id: SG_M01_SSPI
+  description: Security Group consisting of allMGMT SSPI VMs
+- display_name: SG_M01_SSP
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: ssp-
+  domain_id: default
+  id: SG_M01_SSP
+  description: Security Group consisting of all MGMT SSP VMs
+- display_name: SG_M01_SSP_SVC_IP
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.0.12
+  domain_id: default
+  id: SG_M01_SSP_SVC_IP
+  description: Security Group consisting of all MGMT SSPM VMs
+- display_name: SG_M01_AVI
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: alb-
+  domain_id: default
+  id: SG_M01_AVI
+  description: Security Group consisting of all MGMT AVI Controller VMs
+- display_name: SG_M01_AVISE
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.94
+    - 10.1.1.95
+    - 10.1.1.96
+  domain_id: default
+  id: SG_M01_AVISE
+  description: Security Group consisting of all MGMT AVI Service Engines VMs
+- display_name: SG_M01_SUP
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 1.1.1.1
+  domain_id: default
+  id: SG_M01_SUP
+  description: Security Group consisting of all M01 Supervisor Management Ips
+- display_name: SG_W01_VC
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: vc-wld01-
+  domain_id: default
+  id: SG_W01_VC
+  description: Security Group consisting of all W01 VC VMs
+- display_name: SG_W01_NSX
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: nsx-wld01-
+  domain_id: default
+  id: SG_W01_NSX
+  description: Security Group consisting of all W01 NSX VMs
+- display_name: SG_W01_ESX_IP
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.105-10.1.1.108
+  domain_id: default
+  id: SG_W01_ESX_IP
+  description: Security Group consisting of all W01 ESXi IPs
+- display_name: SG_W01_EDGE_IP
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.182
+    - 10.1.1.183
+  domain_id: default
+  id: SG_W01_EDGE_IP
+  description: Security Group consisting of all W01 EDGE Ips
+- display_name: SG_W01_SSPI
+  expression:
+  - resource_type: NestedExpression
+    expressions:
+    - key: Tag
+      member_type: VirtualMachine
+      operator: EQUALS
+      resource_type: Condition
+      value: application|SSPI
+    - conjunction_operator: AND
+      resource_type: ConjunctionOperator
+    - key: Tag
+      member_type: VirtualMachine
+      operator: EQUALS
+      resource_type: Condition
+      value: environment|W01
+  domain_id: default
+  id: SG_W01_SSPI
+  description: Security Group consisting of all W01 SSPI VMs
+- display_name: SG_W01_SSP
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: ssp-
+  domain_id: default
+  id: SG_W01_SSP
+  description: Security Group consisting of all W01 SSP VMs
+- display_name: SG_W01_SSP_SVC_IP
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.0.12
+  domain_id: default
+  id: SG_W01_SSP_SVC_IP
+  description: Security Group consisting of all W01 SSPM VMs
+- display_name: SG_W01_AVI
+  expression:
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: alb-
+  domain_id: default
+  id: SG_W01_AVI
+  description: Security Group consisting of all W01 AVI Controller VMs
+- display_name: SG_W01_AVISE
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.94
+    - 10.1.1.95
+    - 10.1.1.96
+  domain_id: default
+  id: SG_W01_AVISE
+  description: Security Group consisting of all W01 AVI Service Engines VMs
+- display_name: SG_W01_SUP
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 1.1.1.1
+  domain_id: default
+  id: SG_W01_SUP
+  description: Security Group consisting of all W01 Supervisor Management Ips
+- display_name: SG_FLEET_MGMT
+  expression:
+  - resource_type: PathExpression
+    paths:
+    - /infra/domains/default/groups/SG_FLEET_SDDC
+    - /infra/domains/default/groups/SG_FLEET_OPS
+    - /infra/domains/default/groups/SG_FLEET_OPS_COL
+    - /infra/domains/default/groups/SG_FLEET_OPSNET
+    - /infra/domains/default/groups/SG_FLEET_OPSNET_COL
+    - /infra/domains/default/groups/SG_FLEET_VCFA
+    - /infra/domains/default/groups/SG_FLEET_LIC_SER
+    - /infra/domains/default/groups/SG_FLEET_LIC_HUB
+  - conjunction_operator: OR
+    resource_type: ConjunctionOperator
+  - key: Name
+    member_type: VirtualMachine
+    resource_type: Condition
+    value: bootstrap-vm-
+    operator: STARTSWITH
+  domain_id: default
+  id: SG_FLEET_MGMT
+  description: Security Group consisting of all FLEET Resources
+- display_name: SG_M01
+  expression:
+  - resource_type: PathExpression
+    paths:
+    - /infra/domains/default/groups/SG_M01_VC
+    - /infra/domains/default/groups/SG_M01_NSX
+    - /infra/domains/default/groups/SG_M01_ESX_IP
+    - /infra/domains/default/groups/SG_M01_EDGE_IP
+    - /infra/domains/default/groups/SG_M01_SSPI
+    - /infra/domains/default/groups/SG_M01_SSP
+    - /infra/domains/default/groups/SG_M01_AVI
+  domain_id: default
+  id: SG_M01
+  description: Security Group consisting of all MGMT Resources
+- display_name: SG_W01
+  expression:
+  - resource_type: PathExpression
+    paths:
+    - /infra/domains/default/groups/SG_W01_VC
+    - /infra/domains/default/groups/SG_W01_NSX
+    - /infra/domains/default/groups/SG_W01_ESX_IP
+    - /infra/domains/default/groups/SG_W01_EDGE_IP
+    - /infra/domains/default/groups/SG_W01_SSPI
+    - /infra/domains/default/groups/SG_W01_SSP
+    - /infra/domains/default/groups/SG_W01_AVI
+    - /infra/domains/default/groups/SG_W01_AVISE
+  domain_id: default
+  id: SG_W01
+  description: Security Group consisting of all W01 Resources
+- display_name: SG_VCF_FLEET
+  expression:
+  - resource_type: PathExpression
+    paths:
+    - /infra/domains/default/groups/SG_FLEET_MGMT
+    - /infra/domains/default/groups/SG_M01
+    - /infra/domains/default/groups/SG_W01
+  domain_id: default
+  id: SG_VCF_FLEET
+  description: Security Group consisting of all VCF Fleet Resources
+- display_name: SG_BASTION
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.10.130
+    - 10.1.10.131
+  domain_id: default
+  id: SG_BASTION
+  description: Security Group consisting of all BASTION JB Servers
+- display_name: SG_TOOLS
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.10.130
+    - 10.1.10.131
+  domain_id: default
+  id: SG_TOOLS
+  description: Security Group consisting of all Tool Servers
+- display_name: SG_AD_SVC
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.10.254
+    - 192.168.0.2
+  domain_id: default
+  id: SG_AD_SVC
+  description: Security Group consisting of all AD Servers
+- display_name: SG_BACKUP_SERVERS
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.3
+    - 10.1.2.200
+    - 10.1.4.200
+  domain_id: default
+  id: SG_BACKUP_SERVERS
+  description: Security Group consisting of all Backup Servers
+- display_name: SG_DNS_SVC
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.1
+  domain_id: default
+  id: SG_DNS_SVC
+  description: Security Group consisting of all DNS Servers
+- display_name: SG_NTP_SVC
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.1
+  domain_id: default
+  id: SG_NTP_SVC
+  description: Security Group consisting of all NTP Servers
+- display_name: SG_DHCP_SVC
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.1
+  domain_id: default
+  id: SG_DHCP_SVC
+  description: Security Group consisting of all DHCP Servers
+- display_name: SG_SMTP_SVC
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.1
+    - 10.1.10.130
+    - 10.1.10.131
+  domain_id: default
+  id: SG_SMTP_SVC
+  description: Security Group consisting of all SMTP Servers
+- display_name: SG_SYSLOG_SVC
+  expression:
+  - resource_type: IPAddressExpression
+    ip_addresses:
+    - 10.1.1.45
+  domain_id: default
+  id: SG_SYSLOG_SVC
+  description: Security Group consisting of all SYSLOG Servers

@@ -1,0 +1,12 @@
+---
+
+  - include_vars: service_groups_variables.yml
+  
+
+  - name: Initiate Service Group Creation | Loop Service Group
+    include_tasks: 
+      file: ./serv_groups.yaml
+    loop: "{{ serv_groups }}"
+    loop_control:
+      loop_var: SERV
+

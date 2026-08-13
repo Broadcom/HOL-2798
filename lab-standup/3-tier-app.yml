@@ -1,0 +1,95 @@
+---
+- name: Deploy 3 tier App Policy
+  nsxt_policy_security_policy:
+    hostname: "{{ nsxt_wld01_hostname }}"
+    username: "{{ nsxt_wld01_username }}"
+    password: "{{ nsxt_wld01_password }}"
+    mgr_type: "local"
+    validate_certs: false
+    id: "3_Tier_App"
+    display_name: "3 Tier App"
+    state: "present"
+    domain_id: "default"
+    category: "Application"
+    rules:
+    - sequence_number: 100
+      id: "Block_Web_to_Web"
+      action: "DROP"
+      display_name: "Block Web to Web"
+      source_groups: 
+      - "/infra/domains/default/groups/web-group"
+      destination_groups: 
+      - "/infra/domains/default/groups/web-group"
+      services: 
+      - "/infra/services/HTTPS"
+      ip_protocol: IPV4
+      direction: "IN_OUT"
+      logged: true
+      disabled: true
+      scope: 
+      - "/infra/domains/default/groups/web-group"
+    - sequence_number: 110
+      id: "All_to_Web"
+      action: "ALLOW"
+      display_name: "All to Web"
+      source_groups: 
+      - "ANY"
+      destination_groups: 
+      - "/infra/domains/default/groups/web-group"
+      services: 
+      - "/infra/services/HTTPS"
+      ip_protocol: IPV4
+      direction: "IN_OUT"
+      logged: true
+      disabled: true
+      scope: 
+      - "/infra/domains/default/groups/web-group"
+    - sequence_number: 120
+      id: "Web_to_App"
+      action: "ALLOW"
+      display_name: "Web to App"
+      source_groups: 
+      - "/infra/domains/default/groups/web-group"
+      destination_groups: 
+      - "/infra/domains/default/groups/app-group"
+      services: 
+      - "/infra/services/http_8080"
+      ip_protocol: IPV4
+      direction: "IN_OUT"
+      logged: true
+      disabled: true
+      scope: 
+      - "/infra/domains/default/groups/app-group"
+      - "/infra/domains/default/groups/web-group"
+    #- action: "ALLOW"
+    #  id: 3055
+    #  sequence_number: 130
+    #  display_name: "app to db"
+    #  source_groups: ["/infra/domains/default/groups/app-group"]
+    #  destination_groups: ["/infra/domains/default/groups/db-group"]
+    #  services: ["/infra/services/MySQL"]
+    #  ip_protocol: IPV4
+    #  direction: "IN_OUT"
+    #  logged: true
+    #  scope: 
+    #  - "/infra/domains/default/groups/app-group"
+    #  - "/infra/domains/default/groups/db-group"
+    - sequence_number: 140
+      id: "Block_All"
+      action: "DROP"
+      display_name: "Block All"
+      source_groups: 
+      - "ANY"
+      destination_groups: 
+      - "ANY"
+      services: 
+      - "ANY"
+      ip_protocol: IPV4
+      direction: "IN_OUT"
+      logged: true
+      disabled: true
+      scope: 
+      - "/infra/domains/default/groups/app-group"
+      - "/infra/domains/default/groups/db-group"
+      - "/infra/domains/default/groups/web-group"
+  delegate_to: localhost
