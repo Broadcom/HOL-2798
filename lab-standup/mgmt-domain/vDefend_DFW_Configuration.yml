@@ -1,0 +1,62 @@
+- hosts: localhost
+  connection: local
+  collections:
+    - vmware.ansible_for_vdefend
+
+  tasks:
+  - include_vars: NSXT_Variables.yml
+
+  - name: vDefend DFW Configuration | Create Objects
+    block:
+      # VM Tagging
+       - name: vDefend DFW Configuration | Initiate VM Tagging
+         include_tasks:
+           file: ./vm_tags/main.yaml
+
+      #Security Groups
+       - name: vDefend DFW Configuration | Initiate Security Group Creation
+         include_tasks:
+          file: ./sec_groups/main.yaml
+
+      #Service Groups
+       - name: vDefend DFW Configuration | Initiate Service Group Creation
+         include_tasks:
+           file: ./service_groups/main.yaml
+
+      #Context Profiles
+       - name: vDefend DFW Configuration | Initiate Context Profiles
+         include_tasks:
+           file: ./context_profiles/main.yaml
+
+      # Policy Rule Set
+       - name: vDefend DFW Configuration | Initiate Policy and Rule Creation
+         include_tasks:
+            file: ./policy_rules/main.yaml
+
+    when: STATE == "present"
+
+
+  - name: vDefend DFW Configuration | Delete Objects
+    block:
+
+      # Policy Rule Set
+        - name: vDefend DFW Configuration | Initiate Policy and Rule Deletion
+          include_tasks:
+            file: ./policy_rules/main.yaml
+
+      # Security Groups
+        - name: vDefend DFW Configuration | Initiate Security Group Deletion
+          include_tasks:
+            file: ./sec_groups/main.yaml
+ 
+      # Service Groups
+        - name: vDefend DFW Configuration | Initiate Service Group Deletion
+          include_tasks:
+            file: ./service_groups/main.yaml
+ 
+      # Context Profiles
+        - name: vDefend DFW Configuration | Initiate Context Profiles Deletion
+          include_tasks:
+            file: ./context_profiles/main.yaml
+
+    when: STATE == "absent"

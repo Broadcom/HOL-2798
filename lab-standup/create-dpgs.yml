@@ -1,0 +1,112 @@
+---
+  - hosts: 127.0.0.1
+    connection: local
+    become: no
+    vars_files:
+      - environment.yml
+    tasks:
+      - name: verify hol variable is read properly
+        ansible.builtin.debug:
+          msg: "Lab password is shown as {{vc_wld01_password}}"
+
+      - name: Create ANS Management DPG
+        community.vmware.vmware_dvs_portgroup:
+          hostname: '{{ vc_wld01_hostname }}'
+          username: '{{ vc_wld01_username }}'
+          password: '{{ vc_wld01_password }}'
+          portgroup_name: '{{ vc_wld01_ans_network }}'
+          switch_name: '{{ vc_wld01_vds_name }}'
+          vlan_trunk: false
+          vlan_id: 9
+          port_binding: static
+          port_allocation: elastic
+          state: present
+          validate_certs: no
+          port_policy: 
+            vendor_config_override: true
+        delegate_to: localhost 
+      
+      - name: Create External Network DPG
+        community.vmware.vmware_dvs_portgroup:
+          hostname: '{{ vc_wld01_hostname }}'
+          username: '{{ vc_wld01_username }}'
+          password: '{{ vc_wld01_password }}'
+          portgroup_name: '{{ external_network }}'
+          switch_name: '{{ vc_wld01_vds_name }}'
+          vlan_trunk: false
+          vlan_id: 1000
+          port_binding: static
+          port_allocation: elastic
+          state: present
+          validate_certs: no
+          port_policy: 
+            vendor_config_override: true
+        delegate_to: localhost
+
+      - name: Create External-nk Network DPG
+        community.vmware.vmware_dvs_portgroup:
+          hostname: '{{ vc_wld01_hostname }}'
+          username: '{{ vc_wld01_username }}'
+          password: '{{ vc_wld01_password }}'
+          portgroup_name: '{{ external_network_nk }}'
+          switch_name: '{{ vc_wld01_vds_name }}'
+          vlan_trunk: false
+          vlan_id: 1001
+          port_binding: static
+          port_allocation: elastic
+          state: present
+          validate_certs: no
+          port_policy: 
+            vendor_config_override: true
+        delegate_to: localhost
+
+      - name: Create External-ir Network DPG
+        community.vmware.vmware_dvs_portgroup:
+          hostname: '{{ vc_wld01_hostname }}'
+          username: '{{ vc_wld01_username }}'
+          password: '{{ vc_wld01_password }}'
+          portgroup_name: '{{ external_network_ir }}'
+          switch_name: '{{ vc_wld01_vds_name }}'
+          vlan_trunk: false
+          vlan_id: 1002
+          port_binding: static
+          port_allocation: elastic
+          state: present
+          validate_certs: no
+          port_policy: 
+            vendor_config_override: true
+        delegate_to: localhost
+
+      - name: Create Uplink-01 DPG
+        community.vmware.vmware_dvs_portgroup:
+          hostname: '{{ vc_wld01_hostname }}'
+          username: '{{ vc_wld01_username }}'
+          password: '{{ vc_wld01_password }}'
+          portgroup_name: '{{ edge_dpg1 }}'
+          switch_name: '{{ vc_wld01_vds_name }}'
+          vlan_trunk: false
+          vlan_id: 19
+          port_binding: static
+          port_allocation: elastic
+          state: present
+          validate_certs: no
+          port_policy: 
+            vendor_config_override: true
+        delegate_to: localhost
+
+      - name: Create Uplink-02 DPG
+        community.vmware.vmware_dvs_portgroup:
+          hostname: '{{ vc_wld01_hostname }}'
+          username: '{{ vc_wld01_username }}'
+          password: '{{ vc_wld01_password }}'
+          portgroup_name: '{{ edge_dpg2 }}'
+          switch_name: '{{ vc_wld01_vds_name }}'
+          vlan_trunk: false
+          vlan_id: 20
+          port_binding: static
+          port_allocation: elastic
+          state: present
+          validate_certs: no
+          port_policy: 
+            vendor_config_override: true
+        delegate_to: localhost

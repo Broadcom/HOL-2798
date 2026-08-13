@@ -1,0 +1,21 @@
+- hosts: localhost
+  connection: local
+  collections:
+    - vmware.ansible_for_vdefend
+
+  tasks:
+  - include_vars: environment.yml
+
+  - name: Build Lab Configuration
+    block:
+      
+    # Build 3-Tier-App Policy
+      - name: vDefend 3-Tier-App Configuration | Deploy 3-Tier-App Policies
+        include_tasks:
+          file: ./3-tier-groups.yml
+      - name: vDefend 3-Tier-App Configuration | Deploy 3-Tier-App Services
+        include_tasks:
+          file: ./3-tier-services.yml
+      - name: vDefend 3-Tier-App Configuration | Deploy 3-Tier-App Policies
+        include_tasks:
+          file: ./3-tier-app.yml

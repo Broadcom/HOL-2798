@@ -1,0 +1,18 @@
+---
+# --------------------------------------------------------------------
+# Management Variables
+# Description: This are variables used for any type of ansible deployment.
+# --------------------------------------------------------------------
+# Cluster IP for Avi Controller
+lab_pw: "{{ lookup('file', '/home/holuser/creds.txt')}}"
+
+NSXT_CLUSTER_IP: "nsx-mgmt-a.site-a.vcf.lab" # This can be either cluster ip or the ip of a Manager Node.
+
+# NSXT Credentials
+NSXT_CREDENTIALS:
+  node: "{{ NSXT_CLUSTER_IP }}"
+  username: "admin"
+  password: "{{ lab_pw }}"
+
+STATE: present # Either present or absent
+MGR_TYPE: "local" # Either global or local

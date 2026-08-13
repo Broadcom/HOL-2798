@@ -1,0 +1,91 @@
+vm_tags:
+- vmname: ops-a
+  tags:
+  - scope: application
+    tag: SDDC
+  - scope: environment
+    tag: FLEET_MGMT
+- vmname: ops-a
+  tags:
+  - scope: application
+    tag: OPS
+  - scope: environment
+    tag: FLEET_MGMT
+- vmname: opscollector-01a
+  tags:
+  - scope: application
+    tag: OPS_COL
+  - scope: environment
+    tag: FLEET_MGMT
+#- vmname: opsnet-a
+#  tags:
+#  - scope: application
+#    tag: OPSNET
+#  - scope: environment
+#    tag: FLEET_MGMT
+#- vmname: opsnetcollector-01a
+#  tags:
+#  - scope: application
+#    tag: OPSNET_COL
+#  - scope: environment
+#    tag: FLEET_MGMT
+#- vmname: ops-logs-a
+#  tags:
+#  - scope: application
+#    tag: OPSLOG
+#  - scope: environment
+#    tag: FLEET_MGMT
+#- vmname: auto-a
+#  tags:
+#  - scope: application
+#    tag: VCFA
+#  - scope: environment
+#    tag: FLEET_MGMT
+#- vmname: FLEET_IDB_0X
+#  tags:
+#  - scope: application
+#    tag: IDB
+#  - scope: environment
+#    tag: FLEET_MGMT
+- vmname: vc-mgmt-a
+  tags:
+  - scope: application
+    tag: VC
+  - scope: environment
+    tag: M01
+- vmname: nsx-mgmt-01a
+  tags:
+  - scope: application
+    tag: NSX
+  - scope: environment
+    tag: M01
+#- vmname: VCF01_SSP_0X
+#  tags:
+#  - scope: application
+#    tag: VCF_SSP
+#  - scope: environment
+#    tag: M01
+- vmname: ssp-installer
+  tags:
+  - scope: application
+    tag: SSPI
+  - scope: environment
+    tag: M01
+- vmname: vc-wld01-a
+  tags:
+  - scope: application
+    tag: VC
+  - scope: environment
+    tag: W01
+- vmname: nsx-wld01-01a
+  tags:
+  - scope: application
+    tag: NSX
+  - scope: environment
+    tag: W01
+- vmname: ssp-installer
+  tags:
+  - scope: application
+    tag: SSPI
+  - scope: environment
+    tag: W01

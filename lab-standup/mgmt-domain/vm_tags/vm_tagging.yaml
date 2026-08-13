@@ -1,0 +1,11 @@
+---
+
+- name: Set VM Tag
+  nsxt_vm_tags:
+    hostname: "{{ NSXT_CREDENTIALS.node }}"
+    username: "{{ NSXT_CREDENTIALS.username }}"
+    password: "{{ NSXT_CREDENTIALS.password }}"
+    validate_certs: False
+    virtual_machine_display_name: "{{ VM.vmname }}"
+    remove_other_tags: False
+    add_tags: "{{ VM.tags }}"

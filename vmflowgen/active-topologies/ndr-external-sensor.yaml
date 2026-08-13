@@ -1,0 +1,248 @@
+name: ndr-external-sensor
+vms:
+- name: ndr-ext-01
+  placement: external
+  network_settings:
+    ip_address: 192.168.10.10
+    managed: true
+    nb_ips: 1
+  view_config:
+    position_x: -355
+    position_y: -108
+  os: Linux
+- name: ndr-ext-02
+  placement: external
+  network_settings:
+    ip_address: 192.168.10.11
+    managed: true
+    nb_ips: 1
+  view_config:
+    position_x: -352
+    position_y: 21
+  os: Linux
+- name: ndr-app-01
+  placement: app-seg-a
+  network_settings:
+    ip_address: 10.1.14.142
+    managed: true
+    nb_ips: 1
+  tags:
+  - cfe4cd70-8abf-4681-8e3b-6779ae2c9c3e
+  push_tags: true
+  view_config:
+    position_x: 46
+    position_y: -61
+  os: Linux
+  type: undefined
+- name: ndr-web-01
+  placement: web-seg-a
+  network_settings:
+    ip_address: 10.1.13.16
+    managed: true
+    nb_ips: 1
+  tags:
+  - cfe4cd70-8abf-4681-8e3b-6779ae2c9c3e
+  push_tags: true
+  view_config:
+    position_x: -124
+    position_y: -115
+  os: Linux
+  type: undefined
+- name: ndr-web-02
+  placement: web-seg-a
+  network_settings:
+    ip_address: 10.1.13.17
+    managed: true
+    nb_ips: 1
+  tags:
+  - cfe4cd70-8abf-4681-8e3b-6779ae2c9c3e
+  push_tags: true
+  view_config:
+    position_x: -127
+    position_y: 16
+  os: Linux
+  type: undefined
+flows:
+- id: c5d44e75-d49b-44cb-a1b0-e203a4c30302
+  source: ndr-ext-01
+  destination: ndr-web-01
+  protocol: TCP
+  port: 80
+  interval: 25000
+  payload: SCRIPT - Horizontal Port Scan (NMAP) - 10.0.0.0/24
+  data_format: template
+  type: baseline
+  children: 1
+- id: 0c3082f2-59f4-446b-96b7-ed2cee2ed482
+  source: ndr-ext-02
+  destination: ndr-web-02
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: SCRIPT - Horizontal Port Scan (NMAP) - 10.0.0.0/24
+  data_format: template
+  type: baseline
+  children: 1
+- id: 64567c37-331d-42dc-b58e-07c53499738d
+  source: ndr-ext-01
+  destination: ndr-web-01
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: IDS - 2044884 - ET MALWARE Fake Browser Update via Error Page Web Inject
+  data_format: template
+  type: on-demand
+  children: 1
+- id: c4c9bcb1-70f6-4a52-b5fc-664e5c3df431
+  source: ndr-ext-02
+  destination: ndr-web-02
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: IDS - 2044884 - ET MALWARE Fake Browser Update via Error Page Web Inject
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 7a604e28-81f6-4867-91bc-0ce36c17ce9d
+  source: ndr-web-01
+  destination: ndr-web-02
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: SCRIPT - Horizontal Port Scan (NMAP) - 10.0.0.0/24
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 42f8dfc4-c460-436d-be51-c549b6447d57
+  source: ndr-web-01
+  destination: ndr-web-02
+  protocol: TCP
+  port: 3389
+  interval: 10000
+  payload: IDS - 1107300 - NSX - (Lateral Movement) Detect SSL/TLS Certificate Observed
+    (AnyDesk Remote Desktop Software)
+  data_format: template
+  type: baseline
+  children: 1
+- id: a43d4b77-22c7-464b-b751-7fea22790638
+  source: ndr-web-01
+  destination: ndr-ext-02
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: NTA - DGA
+  data_format: template
+  type: on-demand
+  children: 1
+- id: a3c722d1-9ecf-41c1-a9b2-52a46a34b053
+  source: ndr-web-02
+  destination: ndr-ext-02
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: MPS - IcedID OneNote Lure
+  data_format: template
+  type: on-demand
+  children: 1
+- id: fff3f575-900a-41c4-984b-bf123b4e031e
+  source: ndr-web-01
+  destination: ndr-ext-02
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: MPS - Nokoyama Ransomware
+  data_format: template
+  type: on-demand
+  children: 1
+- id: e9cd89b8-15f6-4cdf-8e01-865e97c99863
+  source: ndr-web-01
+  destination: ndr-app-01
+  protocol: TCP
+  port: 3389
+  interval: 2500
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 1
+- id: ee58b89c-7e63-40d2-8bcc-d998a9facd30
+  source: ndr-web-02
+  destination: ndr-app-01
+  protocol: TCP
+  port: 3389
+  interval: 30000
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 4fd702c3-b8cc-4a8d-80eb-a60703869543
+  source: ndr-web-01
+  destination: ndr-app-01
+  protocol: TCP
+  port: 8080
+  interval: 1000
+  payload: IDS - 2005081 - ET WEB_SPECIFIC_APPS ExoPHPDesk SQL Injection Attempt --
+    faq.php id SELECT
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 925e332e-9269-43ad-99ec-cfb438ab2e97
+  source: ndr-web-02
+  destination: ndr-app-01
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: IcedID  DLL (renamed to .jpg)
+  data_format: template
+  type: on-demand
+  children: 1
+- id: c3d16a0e-682c-4aba-b1c7-5ae08e1ba8f5
+  source: ndr-app-01
+  destination: ndr-ext-01
+  protocol: TCP
+  port: 53
+  interval: 1000
+  payload: NTA - DNS Exfiltration
+  data_format: template
+  type: on-demand
+  children: 1
+- id: a8b3f644-c812-410e-a2a7-2f54348d7b28
+  source: ndr-app-01
+  destination: ndr-ext-02
+  protocol: TCP
+  port: 53
+  interval: 1000
+  payload: NTA - DNS Exfiltration
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 1abcbdfa-b487-403b-8052-7b7e6f0d84c4
+  source: ndr-app-01
+  destination: ndr-ext-01
+  protocol: TCP
+  port: 3389
+  interval: 1000
+  payload: IDS - 2054652 - ET MALWARE Daolpu Stealer Data Exfiltration Attempt
+  data_format: template
+  type: on-demand
+  children: 1
+campaign:
+  name: default
+  blocking: false
+  flow_ids:
+  - 64567c37-331d-42dc-b58e-07c53499738d
+  - c4c9bcb1-70f6-4a52-b5fc-664e5c3df431
+  - 7a604e28-81f6-4867-91bc-0ce36c17ce9d
+  - a43d4b77-22c7-464b-b751-7fea22790638
+  - a3c722d1-9ecf-41c1-a9b2-52a46a34b053
+  - fff3f575-900a-41c4-984b-bf123b4e031e
+  - 4fd702c3-b8cc-4a8d-80eb-a60703869543
+  - 925e332e-9269-43ad-99ec-cfb438ab2e97
+  - c3d16a0e-682c-4aba-b1c7-5ae08e1ba8f5
+  - a8b3f644-c812-410e-a2a7-2f54348d7b28
+  - 1abcbdfa-b487-403b-8052-7b7e6f0d84c4
+tags:
+- id: cfe4cd70-8abf-4681-8e3b-6779ae2c9c3e
+  scope: application
+  value: ndr-sensor-demo
+certificates: []
+nsx_api_calls: []

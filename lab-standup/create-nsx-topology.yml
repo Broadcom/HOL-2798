@@ -1,0 +1,222 @@
+---
+  - hosts: 127.0.0.1
+    connection: local
+    vars_files:
+      - environment.yml
+    tasks:
+      - name: create edge uplink 1 segment
+        vmware.ansible_for_nsxt.nsxt_policy_segment:
+          hostname: "{{ nsxt_hostname }}"
+          username: "{{ nsxt_username }}"
+          password: "{{ nsxt_password }}"
+          validate_certs: False
+          display_name: "{{ edge_uplink1 }}"
+          state: present
+          transport_zone_display_name: "{{ edge_transport_zone_display_name }}"
+          replication_mode: "SOURCE"
+          admin_state: UP
+          tags:
+            - scope: "HOL-Lab"
+              tag: "2572"
+          vlan_ids: 11
+          advanced_config:
+            uplink_teaming_policy_name: "VCF-edge_EC-01_uplink1-named-teaming-policy"
+        delegate_to: localhost
+
+      - name: create edge uplink 2 segment
+        vmware.ansible_for_nsxt.nsxt_policy_segment:
+          hostname: "{{ nsxt_hostname }}"
+          username: "{{ nsxt_username }}"
+          password: "{{ nsxt_password }}"
+          validate_certs: False
+          display_name: "{{ edge_uplink2 }}"
+          state: present
+          transport_zone_display_name: "{{ edge_transport_zone_display_name }}"
+          replication_mode: "SOURCE"
+          admin_state: UP
+          tags:
+            - scope: "HOL-Lab"
+              tag: "2572"
+          vlan_ids: 12
+          advanced_config:
+            uplink_teaming_policy_name: "VCF-edge_EC-01_uplink1-named-teaming-policy"
+        delegate_to: localhost
+
+      - name: create Tier0
+        vmware.ansible_for_nsxt.nsxt_policy_tier0:
+          hostname: "{{ nsxt_hostname }}"
+          username: "{{ nsxt_username }}"
+          password: "{{ nsxt_password }}"
+          validate_certs: False
+          display_name: "{{ tier0_display_name }}"
+          state: present
+          ha_mode: "ACTIVE_ACTIVE"
+          disable_firewall: True
+          force_whitelisting: True
+          tags:
+            - scope: "HOL-Lab"
+              tag: "2572"
+          locale_services:
+            - state: present
+              display_name: "{{ tier0_display_name }}"
+              route_redistribution_config:
+                bgp_enabled: true
+                redistribution_rules:
+                  - name: wld1-networks
+                    route_redistribution_types: ["TIER0_STATIC", "TIER0_NAT", "TIER0_CONNECTED", "TIER1_CONNECTED", "TIER1_SEGMENT", "TIER1_NAT"]
+              edge_cluster_info:
+                edge_cluster_display_name: "{{ edge_cluster }}"
+              BGP:
+                state: present
+                local_as_num: '65003'
+                inter_sr_ibgp: False
+                graceful_restart_config:
+                  mode: "GR_AND_HELPER"
+                neighbors:
+                  - display_name: SDDC-Router-IF1
+                    neighbor_address: "172.27.11.1"
+                    remote_as_num: "65001"
+                    state: present
+                    password: "{{vc_password}}"
+                    source_addresses:
+                    - "172.27.11.4"
+                    - "172.27.11.5"
+                  - display_name: SDDC-Router-IF2
+                    neighbor_address: "172.27.12.1"
+                    remote_as_num: "65001"
+                    state: present
+                    password: "{{vc_password}}"
+                    source_addresses:
+                    - "172.27.12.4"
+                    - "172.27.12.5"
+              interfaces:
+                - display_name: "edge1-wdl-11"
+                  state: present
+                  subnets:
+                    - ip_addresses: ["172.27.11.4"]
+                      prefix_len: 24
+                  segment_display_name: "{{ edge_uplink1 }}"
+                  edge_node_info:
+                    edge_cluster_display_name: "{{ edge_cluster }}"
+                    edge_node_display_name: "{{ edge_hostname1 }}"
+                  mtu: 8000
+                  urpf_mode: "STRICT"
+                - display_name: "edge1-wdl-12"
+                  state: present
+                  subnets:
+                    - ip_addresses: ["172.27.12.4"]
+                      prefix_len: 24
+                  segment_display_name: "{{ edge_uplink2 }}"
+                  edge_node_info:
+                    edge_cluster_display_name: "{{ edge_cluster }}"
+                    edge_node_display_name: "{{ edge_hostname1 }}"
+                  mtu: 8000
+                  urpf_mode: "STRICT"
+                - display_name: "edge2-wdl-11"
+                  state: present
+                  subnets:
+                    - ip_addresses: ["172.27.11.5"]
+                      prefix_len: 24
+                  segment_display_name: "{{ edge_uplink1 }}"
+                  edge_node_info:
+                    edge_cluster_display_name: "{{ edge_cluster }}"
+                    edge_node_display_name: "{{ edge_hostname2 }}"
+                  mtu: 8000
+                  urpf_mode: "STRICT"
+                - display_name: "edge2-wdl-12"
+                  state: present
+                  subnets:
+                    - ip_addresses: ["172.27.12.5"]
+                      prefix_len: 24
+                  segment_display_name: "{{ edge_uplink2 }}"
+                  edge_node_info:
+                    edge_cluster_display_name: "{{ edge_cluster }}"
+                    edge_node_display_name: "{{ edge_hostname2 }}"
+                  mtu: 8000
+                  urpf_mode: "STRICT"
+        delegate_to: localhost
+
+      - name: create Tier1 Router
+        vmware.ansible_for_nsxt.nsxt_policy_tier1:
+          hostname: "{{ nsxt_hostname }}"
+          username: "{{ nsxt_username }}"
+          password: "{{ nsxt_password }}"
+          validate_certs: False
+          display_name: "{{ tier1_display_name }}"
+          state: present
+          failover_mode: "PREEMPTIVE"
+          disable_firewall: True
+          force_whitelisting: True
+          enable_standby_relocation: False
+          tags:
+            - scope: "HOL-Lab"
+              tag: "2572"
+          route_advertisement_types:
+              - "TIER1_STATIC_ROUTES"
+              - "TIER1_CONNECTED"
+              - "TIER1_NAT"
+          tier0_display_name: "{{ tier0_display_name }}"
+        delegate_to: localhost
+
+      - name: create Web LS
+        vmware.ansible_for_nsxt.nsxt_policy_segment:
+          hostname: "{{ nsxt_hostname }}"
+          username: "{{ nsxt_username }}"
+          password: "{{ nsxt_password }}"
+          validate_certs: False
+          display_name: "vDefend-Web-LS"
+          state: present
+          transport_zone_display_name: "{{transport_zone_display_name}}"
+          replication_mode: "SOURCE"
+          admin_state: UP
+          tier1_display_name: "{{tier1_display_name}}"
+          tags:
+            - scope: "HOL-Lab"
+              tag: "2572"
+            - scope: "Net-Tier"
+              tag: "Web"
+          subnets:
+            - gateway_address: "10.88.1.1/24"
+        delegate_to: localhost
+
+      - name: create App LS
+        vmware.ansible_for_nsxt.nsxt_policy_segment:
+          hostname: "{{ nsxt_hostname }}"
+          username: "{{ nsxt_username }}"
+          password: "{{ nsxt_password }}"
+          validate_certs: False
+          display_name: "vDefend-App-LS"
+          state: present
+          transport_zone_display_name: "{{transport_zone_display_name}}"
+          replication_mode: "SOURCE"
+          admin_state: UP
+          tier1_display_name: "{{tier1_display_name}}"
+          tags:
+            - scope: "HOL-Lab"
+              tag: "2572"
+            - scope: "Net-Tier"
+              tag: "App"
+          subnets:
+            - gateway_address: "10.88.2.1/24"
+        delegate_to: localhost
+
+      - name: create DB LS
+        vmware.ansible_for_nsxt.nsxt_policy_segment:
+          hostname: "{{ nsxt_hostname }}"
+          username: "{{ nsxt_username }}"
+          password: "{{ nsxt_password }}"
+          validate_certs: False
+          display_name: "vDefend-DB-LS"
+          state: present
+          transport_zone_display_name: "{{transport_zone_display_name}}"
+          replication_mode: "SOURCE"
+          admin_state: UP
+          tier1_display_name: "{{tier1_display_name}}"
+          tags:
+            - scope: "HOL-Lab"
+              tag: "2572"
+            - scope: "Net-Tier"
+              tag: "DB"
+          subnets:
+            - gateway_address: "10.88.3.1/24"
+        delegate_to: localhost
