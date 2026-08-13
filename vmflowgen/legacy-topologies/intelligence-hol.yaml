@@ -1,0 +1,3508 @@
+name: intelligence-hol
+vms:
+- name: PAR.PROD.LEG.WEB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.2
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  - 9588d32c-3f43-46b7-8955-42fd3c1df8c7
+  push_tags: true
+  view_config:
+    position_x: -1523
+    position_y: 725
+  os: Linux
+  type: undefined
+- name: PAR.PROD.LEG.WEB.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.3
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  - 9588d32c-3f43-46b7-8955-42fd3c1df8c7
+  push_tags: true
+  view_config:
+    position_x: -1265
+    position_y: 711
+  os: Linux
+  type: undefined
+- name: PAR.PROD.LEG.APP.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.4
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385b
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  - 9588d32c-3f43-46b7-8955-42fd3c1df8c7
+  push_tags: true
+  view_config:
+    position_x: -1433
+    position_y: 994
+  os: Linux
+  type: undefined
+- name: PAR.PROD.LEG.DB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.5
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385c
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  - 9588d32c-3f43-46b7-8955-42fd3c1df8c7
+  push_tags: true
+  view_config:
+    position_x: -1447
+    position_y: 1263
+  os: Linux
+  type: undefined
+- name: LON.PROD.FIN.WEB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.6
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383b
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -435
+    position_y: 689
+  os: Linux
+  type: undefined
+- name: LON.PROD.FIN.WEB.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.7
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383b
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -211
+    position_y: 693
+  os: Linux
+  type: undefined
+- name: LON.PROD.FIN.APP.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.8
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383b
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385b
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -314
+    position_y: 954
+  os: Linux
+  type: undefined
+- name: LON.PROD.FIN.DB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.9
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383b
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385c
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -336
+    position_y: 1229
+  os: Linux
+  type: undefined
+- name: NY.PROD.RND.WEB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.10
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - ad3ab825-37b2-403b-9d8d-facdd8fccf13
+  push_tags: true
+  view_config:
+    position_x: 1479
+    position_y: -420
+  os: Linux
+  type: undefined
+- name: NY.PROD.RND.WEB.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.11
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - ad3ab825-37b2-403b-9d8d-facdd8fccf13
+  push_tags: true
+  view_config:
+    position_x: 1692
+    position_y: -431
+  os: Linux
+  type: undefined
+- name: NY.PROD.RND.APP.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.12
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385b
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - ad3ab825-37b2-403b-9d8d-facdd8fccf13
+  push_tags: true
+  view_config:
+    position_x: 1630
+    position_y: -183
+  os: Linux
+  type: undefined
+- name: NY.PROD.RND.DB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.13
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385c
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - ad3ab825-37b2-403b-9d8d-facdd8fccf13
+  push_tags: true
+  view_config:
+    position_x: 1655
+    position_y: 126
+  os: Linux
+  type: undefined
+- name: PAR.PROD.CRM.WEB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.14
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -946
+    position_y: 690
+  os: Linux
+  type: undefined
+- name: PAR.PROD.CRM.APP.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.15
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385b
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -947
+    position_y: 963
+  os: Linux
+  type: undefined
+- name: PAR.PROD.CRM.DB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.16
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385c
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -935
+    position_y: 1244
+  os: Linux
+  type: undefined
+- name: NY.PROD.PEO.WEB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.17
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - 20245aa0-95b2-4d2c-8ea5-b664203b9d47
+  push_tags: true
+  view_config:
+    position_x: 602
+    position_y: -455
+  os: Linux
+  type: undefined
+- name: NY.PROD.PEO.APP.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.18
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385b
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - 20245aa0-95b2-4d2c-8ea5-b664203b9d47
+  push_tags: true
+  view_config:
+    position_x: 643
+    position_y: -140
+  os: Linux
+  type: undefined
+- name: NY.PROD.PEO.DB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.19
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385c
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - 20245aa0-95b2-4d2c-8ea5-b664203b9d47
+  push_tags: true
+  view_config:
+    position_x: 652
+    position_y: 141
+  os: Linux
+  type: undefined
+- name: NY.STG.TOO.WEB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.20
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - a205bbb5-96b8-4393-98c8-4b67687ad0f1
+  push_tags: true
+  view_config:
+    position_x: 310
+    position_y: -470
+  os: Linux
+  type: undefined
+- name: NY.STG.TOO.APP.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.21
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385b
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - a205bbb5-96b8-4393-98c8-4b67687ad0f1
+  push_tags: true
+  view_config:
+    position_x: 350
+    position_y: -143
+  os: Linux
+  type: undefined
+- name: NY.STG.TOO.DB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.22
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385c
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - a205bbb5-96b8-4393-98c8-4b67687ad0f1
+  push_tags: true
+  view_config:
+    position_x: 331
+    position_y: 140
+  os: Linux
+  type: undefined
+- name: PAL.PROD.PAY.WEB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.23
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383d
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384b
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  push_tags: true
+  view_config:
+    position_x: 983
+    position_y: -464
+  os: Linux
+  type: undefined
+- name: PAL.PROD.PAY.APP.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.24
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384b
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383d
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385b
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  push_tags: true
+  view_config:
+    position_x: 980
+    position_y: -128
+  os: Linux
+  type: undefined
+- name: PAL.PROD.PAY.DB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.25
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384b
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383d
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385c
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  push_tags: true
+  view_config:
+    position_x: 1010
+    position_y: 142
+  os: Linux
+  type: undefined
+- name: PAL.PROD.SHA.WEB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.26
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384b
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - 1ea0b35d-d987-4c78-a334-857288b6a899
+  push_tags: true
+  view_config:
+    position_x: 2204
+    position_y: -426
+  os: Linux
+  type: undefined
+- name: PAL.PROD.SHA.APP.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.27
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384b
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385b
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - 1ea0b35d-d987-4c78-a334-857288b6a899
+  push_tags: true
+  view_config:
+    position_x: 2206
+    position_y: -183
+  os: Linux
+  type: undefined
+- name: PAL.PROD.SHA.DB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.28
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384b
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385c
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - 1ea0b35d-d987-4c78-a334-857288b6a899
+  push_tags: true
+  view_config:
+    position_x: 2192
+    position_y: 87
+  os: Linux
+  type: undefined
+- name: PAR.PROD.HR.WEB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.29
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -2265
+    position_y: 400
+  os: Linux
+  type: undefined
+- name: PAR.PROD.HR.APP.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.30
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385b
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -2267
+    position_y: 687
+  os: Linux
+  type: undefined
+- name: PAR.PROD.HR.DB.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.31
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385c
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -2131
+    position_y: 972
+  os: Linux
+  type: undefined
+- name: LON.PROD.IT.DNS.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.32
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384d
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -1075
+    position_y: 94
+  os: Linux
+  infra: true
+- name: LON.PROD.IT.DNS.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.33
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384d
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -1087
+    position_y: 268
+  os: Linux
+  infra: true
+- name: LON.PROD.IT.NTP.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.34
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384f
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -1272
+    position_y: 102
+  os: Linux
+  infra: true
+- name: LON.PROD.IT.NTP.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.35
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384f
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -1295
+    position_y: 298
+  os: Linux
+  infra: true
+- name: LON.PROD.IT.AD.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.36
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384e
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -886
+    position_y: 91
+  os: Linux
+  infra: true
+- name: LON.PROD.IT.AD.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.37
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384e
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -876
+    position_y: 270
+  os: Linux
+  infra: true
+- name: NY.PROD.IT.DNS.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.38
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384d
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  push_tags: true
+  view_config:
+    position_x: 726
+    position_y: -1131
+  os: Linux
+  infra: true
+- name: NY.PROD.IT.DNS.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.39
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384d
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  push_tags: true
+  view_config:
+    position_x: 740
+    position_y: -978
+  os: Linux
+  infra: true
+- name: NY.PROD.IT.NTP.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.40
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384f
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  push_tags: true
+  view_config:
+    position_x: 438
+    position_y: -1135
+  os: Linux
+  infra: true
+- name: NY.PROD.IT.NTP.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.41
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384f
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  push_tags: true
+  view_config:
+    position_x: 437
+    position_y: -981
+  os: Linux
+  infra: true
+- name: NY.PROD.IT.AD.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.42
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384e
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  push_tags: true
+  view_config:
+    position_x: 573
+    position_y: -1134
+  os: Linux
+  infra: true
+- name: NY.PROD.IT.AD.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.43
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384e
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  push_tags: true
+  view_config:
+    position_x: 586
+    position_y: -979
+  os: Linux
+  infra: true
+- name: EuropeClients
+  placement: external
+  network_settings:
+    ip_address: 192.168.10.10
+    managed: true
+    nb_ips: 1
+  tags:
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  - 425c768a-16c0-47be-8f48-39695a409441
+  view_config:
+    position_x: -1421
+    position_y: -489
+  os: Linux
+- name: USAClients
+  placement: external
+  network_settings:
+    ip_address: 192.168.10.11,192.168.10.12,192.168.10.13,192.168.10.14,192.168.10.15,192.168.10.16,192.168.10.17,192.168.10.18,192.168.10.19,192.168.10.20,192.168.10.21,192.168.10.22,192.168.10.23,192.168.10.24,192.168.10.25,192.168.10.26,192.168.10.27,192.168.10.28,192.168.10.29,192.168.10.30,192.168.10.31,192.168.10.32,192.168.10.33,192.168.10.34,192.168.10.35,192.168.10.36,192.168.10.37,192.168.10.38,192.168.10.39,192.168.10.40,192.168.10.41,192.168.10.42,192.168.10.43,192.168.10.44,192.168.10.45,192.168.10.46,192.168.10.47,192.168.10.48,192.168.10.49,192.168.10.50,192.168.10.51,192.168.10.52,192.168.10.53,192.168.10.54,192.168.10.55,192.168.10.56,192.168.10.57,192.168.10.58,192.168.10.59,192.168.10.60
+    managed: true
+    nb_ips: 50
+  tags:
+  - 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  - 425c768a-16c0-47be-8f48-39695a409441
+  view_config:
+    position_x: 1858
+    position_y: -1559
+  os: Linux
+- name: Internet
+  placement: internet
+  network_settings:
+    ip_address: 192.0.0.2
+    managed: true
+    nb_ips: 1
+  tags:
+  - f8d9963a-848d-4240-babc-f53b4c385326
+  view_config:
+    position_x: 2423
+    position_y: -786
+  os: Linux
+- name: PAR.PROD.HR.APP.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.44
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385b
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -2050
+    position_y: 681
+  os: Linux
+  type: undefined
+- name: PAR.PROD.HR.WEB.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.45
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383a
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -2058
+    position_y: 391
+  os: Linux
+  type: undefined
+- name: internet2
+  placement: internet
+  network_settings:
+    ip_address: 192.0.0.3
+    managed: true
+    nb_ips: 1
+  tags:
+  - f8d9963a-848d-4240-babc-f53b4c385326
+  view_config:
+    position_x: -2138
+    position_y: 89
+  os: Linux
+- name: LON.PROD.IT.BAC.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.46
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - de922381-5123-4700-a4bb-739c961c7452
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -50
+    position_y: 237
+  os: Linux
+  type: undefined
+- name: PAR.PROD.IT.VDI.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.47
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8330b38a-03f5-457a-b196-1d7b9f6ab477
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -870
+    position_y: -236
+  os: Linux
+  type: undefined
+- name: VDIClients1
+  placement: external
+  network_settings:
+    ip_address: 192.168.10.61,192.168.10.62,192.168.10.63,192.168.10.64,192.168.10.65,192.168.10.66,192.168.10.67,192.168.10.68,192.168.10.69,192.168.10.70,192.168.10.71,192.168.10.72,192.168.10.73,192.168.10.74,192.168.10.75,192.168.10.76,192.168.10.77,192.168.10.78,192.168.10.79,192.168.10.80,192.168.10.81,192.168.10.82,192.168.10.83,192.168.10.84,192.168.10.85,192.168.10.86,192.168.10.87,192.168.10.88,192.168.10.89,192.168.10.90,192.168.10.91,192.168.10.92,192.168.10.93,192.168.10.94,192.168.10.95,192.168.10.96,192.168.10.97,192.168.10.98,192.168.10.99,192.168.10.100,192.168.10.101,192.168.10.102,192.168.10.103,192.168.10.104,192.168.10.105,192.168.10.106,192.168.10.107,192.168.10.108,192.168.10.109,192.168.10.110,192.168.10.111,192.168.10.112,192.168.10.113,192.168.10.114,192.168.10.115,192.168.10.116,192.168.10.117,192.168.10.118,192.168.10.119,192.168.10.120,192.168.10.121,192.168.10.122,192.168.10.123,192.168.10.124,192.168.10.125,192.168.10.126,192.168.10.127,192.168.10.128,192.168.10.129,192.168.10.130,192.168.10.131,192.168.10.132,192.168.10.133,192.168.10.134,192.168.10.135,192.168.10.136,192.168.10.137,192.168.10.138,192.168.10.139,192.168.10.140,192.168.10.141,192.168.10.142,192.168.10.143,192.168.10.144,192.168.10.145,192.168.10.146,192.168.10.147,192.168.10.148,192.168.10.149,192.168.10.150
+    managed: true
+    nb_ips: 90
+  tags:
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  - 425c768a-16c0-47be-8f48-39695a409441
+  view_config:
+    position_x: -819
+    position_y: -533
+  os: Linux
+- name: PAR.PROD.IT.VDI.02
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.48
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8330b38a-03f5-457a-b196-1d7b9f6ab477
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -666
+    position_y: -242
+  os: Linux
+  type: undefined
+- name: VDIClients2
+  placement: external
+  network_settings:
+    ip_address: 192.168.10.151,192.168.10.152,192.168.10.153,192.168.10.154,192.168.10.155,192.168.10.156,192.168.10.157,192.168.10.158,192.168.10.159,192.168.10.160,192.168.10.161,192.168.10.162,192.168.10.163,192.168.10.164,192.168.10.165,192.168.10.166,192.168.10.167,192.168.10.168,192.168.10.169,192.168.10.170,192.168.10.171,192.168.10.172,192.168.10.173,192.168.10.174,192.168.10.175,192.168.10.176,192.168.10.177,192.168.10.178,192.168.10.179,192.168.10.180,192.168.10.181,192.168.10.182,192.168.10.183,192.168.10.184,192.168.10.185,192.168.10.186,192.168.10.187,192.168.10.188,192.168.10.189,192.168.10.190,192.168.10.191,192.168.10.192,192.168.10.193,192.168.10.194,192.168.10.195,192.168.10.196,192.168.10.197,192.168.10.198,192.168.10.199,192.168.10.200,192.168.10.201,192.168.10.202,192.168.10.203,192.168.10.204,192.168.10.205,192.168.10.206,192.168.10.207,192.168.10.208,192.168.10.209,192.168.10.210,192.168.10.211,192.168.10.212,192.168.10.213,192.168.10.214,192.168.10.215,192.168.10.216,192.168.10.217,192.168.10.218,192.168.10.219,192.168.10.220,192.168.10.221,192.168.10.222,192.168.10.223,192.168.10.224,192.168.10.225,192.168.10.226,192.168.10.227,192.168.10.228,192.168.10.229,192.168.10.230,192.168.10.231,192.168.10.232,192.168.10.233,192.168.10.234,192.168.10.235,192.168.10.236,192.168.10.237,192.168.10.238,192.168.10.239,192.168.10.240
+    managed: true
+    nb_ips: 90
+  tags:
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  - 425c768a-16c0-47be-8f48-39695a409441
+  view_config:
+    position_x: -637
+    position_y: -526
+  os: Linux
+- name: PAR.PROD.IT.VDI.03
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.49
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8330b38a-03f5-457a-b196-1d7b9f6ab477
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -469
+    position_y: -235
+  os: Linux
+  type: undefined
+- name: PAR.PROD.IT.VDI.04
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.50
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8330b38a-03f5-457a-b196-1d7b9f6ab477
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -269
+    position_y: -234
+  os: Linux
+  type: undefined
+- name: VDIClients3
+  placement: external
+  network_settings:
+    ip_address: 192.168.10.241,192.168.10.242,192.168.10.243,192.168.10.244,192.168.10.245,192.168.10.246,192.168.10.247,192.168.10.248,192.168.10.249,192.168.10.250,192.168.10.251,192.168.10.252,192.168.10.253,192.168.10.254,192.168.10.255,192.168.11.0,192.168.11.1,192.168.11.2,192.168.11.3,192.168.11.4,192.168.11.5,192.168.11.6,192.168.11.7,192.168.11.8,192.168.11.9,192.168.11.10,192.168.11.11,192.168.11.12,192.168.11.13,192.168.11.14,192.168.11.15,192.168.11.16,192.168.11.17,192.168.11.18,192.168.11.19,192.168.11.20,192.168.11.21,192.168.11.22,192.168.11.23,192.168.11.24,192.168.11.25,192.168.11.26,192.168.11.27,192.168.11.28,192.168.11.29,192.168.11.30,192.168.11.31,192.168.11.32,192.168.11.33,192.168.11.34,192.168.11.35,192.168.11.36,192.168.11.37,192.168.11.38,192.168.11.39,192.168.11.40,192.168.11.41,192.168.11.42,192.168.11.43,192.168.11.44,192.168.11.45,192.168.11.46,192.168.11.47,192.168.11.48,192.168.11.49,192.168.11.50,192.168.11.51,192.168.11.52,192.168.11.53,192.168.11.54,192.168.11.55,192.168.11.56,192.168.11.57,192.168.11.58,192.168.11.59,192.168.11.60,192.168.11.61,192.168.11.62,192.168.11.63,192.168.11.64,192.168.11.65,192.168.11.66,192.168.11.67,192.168.11.68,192.168.11.69,192.168.11.70,192.168.11.71,192.168.11.72,192.168.11.73,192.168.11.74
+    managed: true
+    nb_ips: 90
+  tags:
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  - 425c768a-16c0-47be-8f48-39695a409441
+  view_config:
+    position_x: -439
+    position_y: -517
+  os: Linux
+- name: VDIClients4
+  placement: external
+  network_settings:
+    ip_address: 192.168.11.75,192.168.11.76,192.168.11.77,192.168.11.78,192.168.11.79,192.168.11.80,192.168.11.81,192.168.11.82,192.168.11.83,192.168.11.84,192.168.11.85,192.168.11.86,192.168.11.87,192.168.11.88,192.168.11.89,192.168.11.90,192.168.11.91,192.168.11.92,192.168.11.93,192.168.11.94,192.168.11.95,192.168.11.96,192.168.11.97,192.168.11.98,192.168.11.99,192.168.11.100,192.168.11.101,192.168.11.102,192.168.11.103,192.168.11.104,192.168.11.105,192.168.11.106,192.168.11.107,192.168.11.108,192.168.11.109,192.168.11.110,192.168.11.111,192.168.11.112,192.168.11.113,192.168.11.114,192.168.11.115,192.168.11.116,192.168.11.117,192.168.11.118,192.168.11.119,192.168.11.120,192.168.11.121,192.168.11.122,192.168.11.123,192.168.11.124,192.168.11.125,192.168.11.126,192.168.11.127,192.168.11.128,192.168.11.129,192.168.11.130,192.168.11.131,192.168.11.132,192.168.11.133,192.168.11.134,192.168.11.135,192.168.11.136,192.168.11.137,192.168.11.138,192.168.11.139,192.168.11.140,192.168.11.141,192.168.11.142,192.168.11.143,192.168.11.144,192.168.11.145,192.168.11.146,192.168.11.147,192.168.11.148,192.168.11.149,192.168.11.150,192.168.11.151,192.168.11.152,192.168.11.153,192.168.11.154,192.168.11.155,192.168.11.156,192.168.11.157,192.168.11.158,192.168.11.159,192.168.11.160,192.168.11.161,192.168.11.162,192.168.11.163,192.168.11.164
+    managed: true
+    nb_ips: 90
+  tags:
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  - 425c768a-16c0-47be-8f48-39695a409441
+  view_config:
+    position_x: -243
+    position_y: -519
+  os: Linux
+- name: LON.PROD.IT.VDI.14
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.51
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -47
+    position_y: -232
+  os: Linux
+  type: undefined
+- name: InternetIceID
+  placement: internet
+  network_settings:
+    ip_address: 192.0.0.4
+    managed: true
+    nb_ips: 1
+  tags:
+  - f8d9963a-848d-4240-babc-f53b4c385326
+  view_config:
+    position_x: -52
+    position_y: -510
+  os: Linux
+- name: InternetC2C
+  placement: internet
+  network_settings:
+    ip_address: 192.0.0.5
+    managed: true
+    nb_ips: 1
+  tags:
+  - f8d9963a-848d-4240-babc-f53b4c385326
+  view_config:
+    position_x: 124
+    position_y: -507
+  os: Linux
+- name: LON.PROD.IT.BAC.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.52
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - de922381-5123-4700-a4bb-739c961c7452
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: -156
+    position_y: 103
+  os: Linux
+  type: undefined
+- name: LON.PROD.IT.FIL.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.53
+    managed: true
+    nb_ips: 1
+  tags:
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  - 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  - e75864fe-06fc-4926-bba8-1dec5b085927
+  - 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  push_tags: true
+  view_config:
+    position_x: 92
+    position_y: 96
+  os: Linux
+  type: undefined
+flows:
+- id: caa3d29c-3819-4bb4-98d2-76d4a9b4642f
+  source: USAClients
+  destination: NY.PROD.RND.WEB.01
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 50
+  certificate_id: undefined
+- id: c862fa05-8965-4062-983a-f550b3ba8760
+  source: USAClients
+  destination: NY.PROD.RND.WEB.02
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 50
+  certificate_id: undefined
+- id: e626c6be-377d-4c03-9f70-dcde3de747d9
+  source: USAClients
+  destination: NY.PROD.PEO.WEB.01
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 50
+  certificate_id: undefined
+- id: 592079de-ff98-44a1-88da-5b69936637a7
+  source: USAClients
+  destination: PAL.PROD.PAY.WEB.01
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 50
+  certificate_id: undefined
+- id: 8fed5af2-f21f-44bc-a753-4cfac69effc8
+  source: USAClients
+  destination: NY.STG.TOO.WEB.01
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 50
+  certificate_id: undefined
+- id: d2aade3a-6401-4936-ab27-6baf7f75ceea
+  source: USAClients
+  destination: PAL.PROD.SHA.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 30000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 50
+  certificate_id: undefined
+- id: 5418765c-f970-4898-bb72-d06481e9c784
+  source: EuropeClients
+  destination: PAR.PROD.LEG.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 30000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 7c1cdcc3-d25c-44be-868b-6c59ad4dda16
+  source: EuropeClients
+  destination: PAR.PROD.LEG.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 30000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 0b402cda-c0c5-4f32-b408-e52025544f1d
+  source: EuropeClients
+  destination: PAR.PROD.CRM.WEB.01
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 702c2ea5-05af-457d-af54-3d628417c086
+  source: EuropeClients
+  destination: LON.PROD.FIN.WEB.01
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 422d5187-5055-4482-97fa-b547c12ce9cf
+  source: EuropeClients
+  destination: LON.PROD.FIN.WEB.02
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: ffa9db65-1c62-419c-95e6-fe5063492b0f
+  source: NY.PROD.RND.WEB.02
+  destination: NY.PROD.IT.DNS.01
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: a93b6537-3b74-4d4b-ab15-0750cc9bcbc6
+  source: NY.PROD.PEO.WEB.01
+  destination: NY.PROD.IT.DNS.01
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 4b1e9968-9f60-4311-9668-29824e85cda8
+  source: PAL.PROD.PAY.WEB.01
+  destination: NY.PROD.IT.DNS.01
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 5b6d0379-d860-47e3-97c2-ae6633e691c7
+  source: PAL.PROD.SHA.WEB.01
+  destination: NY.PROD.IT.DNS.01
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8e95cbff-20b2-448f-925f-dfe9d4c6ef17
+  source: PAL.PROD.SHA.WEB.01
+  destination: PAL.PROD.SHA.APP.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 20cc2140-16f7-495f-b3e2-3ae2a29fc5dd
+  source: PAL.PROD.SHA.APP.01
+  destination: PAL.PROD.SHA.DB.01
+  protocol: TCP
+  port: 3306
+  interval: 5000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 28901067-bd6b-4abe-8e93-52d95ca00cef
+  source: NY.STG.TOO.WEB.01
+  destination: NY.PROD.IT.DNS.02
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 7428f973-5a27-408c-aded-525ef5e6313e
+  source: NY.STG.TOO.WEB.01
+  destination: NY.STG.TOO.APP.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  tls: true
+  tls_version: "1.1"
+  tls_cipher: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+  certificate_id: f434b6c7-2c7e-46ad-b7e9-0a32468f76ab
+- id: baaa44e7-606d-4577-a1ce-5fb6d553389b
+  source: NY.PROD.RND.WEB.02
+  destination: NY.PROD.IT.DNS.02
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: ccb2c76f-eb7b-4951-9c9e-c80c60a44625
+  source: NY.PROD.RND.APP.01
+  destination: NY.PROD.RND.DB.01
+  protocol: TCP
+  port: 3306
+  interval: 5000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 4777569a-0642-4922-9361-4962b8cab2d1
+  source: NY.STG.TOO.DB.01
+  destination: NY.PROD.IT.NTP.01
+  protocol: UDP
+  port: 123
+  interval: 5000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: b7bd044d-81eb-40d4-8155-5ae55bb32a36
+  source: NY.PROD.RND.WEB.01
+  destination: NY.PROD.RND.APP.01
+  protocol: TCP
+  port: 80
+  interval: 5000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 056bd059-3ce4-4f55-8b70-85e727282fe1
+  source: NY.PROD.RND.APP.01
+  destination: NY.PROD.IT.AD.01
+  protocol: TCP
+  port: 389
+  interval: 5000
+  payload: APPID - LDAP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8b8a9c20-690b-4a4f-9b52-783d5d5f91d5
+  source: NY.PROD.PEO.WEB.01
+  destination: NY.PROD.PEO.APP.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  tls: true
+  tls_version: "1.3"
+  tls_cipher: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+  certificate_id: f434b6c7-2c7e-46ad-b7e9-0a32468f76ab
+- id: d9eaa3e5-e059-4a8a-b343-5917dc73e2b4
+  source: NY.PROD.PEO.APP.01
+  destination: NY.PROD.PEO.DB.01
+  protocol: TCP
+  port: 3306
+  interval: 5000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: f3e4572f-31cc-4c0c-8a2e-e214aaec8068
+  source: NY.PROD.PEO.APP.01
+  destination: NY.PROD.IT.AD.02
+  protocol: TCP
+  port: 389
+  interval: 5000
+  payload: APPID - LDAP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 5b1c81ce-7694-4cb4-87c3-e12173ca6e84
+  source: PAL.PROD.PAY.WEB.01
+  destination: PAL.PROD.PAY.APP.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 947475d5-d1d3-4b61-8064-dcc19104c46b
+  source: PAL.PROD.PAY.APP.01
+  destination: PAL.PROD.PAY.DB.01
+  protocol: TCP
+  port: 3306
+  interval: 5000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 278c2b05-3a04-4a06-99b3-dbc12d7318b2
+  source: PAL.PROD.PAY.DB.01
+  destination: NY.PROD.IT.NTP.02
+  protocol: UDP
+  port: 123
+  interval: 5000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 681a5895-117a-4f32-9d11-13d500cf1f95
+  source: LON.PROD.FIN.APP.01
+  destination: LON.PROD.FIN.DB.01
+  protocol: TCP
+  port: 3306
+  interval: 5000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: c7500f0b-1114-4f19-a23e-f52ecaaa1f05
+  source: LON.PROD.FIN.WEB.02
+  destination: LON.PROD.FIN.APP.01
+  protocol: TCP
+  port: 8088
+  interval: 5000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: a90551ad-3e0b-4f0d-8a33-ff7d367a0aa0
+  source: PAR.PROD.HR.WEB.01
+  destination: PAR.PROD.HR.APP.01
+  protocol: TCP
+  port: 80
+  interval: 5000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 42428963-cd5b-46e1-aaa6-cb94c833cfaa
+  source: PAR.PROD.HR.APP.01
+  destination: PAR.PROD.HR.DB.01
+  protocol: TCP
+  port: 3306
+  interval: 5000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8ad5f1f5-a4ae-4d4b-b8d4-6b91b6edf8ab
+  source: PAR.PROD.HR.WEB.01
+  destination: LON.PROD.IT.DNS.02
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 603abc81-884a-4bd4-891e-35a0b0c8609d
+  source: LON.PROD.FIN.APP.01
+  destination: LON.PROD.IT.AD.02
+  protocol: TCP
+  port: 389
+  interval: 5000
+  payload: APPID - LDAP
+  data_format: template
+  type: baseline
+  children: 1
+- id: cff90a3f-af25-4044-bf1b-ddf9c9be66bc
+  source: PAR.PROD.CRM.WEB.01
+  destination: PAR.PROD.CRM.APP.01
+  protocol: TCP
+  port: 80
+  interval: 5000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 5f4e55d7-d642-4921-a04d-a54dcbb39d35
+  source: PAR.PROD.CRM.APP.01
+  destination: PAR.PROD.CRM.DB.01
+  protocol: TCP
+  port: 3306
+  interval: 5000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: bf3364a0-7912-459b-942a-a46075458396
+  source: LON.PROD.FIN.DB.01
+  destination: LON.PROD.IT.NTP.02
+  protocol: UDP
+  port: 123
+  interval: 5000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 6f8730d5-513b-45ca-a63f-11c88ba24ae6
+  source: PAR.PROD.LEG.WEB.01
+  destination: PAR.PROD.LEG.APP.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 819303c4-2e2a-4d75-9d0c-cf04177a0c3b
+  source: PAR.PROD.LEG.WEB.02
+  destination: PAR.PROD.LEG.APP.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 9dd3ce75-9898-4263-864c-485d0982b0c1
+  source: PAR.PROD.LEG.APP.01
+  destination: PAR.PROD.LEG.DB.01
+  protocol: TCP
+  port: 3306
+  interval: 5000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 83b1bfb0-2d70-4ed0-aa6a-2fd26a029f04
+  source: PAR.PROD.LEG.WEB.01
+  destination: LON.PROD.IT.DNS.01
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: c85128b0-92b7-492e-8a82-dc8e21c2e49b
+  source: PAR.PROD.CRM.WEB.01
+  destination: LON.PROD.IT.DNS.01
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: a9f1d12e-6551-4504-b54a-3b6e4809a6f5
+  source: PAR.PROD.LEG.DB.01
+  destination: LON.PROD.IT.NTP.01
+  protocol: UDP
+  port: 123
+  interval: 5000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 7c9916ed-5f0c-4fab-9586-fe81c2a356e3
+  source: PAR.PROD.LEG.APP.01
+  destination: LON.PROD.IT.AD.01
+  protocol: TCP
+  port: 389
+  interval: 5000
+  payload: APPID - LDAP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 71495368-e32c-4ac8-abbb-e0266158c7dc
+  source: NY.STG.TOO.APP.01
+  destination: NY.STG.TOO.DB.01
+  protocol: TCP
+  port: 3306
+  interval: 5000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 9832eed4-0827-4345-abc0-1269c74d4a7f
+  source: LON.PROD.FIN.DB.01
+  destination: LON.PROD.IT.DNS.02
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: e0d333d0-467c-44f7-9a5f-ac1e593d5299
+  source: PAR.PROD.CRM.WEB.01
+  destination: LON.PROD.IT.DNS.02
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 55959764-2d73-41d1-b982-8fe9138b8146
+  source: PAR.PROD.LEG.WEB.01
+  destination: LON.PROD.IT.DNS.02
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 0a181252-c83f-4092-ab03-8d20b19d3267
+  source: LON.PROD.FIN.APP.01
+  destination: LON.PROD.IT.AD.01
+  protocol: TCP
+  port: 389
+  interval: 5000
+  payload: APPID - LDAP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 0230557d-a750-4362-b93d-2e2f76dd3f24
+  source: PAR.PROD.LEG.APP.01
+  destination: LON.PROD.IT.AD.01
+  protocol: TCP
+  port: 389
+  interval: 5000
+  payload: APPID - LDAP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 09210cdb-55ec-4d75-a3ed-451ef5e2f771
+  source: NY.PROD.RND.WEB.01
+  destination: NY.PROD.IT.DNS.01
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 3bce37e5-ea39-450d-9c92-c35b1b921e5a
+  source: EuropeClients
+  destination: PAR.PROD.HR.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 30000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 10da7b18-182b-43d6-babc-7a4257f4f6d6
+  source: PAL.PROD.SHA.WEB.01
+  destination: Internet
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 8d2dffb9-1f04-408f-9c4c-dab93b63ba63
+  source: PAR.PROD.HR.WEB.02
+  destination: PAR.PROD.HR.APP.02
+  protocol: TCP
+  port: 80
+  interval: 5000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: ce4757ef-32fe-492c-926f-3fbce488e61a
+  source: PAR.PROD.HR.WEB.01
+  destination: PAR.PROD.HR.APP.02
+  protocol: TCP
+  port: 80
+  interval: 5000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 93444ad1-4895-4246-b5ce-7fa3e57bd643
+  source: PAR.PROD.HR.WEB.02
+  destination: PAR.PROD.HR.APP.01
+  protocol: TCP
+  port: 80
+  interval: 5000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 53bb87b5-da48-430d-997d-6579fad131a9
+  source: EuropeClients
+  destination: PAR.PROD.HR.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 30000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 150a7304-d036-4a4a-96e1-777ecee9b601
+  source: PAR.PROD.HR.APP.02
+  destination: PAR.PROD.HR.DB.01
+  protocol: TCP
+  port: 3306
+  interval: 5000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 036d8b7c-68ac-4fc8-b308-8090dffcb983
+  source: PAR.PROD.HR.WEB.02
+  destination: LON.PROD.IT.DNS.02
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 7124543a-7073-4de8-ab7e-3607878bde1d
+  source: PAR.PROD.HR.APP.02
+  destination: LON.PROD.IT.DNS.02
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: d11607ba-2c6d-4632-97d2-c3b84886cca0
+  source: PAR.PROD.HR.APP.01
+  destination: LON.PROD.IT.DNS.02
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: fded1524-fd81-4783-8a33-a252bf073b92
+  source: PAR.PROD.HR.DB.01
+  destination: LON.PROD.IT.DNS.02
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: b116fb2b-bfed-45f9-b8c0-68a419eb44ba
+  source: PAL.PROD.PAY.APP.01
+  destination: NY.PROD.IT.NTP.02
+  protocol: UDP
+  port: 123
+  interval: 5000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 38ffb180-c86a-455f-846f-ac1c7e41484b
+  source: PAL.PROD.PAY.WEB.01
+  destination: NY.PROD.IT.NTP.02
+  protocol: UDP
+  port: 123
+  interval: 5000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: f7825845-c30c-4358-942f-af9f543f15ee
+  source: NY.PROD.RND.WEB.01
+  destination: NY.PROD.IT.NTP.02
+  protocol: UDP
+  port: 123
+  interval: 5000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 335ad0c4-8602-4015-ad43-44469fb9b004
+  source: PAR.PROD.HR.WEB.01
+  destination: internet2
+  protocol: TCP
+  port: 10443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+- id: a326434b-e972-4247-913b-5dcfe0bbf312
+  source: PAR.PROD.HR.WEB.02
+  destination: internet2
+  protocol: TCP
+  port: 10443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+- id: b7ec2290-b988-4ec9-b959-c20dea1ab052
+  source: PAR.PROD.HR.WEB.02
+  destination: LON.PROD.IT.DNS.01
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: f7028ff0-edf1-4fac-941b-82901033b48d
+  source: PAR.PROD.HR.WEB.01
+  destination: LON.PROD.IT.DNS.01
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 39a802cd-b6a9-4660-91d4-d60038ea3a2a
+  source: LON.PROD.FIN.WEB.01
+  destination: LON.PROD.FIN.APP.01
+  protocol: TCP
+  port: 8088
+  interval: 5000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: bf22b4b5-8e1a-461c-a8ff-9b92ac371b55
+  source: NY.PROD.RND.WEB.02
+  destination: NY.PROD.RND.APP.01
+  protocol: TCP
+  port: 80
+  interval: 5000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: b5bf3d77-4f36-473f-9c72-1e97253a8d17
+  source: LON.PROD.IT.BAC.02
+  destination: LON.PROD.IT.DNS.01
+  protocol: UDP
+  port: 53
+  interval: 5000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 268e526e-4025-4005-b4db-f526455ed4cd
+  source: LON.PROD.IT.BAC.02
+  destination: LON.PROD.FIN.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 0f0f4ac9-3c2c-4073-ac4c-afa5250bd20a
+  source: VDIClients1
+  destination: PAR.PROD.IT.VDI.01
+  protocol: TCP
+  port: 3389
+  interval: 30000
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 90
+- id: 4ff96d97-2bf6-40ee-b7d7-5bf9bf62550b
+  source: VDIClients1
+  destination: PAR.PROD.IT.VDI.02
+  protocol: TCP
+  port: 3389
+  interval: 30000
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 90
+- id: 49b81ae6-b825-449a-8cfe-e681a2bee9ca
+  source: PAR.PROD.IT.VDI.01
+  destination: PAR.PROD.HR.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: ec821a7b-9ff9-452a-a339-14d72a1bcde9
+  source: PAR.PROD.IT.VDI.01
+  destination: PAR.PROD.HR.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 3652a39d-43a0-4068-adbd-d006e6e71770
+  source: PAR.PROD.IT.VDI.01
+  destination: PAR.PROD.LEG.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: ab3fc7b9-81a0-4c25-8f3a-086af4eebe0c
+  source: PAR.PROD.IT.VDI.01
+  destination: PAR.PROD.LEG.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 9963cb61-4153-4de6-aec2-2ec8c9d34608
+  source: PAR.PROD.IT.VDI.01
+  destination: PAR.PROD.CRM.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: c5051a9e-578d-49be-b4eb-ffe0a4b57435
+  source: PAR.PROD.IT.VDI.01
+  destination: LON.PROD.FIN.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 958c9086-6b61-4ae6-bf19-b72faa01337c
+  source: PAR.PROD.IT.VDI.01
+  destination: LON.PROD.FIN.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 1f4b4363-269a-47fe-9c94-2fcdf4d2f7d6
+  source: PAR.PROD.IT.VDI.02
+  destination: LON.PROD.FIN.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 7113de5e-b5b2-4fea-978d-0aea8a13f98d
+  source: PAR.PROD.IT.VDI.02
+  destination: LON.PROD.FIN.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: db7a9bb1-c93f-4948-81a8-9eeaa5210128
+  source: PAR.PROD.IT.VDI.02
+  destination: PAR.PROD.CRM.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 1e3ca493-5302-445f-aa10-f771f7ef867d
+  source: PAR.PROD.IT.VDI.02
+  destination: PAR.PROD.LEG.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 353c2a1f-1ee8-4bf1-9a14-c19064688a47
+  source: PAR.PROD.IT.VDI.02
+  destination: PAR.PROD.LEG.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: d5f82483-e17b-444c-818b-61a86ba44c68
+  source: PAR.PROD.IT.VDI.02
+  destination: PAR.PROD.HR.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 733d6240-64a5-42fa-bc3e-aae1e28d0897
+  source: PAR.PROD.IT.VDI.02
+  destination: PAR.PROD.HR.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: cd92ebcc-f86b-4eb0-b3fc-80fc6e13b12a
+  source: VDIClients2
+  destination: PAR.PROD.IT.VDI.01
+  protocol: TCP
+  port: 3389
+  interval: 30000
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 90
+  certificate_id: undefined
+- id: c309c8a0-e33b-4688-b7c7-7b4ec143f6c2
+  source: VDIClients2
+  destination: PAR.PROD.IT.VDI.02
+  protocol: TCP
+  port: 3389
+  interval: 30000
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 90
+  certificate_id: undefined
+- id: 8b231fc7-41fb-4733-ada6-c6ca83a8502b
+  source: PAR.PROD.IT.VDI.03
+  destination: PAR.PROD.HR.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: b9975649-7d47-4054-aeb6-f28636352989
+  source: PAR.PROD.IT.VDI.03
+  destination: PAR.PROD.HR.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: d97e6d75-f6d1-47b5-acf2-6149a0940fb8
+  source: PAR.PROD.IT.VDI.03
+  destination: PAR.PROD.LEG.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 3b9c2525-45f3-4567-8f8a-9cbd07619c7d
+  source: PAR.PROD.IT.VDI.03
+  destination: PAR.PROD.LEG.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: cc1cd816-89d8-4a74-ad22-64df25f0ea7f
+  source: PAR.PROD.IT.VDI.03
+  destination: PAR.PROD.CRM.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 1b0de429-ada5-4fb9-bd16-6955511fdb07
+  source: PAR.PROD.IT.VDI.03
+  destination: LON.PROD.FIN.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 622d765a-ef76-480c-9776-4bcb09bbae44
+  source: PAR.PROD.IT.VDI.03
+  destination: LON.PROD.FIN.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 6b6497ad-f50e-4119-b3c4-e6bc66bae4b0
+  source: PAR.PROD.IT.VDI.04
+  destination: PAR.PROD.HR.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 923ea9b2-1a6f-4700-bc09-afccf8dfe921
+  source: PAR.PROD.IT.VDI.04
+  destination: PAR.PROD.HR.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 092cbaaa-18a9-4386-abc1-f910dacb9ef9
+  source: PAR.PROD.IT.VDI.04
+  destination: PAR.PROD.LEG.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 68aaef86-04b7-4f0a-be4f-1a5f90c09b9c
+  source: PAR.PROD.IT.VDI.04
+  destination: PAR.PROD.LEG.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: a7a70bab-b418-4d68-8ece-2eb7661e3a89
+  source: PAR.PROD.IT.VDI.04
+  destination: PAR.PROD.CRM.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 86e98bd6-7d66-4469-b0ed-bba705a9df26
+  source: PAR.PROD.IT.VDI.04
+  destination: LON.PROD.FIN.WEB.01
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 1a000d00-058c-4d24-89cf-6d95a897933a
+  source: PAR.PROD.IT.VDI.04
+  destination: LON.PROD.FIN.WEB.02
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 76d2faa5-2b88-48ab-9795-450eabedd755
+  source: VDIClients3
+  destination: PAR.PROD.IT.VDI.03
+  protocol: TCP
+  port: 3389
+  interval: 30000
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 90
+  certificate_id: undefined
+- id: ec54096b-b6b8-48f2-a95f-86711ea3147b
+  source: VDIClients3
+  destination: PAR.PROD.IT.VDI.04
+  protocol: TCP
+  port: 3389
+  interval: 30000
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 90
+  certificate_id: undefined
+- id: 1706f2e5-a886-4fef-8d64-f68e2b246bae
+  source: VDIClients4
+  destination: PAR.PROD.IT.VDI.03
+  protocol: TCP
+  port: 3389
+  interval: 30000
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 90
+  certificate_id: undefined
+- id: 5c60c813-e32e-4ea5-8c7c-2c88efff7799
+  source: VDIClients4
+  destination: PAR.PROD.IT.VDI.04
+  protocol: TCP
+  port: 3389
+  interval: 30000
+  payload: APPID - RDP
+  data_format: template
+  type: baseline
+  children: 90
+  certificate_id: undefined
+- id: a58660ea-5974-450c-8659-2c8d1a78ea87
+  source: LON.PROD.IT.VDI.14
+  destination: InternetIceID
+  protocol: TCP
+  port: 80
+  interval: 0
+  payload: MPS - IcedID OneNote Lure
+  description: A user on a VDI desktop was tricked into clicking a link in an email
+    This triggered the download of a malicoius OneNote file.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 9e1c8a62-95b3-455d-b111-be9e65ade28e
+  source: LON.PROD.IT.VDI.14
+  destination: InternetIceID
+  protocol: TCP
+  port: 80
+  interval: 0
+  payload: IcedID  DLL (renamed to .jpg)
+  description: An IcedID trojan is downloaded
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 13e1d7d5-13dd-4ba3-9fac-6a1453dec2a6
+  source: LON.PROD.IT.VDI.14
+  destination: InternetC2C
+  protocol: TCP
+  port: 80
+  interval: 0
+  payload: IDS - 109683001 - NSX - (Command and Control) Detect possible IcedID C&C
+    communication
+  description: A command and control session gets established, giving the attacker
+    control over this VDI desktop.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: fedc28b1-b98e-4f94-98c3-ecfa55664530
+  source: LON.PROD.IT.VDI.14
+  destination: LON.PROD.IT.AD.01
+  protocol: TCP
+  port: 445
+  interval: 0
+  payload: IDS - 106534500 - NSX - Detect Potential AD Account Enumeration
+  description: The attacker used credentials from the admin user on the VDI desktop
+    to discover Active Directory and enumerate the computer and user inventory.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 9c135470-b806-4323-aa92-bcd7f4f20a5f
+  source: LON.PROD.IT.VDI.14
+  destination: LON.PROD.IT.AD.01
+  protocol: TCP
+  port: 80
+  interval: 0
+  payload: SCRIPT - Horizontal Port Scan (NMAP) - 10.0.0.0/24
+  description: 'The attacker then went on to discover the enironment, running a port
+    scan against a file server and backup server. '
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 224737ff-2321-45f0-83a9-ffb2dd0c1cbc
+  source: LON.PROD.IT.VDI.14
+  destination: LON.PROD.IT.BAC.01
+  protocol: TCP
+  port: 3389
+  interval: 5000
+  payload: APPID - RDP
+  description: They then proceeded to use the Remote Desktop Protocol (also named
+    the Ransomware Distribution Protocol by some), to move laterally and gain access
+    to these server.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: f188bcfc-7eae-41ab-b358-bb1dd4628edf
+  source: LON.PROD.IT.VDI.14
+  destination: LON.PROD.IT.FIL.01
+  protocol: TCP
+  port: 3389
+  interval: 5000
+  payload: APPID - RDP
+  description: They then proceeded to use the Remote Desktop Protocol (also named
+    the Ransomware Distribution Protocol by some), to move laterally and gain access
+    to these server.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: fd8fea76-5e7e-40ad-a073-39e2ce7e993f
+  source: LON.PROD.IT.BAC.01
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 2032362 - ET MALWARE Cobalt Strike Beacon Activity
+  description: The Cobalt Strike post-exploit toolkit was deployed and command and
+    control initiated.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: bd8ecd02-84c9-4c26-a1e6-bc38a3da8af2
+  source: LON.PROD.IT.FIL.01
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 2032362 - ET MALWARE Cobalt Strike Beacon Activity
+  description: 'The Cobalt Strike post-exploit toolkit was deployed and command and
+    control initiated. '
+  data_format: template
+  type: on-demand
+  children: 1
+- id: b2e72061-07b1-43ff-b2c2-83684ae6e6f5
+  source: LON.PROD.IT.BAC.01
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 2032957 - ET MALWARE Cobalt Strike Malleable C2 (Unknown Profile)
+  description: 'The Cobalt Strike post-exploit toolkit was deployed and command and
+    control initiated. '
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 35523c0e-59c1-4703-849d-09d49b6f88f0
+  source: LON.PROD.IT.FIL.01
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 2032957 - ET MALWARE Cobalt Strike Malleable C2 (Unknown Profile)
+  description: The Cobalt Strike post-exploit toolkit was deployed and command and
+    control initiated.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: b9de567c-7d5f-4e32-ae6f-92a52f479cf3
+  source: LON.PROD.IT.BAC.01
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 1107300 - NSX - (Lateral Movement) Detect SSL/TLS Certificate Observed
+    (AnyDesk Remote Desktop Software)
+  description: The attacker was then observed installing an Anydesk server on both
+    workloads, giving them persistent access.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 1948411d-439e-4b1c-aa65-d99bba59a213
+  source: LON.PROD.IT.FIL.01
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 1107300 - NSX - (Lateral Movement) Detect SSL/TLS Certificate Observed
+    (AnyDesk Remote Desktop Software)
+  description: The attacker was then observed installing an Anydesk server on both
+    workloads, giving them persistent access.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 91bbd234-1e5f-4c45-a37a-1cf4c9de9fac
+  source: LON.PROD.IT.FIL.01
+  destination: LON.PROD.IT.VDI.14
+  protocol: TCP
+  port: 22
+  interval: 5000
+  payload: NTA - SSH upload
+  description: The attacker exfiltrated critical data out of the fileserver.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 35331c22-5397-46b6-9f76-f5790e05a899
+  source: LON.PROD.IT.VDI.14
+  destination: InternetIceID
+  protocol: TCP
+  port: 22
+  interval: 5000
+  payload: NTA - SSH upload
+  description: The attacker exfiltrated critical data out of the fileserver.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 554b1f08-7842-4f60-a845-ef14ebfefe2f
+  source: LON.PROD.IT.BAC.01
+  destination: InternetIceID
+  protocol: TCP
+  port: 80
+  interval: 5000
+  payload: MPS - Nokoyama Ransomware
+  description: And finally, deployed the Nokoyawa ransomware to both servers, encrypting
+    the files and leaving behind a demand for payout along with a bitcoin address.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 59305119-b3a7-491c-889c-95e0644aeeb3
+  source: LON.PROD.IT.FIL.01
+  destination: InternetIceID
+  protocol: TCP
+  port: 80
+  interval: 5000
+  payload: MPS - Nokoyama Ransomware
+  description: And finally, deployed the Nokoyawa ransomware to both servers, encrypting
+    the files and leaving behind a demand for payout along with a bitcoin address.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: c4f64669-8b29-4ea1-9ec7-edbcdd7a4710
+  source: NY.PROD.RND.WEB.02
+  destination: Internet
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: cd3a5059-9111-4228-a2bd-0df83b72bd06
+  source: NY.PROD.RND.WEB.01
+  destination: Internet
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 81a02557-c831-4eff-8c31-e3c1a7284727
+  source: PAL.PROD.PAY.WEB.01
+  destination: Internet
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: 75e7fe93-5145-436f-b42c-f7bf9908c41c
+  source: NY.PROD.PEO.WEB.01
+  destination: Internet
+  protocol: TCP
+  port: 80
+  interval: 30000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  certificate_id: undefined
+- id: f73c9e54-bab6-415a-8492-5df75a4b85ca
+  source: LON.PROD.FIN.APP.01
+  destination: NY.PROD.RND.DB.01
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+campaign:
+  name: default
+  blocking: true
+  flow_ids:
+  - a58660ea-5974-450c-8659-2c8d1a78ea87
+  - 9e1c8a62-95b3-455d-b111-be9e65ade28e
+  - 13e1d7d5-13dd-4ba3-9fac-6a1453dec2a6
+  - fedc28b1-b98e-4f94-98c3-ecfa55664530
+  - 9c135470-b806-4323-aa92-bcd7f4f20a5f
+  - 224737ff-2321-45f0-83a9-ffb2dd0c1cbc
+  - f188bcfc-7eae-41ab-b358-bb1dd4628edf
+  - fd8fea76-5e7e-40ad-a073-39e2ce7e993f
+  - bd8ecd02-84c9-4c26-a1e6-bc38a3da8af2
+  - b2e72061-07b1-43ff-b2c2-83684ae6e6f5
+  - 35523c0e-59c1-4703-849d-09d49b6f88f0
+  - b9de567c-7d5f-4e32-ae6f-92a52f479cf3
+  - 1948411d-439e-4b1c-aa65-d99bba59a213
+  - 91bbd234-1e5f-4c45-a37a-1cf4c9de9fac
+  - 35331c22-5397-46b6-9f76-f5790e05a899
+  - 554b1f08-7842-4f60-a845-ef14ebfefe2f
+  - 59305119-b3a7-491c-889c-95e0644aeeb3
+tags:
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608382e
+  scope: env
+  value: PROD
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608382f
+  scope: env
+  value: STG
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608383a
+  scope: app
+  value: HR
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608383b
+  scope: app
+  value: FIN
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608383c
+  scope: app
+  value: CRM
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608383d
+  scope: app
+  value: PAY
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608383e
+  scope: app
+  value: IT
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608383f
+  scope: site
+  value: PAR
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608384a
+  scope: site
+  value: LON
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608384b
+  scope: site
+  value: PAL
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608384c
+  scope: site
+  value: NYC
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608384d
+  scope: tier
+  value: DNS
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608384e
+  scope: tier
+  value: AD
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608384f
+  scope: tier
+  value: NTP
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608385a
+  scope: tier
+  value: WEB
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608385b
+  scope: tier
+  value: APP
+- id: 8d8cd2f1-3f89-4bf0-8b61-996a1608385c
+  scope: tier
+  value: DB
+- id: 8330b38a-03f5-457a-b196-1d7b9f6ab477
+  scope: tier
+  value: VDI
+- id: e75864fe-06fc-4926-bba8-1dec5b085927
+  scope: tier
+  value: FIL
+- id: de922381-5123-4700-a4bb-739c961c7452
+  scope: tier
+  value: BAC
+- id: 6e9ec282-f1c5-4b92-a022-310f82d525bd
+  scope: az
+  value: EUROPE
+- id: 8b84d931-7cf7-48d9-a2f9-392dcb589961
+  scope: az
+  value: USA
+- id: f8d9963a-848d-4240-babc-f53b4c385326
+  scope: type
+  value: INTERNET
+- id: 425c768a-16c0-47be-8f48-39695a409441
+  scope: type
+  value: IP
+- id: 20245aa0-95b2-4d2c-8ea5-b664203b9d47
+  scope: app
+  value: PEO
+- id: a205bbb5-96b8-4393-98c8-4b67687ad0f1
+  scope: app
+  value: TOO
+- id: 9588d32c-3f43-46b7-8955-42fd3c1df8c7
+  scope: app
+  value: LEG
+- id: ad3ab825-37b2-403b-9d8d-facdd8fccf13
+  scope: app
+  value: RND
+- id: 1ea0b35d-d987-4c78-a334-857288b6a899
+  scope: app
+  value: SHA
+certificates:
+- id: f434b6c7-2c7e-46ad-b7e9-0a32468f76ab
+  name: my-app.com
+  tls_server_certificate: |
+    -----BEGIN CERTIFICATE-----
+    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
+    -----END CERTIFICATE-----
+  tls_server_private_key: |
+    -----BEGIN RSA PRIVATE KEY-----
+    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
+    -----END RSA PRIVATE KEY-----
+nsx_api_calls:
+- id: 64ff7434-bd20-4cfc-b499-51c2d78b8a78
+  name: groups and rules
+  method: PATCH
+  uri: policy/api/v1/infra
+  body: |-
+    {
+        "resource_type": "Infra",
+        "id": "infra",
+        "display_name": "infra",
+        "children": [
+            {
+                "Domain": {
+                    "resource_type": "Domain",
+                    "id": "default",
+                    "display_name": "default",
+                    "children": [
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "app|HR",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "site|PAR",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "env|PROD",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "PAR.PROD.HR.ALL",
+                                "display_name": "PAR.PROD.HR.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "app|LEG",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "site|PAR",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "env|PROD",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "PAR.PROD.LEG.ALL",
+                                "display_name": "PAR.PROD.LEG.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "app|FIN",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "site|LON",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "env|PROD",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "LON.PROD.FIN.ALL",
+                                "display_name": "LON.PROD.FIN.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "app|TOO",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "site|NYC",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "env|STG",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "NY.STG.TOO.ALL",
+                                "display_name": "NY.STG.TOO.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "app|PEO",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "site|NYC",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "env|PROD",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "NY.PROD.PEO.ALL",
+                                "display_name": "NY.PROD.PEO.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "app|PAY",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "site|PAL",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "env|PROD",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "PAL.PROD.PAY.ALL",
+                                "display_name": "PAL.PROD.PAY.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "app|RND",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "site|NYC",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "env|PROD",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "NY.PROD.RND.ALL",
+                                "display_name": "NY.PROD.RND.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "app|SHA",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "site|PAL",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "env|PROD",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "PAL.PROD.SHA.ALL",
+                                "display_name": "PAL.PROD.SHA.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "env|PROD",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "PROD.ALL",
+                                "display_name": "PROD.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "env|STG",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "STG.ALL",
+                                "display_name": "STG.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "site|PAL",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "OR",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "site|NYC",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "US.ALL",
+                                "display_name": "US.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "site|PAR",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "OR",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "site|LON",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "EUROPE.ALL",
+                                "display_name": "EUROPE.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "app|IT",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "tier|DNS",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "IT.DNS.ALL",
+                                "display_name": "IT.DNS.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "app|IT",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "tier|NTP",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "IT.NTP.ALL",
+                                "display_name": "IT.NTP.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "app|IT",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "tier|AD",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "IT.AD.ALL",
+                                "display_name": "IT.AD.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "Group": {
+                                "expression": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "app|IT",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "tier|VDI",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "Group",
+                                "id": "IT.VDI.ALL",
+                                "display_name": "IT.VDI.ALL"
+                            },
+                            "resource_type": "ChildGroup",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "SecurityPolicy": {
+                                "resource_type": "SecurityPolicy",
+                                "id": "Infra-rules",
+                                "display_name": "Infra rules",
+                                "category": "Infrastructure",
+                                "children": [
+                                    {
+                                        "Rule": {
+                                            "action": "ALLOW",
+                                            "resource_type": "Rule",
+                                            "id": "allow-dns",
+                                            "display_name": "Allow DNS",
+                                            "source_groups": [
+                                                "ANY"
+                                            ],
+                                            "destination_groups": [
+                                                "/infra/domains/default/groups/IT.DNS.ALL"
+                                            ],
+                                            "services": [
+                                                "/infra/services/DNS-UDP"
+                                            ],
+                                            "service_entries": [],
+                                            "profiles": [
+                                                "/infra/context-profiles/DNS"
+                                            ],
+                                            "logged": false,
+                                            "scope": [
+                                                "ANY"
+                                            ]
+                                        },
+                                        "resource_type": "ChildRule",
+                                        "marked_for_delete": false,
+                                        "mark_for_override": false
+                                    },
+                                    {
+                                        "Rule": {
+                                            "action": "ALLOW",
+                                            "resource_type": "Rule",
+                                            "id": "allow-dns-l4",
+                                            "display_name": "Allow DNS L4",
+                                            "source_groups": [
+                                                "ANY"
+                                            ],
+                                            "destination_groups": [
+                                                "/infra/domains/default/groups/IT.DNS.ALL"
+                                            ],
+                                            "services": [
+                                                "/infra/services/DNS-UDP"
+                                            ],
+                                            "service_entries": [],
+                                            "profiles": [
+                                                "ANY"
+                                            ],
+                                            "logged": false,
+                                            "scope": [
+                                                "ANY"
+                                            ]
+                                        },
+                                        "resource_type": "ChildRule",
+                                        "marked_for_delete": false,
+                                        "mark_for_override": false
+                                    },
+                                    {
+                                        "Rule": {
+                                            "action": "ALLOW",
+                                            "resource_type": "Rule",
+                                            "id": "allow-ntp",
+                                            "display_name": "Allow NTP",
+                                            "source_groups": [
+                                                "ANY"
+                                            ],
+                                            "destination_groups": [
+                                                "/infra/domains/default/groups/IT.NTP.ALL"
+                                            ],
+                                            "services": [
+                                                "/infra/services/NTP"
+                                            ],
+                                            "service_entries": [],
+                                            "profiles": [
+                                                "ANY"
+                                            ],
+                                            "logged": false,
+                                            "scope": [
+                                                "ANY"
+                                            ]
+                                        },
+                                        "resource_type": "ChildRule",
+                                        "marked_for_delete": false,
+                                        "mark_for_override": false
+                                    },
+                                    {
+                                        "Rule": {
+                                            "action": "ALLOW",
+                                            "resource_type": "Rule",
+                                            "id": "allow-ad",
+                                            "display_name": "Allow AD",
+                                            "source_groups": [
+                                                "ANY"
+                                            ],
+                                            "destination_groups": [
+                                                "/infra/domains/default/groups/IT.AD.ALL"
+                                            ],
+                                            "services": [
+                                                "/infra/services/Microsoft_Active_Directory_V1"
+                                            ],
+                                            "service_entries": [],
+                                            "profiles": [
+                                                "ANY"
+                                            ],
+                                            "logged": false,
+                                            "scope": [
+                                                "ANY"
+                                            ]
+                                        },
+                                        "resource_type": "ChildRule",
+                                        "marked_for_delete": false,
+                                        "mark_for_override": false
+                                    },
+                                    {
+                                        "Rule": {
+                                            "action": "ALLOW",
+                                            "resource_type": "Rule",
+                                            "id": "allow-vdi",
+                                            "display_name": "Allow VDI",
+                                            "source_groups": [
+                                                "ANY"
+                                            ],
+                                            "destination_groups": [
+                                                "/infra/domains/default/groups/IT.VDI.ALL"
+                                            ],
+                                            "services": [
+                                                "/infra/services/RDP"
+                                            ],
+                                            "service_entries": [],
+                                            "profiles": [
+                                                "ANY"
+                                            ],
+                                            "logged": false,
+                                            "scope": [
+                                                "ANY"
+                                            ]
+                                        },
+                                        "resource_type": "ChildRule",
+                                        "marked_for_delete": false,
+                                        "mark_for_override": false
+                                    },
+                                    {
+                                        "Rule": {
+                                            "action": "ALLOW",
+                                            "resource_type": "Rule",
+                                            "id": "allow-vdi-app",
+                                            "display_name": "Allow VDI to App",
+                                            "source_groups": [
+                                                "/infra/domains/default/groups/IT.VDI.ALL"
+                                            ],
+                                            "destination_groups": [
+                                                "/infra/domains/default/groups/US.ALL",
+                                                "/infra/domains/default/groups/EUROPE.ALL"
+                                            ],
+                                            "services": [
+                                                "ANY"
+                                            ],
+                                            "service_entries": [],
+                                            "profiles": [
+                                                "ANY"
+                                            ],
+                                            "logged": false,
+                                            "scope": [
+                                                "ANY"
+                                            ]
+                                        },
+                                        "resource_type": "ChildRule",
+                                        "marked_for_delete": false,
+                                        "mark_for_override": false
+                                    }
+                                ]
+                            },
+                            "resource_type": "ChildSecurityPolicy",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        },
+                        {
+                            "SecurityPolicy": {
+                                "resource_type": "SecurityPolicy",
+                                "id": "Inter-regions",
+                                "display_name": "Regions rules",
+                                "category": "Environment",
+                                "children": [
+                                    {
+                                        "Rule": {
+                                            "action": "REJECT",
+                                            "resource_type": "Rule",
+                                            "id": "europe-us",
+                                            "display_name": "Drop Europe to US",
+                                            "source_groups": [
+                                                "/infra/domains/default/groups/EUROPE.ALL"
+                                            ],
+                                            "destination_groups": [
+                                                "/infra/domains/default/groups/US.ALL"
+                                            ],
+                                            "services": [
+                                                "ANY"
+                                            ],
+                                            "service_entries": [],
+                                            "profiles": [
+                                                "ANY"
+                                            ],
+                                            "logged": false,
+                                            "scope": [
+                                                "ANY"
+                                            ]
+                                        },
+                                        "resource_type": "ChildRule",
+                                        "marked_for_delete": false,
+                                        "mark_for_override": false
+                                    },
+                                    {
+                                        "Rule": {
+                                            "action": "REJECT",
+                                            "resource_type": "Rule",
+                                            "id": "us-europe",
+                                            "display_name": "Drop US to Europe",
+                                            "source_groups": [
+                                                "/infra/domains/default/groups/US.ALL"
+                                            ],
+                                            "destination_groups": [
+                                                "/infra/domains/default/groups/EUROPE.ALL"
+                                            ],
+                                            "services": [
+                                                "ANY"
+                                            ],
+                                            "service_entries": [],
+                                            "profiles": [
+                                                "ANY"
+                                            ],
+                                            "logged": false,
+                                            "scope": [
+                                                "ANY"
+                                            ]
+                                        },
+                                        "resource_type": "ChildRule",
+                                        "marked_for_delete": false,
+                                        "mark_for_override": false
+                                    }
+                                ]
+                            },
+                            "resource_type": "ChildSecurityPolicy",
+                            "marked_for_delete": false,
+                            "mark_for_override": false
+                        }
+                    ]
+                },
+                "resource_type": "ChildDomain"
+            }
+        ]
+    }
+  execute_at_beginning: false

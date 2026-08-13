@@ -1,0 +1,53 @@
+---
+
+- name: web-group
+  nsxt_policy_group:
+    hostname: "{{ nsxt_wld01_hostname }}"
+    username: "{{ nsxt_wld01_username }}"
+    password: "{{ nsxt_wld01_password }}"
+    mgr_type: "local"
+    validate_certs: False
+    display_name: "web-group"
+    state: "present"
+    domain_id: "default"
+    expression:
+          - member_type: "VirtualMachine"
+            value: "tier|web-seg-a"
+            key: "Tag"
+            operator: "EQUALS"
+            resource_type: "Condition"
+  delegate_to: localhost
+- name: app-group
+  nsxt_policy_group:
+    hostname: "{{ nsxt_wld01_hostname }}"
+    username: "{{ nsxt_wld01_username }}"
+    password: "{{ nsxt_wld01_password }}"
+    mgr_type: "local"
+    validate_certs: False
+    display_name: "app-group"
+    state: "present"
+    domain_id: "default"
+    expression:
+          - member_type: "VirtualMachine"
+            value: "tier|app-seg-a"
+            key: "Tag"
+            operator: "EQUALS"
+            resource_type: "Condition"
+  delegate_to: localhost
+- name: db-group
+  nsxt_policy_group:
+    hostname: "{{ nsxt_wld01_hostname }}"
+    username: "{{ nsxt_wld01_username }}"
+    password: "{{ nsxt_wld01_password }}"
+    mgr_type: "local"
+    validate_certs: False
+    display_name: "db-group"
+    state: "present"
+    domain_id: "default"
+    expression:
+          - member_type: "VirtualMachine"
+            value: "tier|db-seg-a"
+            key: "Tag"
+            operator: "EQUALS"
+            resource_type: "Condition"
+  delegate_to: localhost

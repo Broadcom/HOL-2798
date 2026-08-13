@@ -1,0 +1,11 @@
+---
+
+  - include_vars: security_groups_variables.yml
+  
+
+  - name: Initiate Security Group Creation | Loop Seucrity Groups
+    include_tasks: 
+      file: ./sec_groups.yaml
+    loop: "{{ sec_groups }}"
+    loop_control:
+      loop_var: SEC

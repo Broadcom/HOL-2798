@@ -1,0 +1,109 @@
+name: idpsdemo
+vms:
+- name: idps-01
+  placement: web-seg-a
+  network_settings:
+    ip_address: 10.1.13.12
+    managed: true
+    nb_ips: 1
+  tags:
+  - f520ec5d-dfbf-4942-9d7e-b37d6c9f0f11
+  push_tags: true
+  view_config:
+    position_x: -322
+    position_y: -32
+  os: Linux
+  type: undefined
+- name: idps-02
+  placement: web-seg-a
+  network_settings:
+    ip_address: 10.1.13.13
+    managed: true
+    nb_ips: 1
+  tags:
+  - f520ec5d-dfbf-4942-9d7e-b37d6c9f0f11
+  push_tags: true
+  view_config:
+    position_x: 119
+    position_y: -52
+  os: Linux
+- name: idps-03
+  placement: db-seg-a
+  network_settings:
+    ip_address: 10.1.14.11
+    managed: true
+    nb_ips: 1
+  tags:
+  - f520ec5d-dfbf-4942-9d7e-b37d6c9f0f11
+  push_tags: true
+  view_config:
+    position_x: 24
+    position_y: 267
+  os: Linux
+flows:
+- id: 08d61c09-15b9-445e-9c4c-d17e5d53aacd
+  source: idps-01
+  destination: idps-02
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: IDS - 106534500 - NSX - Detect Potential AD Account Enumeration
+  data_format: template
+  type: on-demand
+  children: 1
+- id: d3277f26-62df-4eda-b104-6f171c7acbac
+  source: idps-01
+  destination: idps-03
+  protocol: TCP
+  port: 3389
+  interval: 1000
+  payload: IDS - 1107300 - NSX - (Lateral Movement) Detect SSL/TLS Certificate Observed
+    (AnyDesk Remote Desktop Software)
+  data_format: template
+  type: on-demand
+  children: 1
+- id: d724c21e-a070-4df3-a0f3-38cf13303f50
+  source: idps-02
+  destination: idps-01
+  protocol: TCP
+  port: 53
+  interval: 1000
+  payload: IDS - 1092316 - NSX - (Exfiltration) Detect possible outbound dnscat2 exfiltration
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 53cbab3b-db31-47bb-8de7-be7f042c731f
+  source: idps-03
+  destination: idps-01
+  protocol: TCP
+  port: 445
+  interval: 10000
+  payload: IDS - 2025636 - ET MALWARE Cobalt Strike Exfiltration
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 7fe6782b-48ea-43ab-9abc-aef7b0530686
+  source: idps-01
+  destination: idps-03
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: IcedID  DLL (renamed to .jpg)
+  data_format: template
+  type: on-demand
+  children: 1
+campaign:
+  name: default
+  blocking: true
+  flow_ids:
+  - 08d61c09-15b9-445e-9c4c-d17e5d53aacd
+  - d724c21e-a070-4df3-a0f3-38cf13303f50
+  - d3277f26-62df-4eda-b104-6f171c7acbac
+  - 53cbab3b-db31-47bb-8de7-be7f042c731f
+  - 7fe6782b-48ea-43ab-9abc-aef7b0530686
+tags:
+- id: f520ec5d-dfbf-4942-9d7e-b37d6c9f0f11
+  scope: app
+  value: idps-demo
+certificates: []
+nsx_api_calls: []

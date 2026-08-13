@@ -1,0 +1,4808 @@
+name: security-journey
+vms:
+- name: xvkkmq8228
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.6
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 34bca44e-6fd8-4228-8071-b6268965f9f5
+  - 22915eed-bfe2-4fdd-838f-54cdde001293
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  view_config:
+    position_x: -564
+    position_y: -34
+  os: Linux
+- name: zhaico7021
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.7
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 34bca44e-6fd8-4228-8071-b6268965f9f5
+  - 22915eed-bfe2-4fdd-838f-54cdde001293
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  view_config:
+    position_x: -391
+    position_y: -34
+  os: Linux
+- name: zckzgt8968
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.8
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 34bca44e-6fd8-4228-8071-b6268965f9f5
+  - 71e07cb3-53e5-4d5a-ae61-39af41d92097
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  view_config:
+    position_x: -564
+    position_y: 177
+  os: Linux
+- name: tyzhta1564
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.9
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 34bca44e-6fd8-4228-8071-b6268965f9f5
+  - 71e07cb3-53e5-4d5a-ae61-39af41d92097
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  view_config:
+    position_x: -391
+    position_y: 177
+  os: Linux
+- name: ydimbe0598
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.10
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 34bca44e-6fd8-4228-8071-b6268965f9f5
+  - 83c03525-1cea-4418-a929-b0fdaa3966f7
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  view_config:
+    position_x: -391
+    position_y: 413
+  os: Linux
+- name: jjsdwz8951
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.11
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 34bca44e-6fd8-4228-8071-b6268965f9f5
+  - 83c03525-1cea-4418-a929-b0fdaa3966f7
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  view_config:
+    position_x: -564
+    position_y: 413
+  os: Linux
+- name: externals
+  placement: external
+  network_settings:
+    ip_address: 192.168.10.13,192.168.10.14,192.168.10.15,192.168.10.16,192.168.10.17,192.168.10.18,192.168.10.19,192.168.10.20,192.168.10
+.21,192.168.10.22,192.168.10.23,192.168.10.24,192.168.10.25,192.168.10.26,192.168.10.27,192.168.10.28,192.168.10.29,192.168.10.30,192.168.
+10.31,192.168.10.32,192.168.10.33,192.168.10.34,192.168.10.35,192.168.10.36,192.168.10.37
+    managed: true
+    nb_ips: 25
+  view_config:
+    position_x: -1075
+    position_y: -903
+  os: Linux
+  type: undefined
+- name: rvejda0049
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.12
+    managed: true
+    nb_ips: 1
+  tags:
+  - 1d771bcf-5d3d-4abf-a4ad-e4efda75f0a6
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - a6d70459-8847-48d7-88ad-eb853e76440d
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  - a7af26e3-ad4d-4155-8db0-85ee99e7a7bc
+  view_config:
+    position_x: -89
+    position_y: 413
+  os: Linux
+- name: hdxugs8842
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.13
+    managed: true
+    nb_ips: 1
+  tags:
+  - 1d771bcf-5d3d-4abf-a4ad-e4efda75f0a6
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - a6d70459-8847-48d7-88ad-eb853e76440d
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  - a7af26e3-ad4d-4155-8db0-85ee99e7a7bc
+  view_config:
+    position_x: 90
+    position_y: 413
+  os: Linux
+- name: gukiqw9819
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.14
+    managed: true
+    nb_ips: 1
+  tags:
+  - 1d771bcf-5d3d-4abf-a4ad-e4efda75f0a6
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - a6d70459-8847-48d7-88ad-eb853e76440d
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  - 1dfe699e-c292-49ae-841d-41c2aa105815
+  view_config:
+    position_x: 90
+    position_y: 177
+  os: Linux
+- name: qtclqw9130
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.15
+    managed: true
+    nb_ips: 1
+  tags:
+  - 1d771bcf-5d3d-4abf-a4ad-e4efda75f0a6
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - a6d70459-8847-48d7-88ad-eb853e76440d
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  - 1dfe699e-c292-49ae-841d-41c2aa105815
+  view_config:
+    position_x: -89
+    position_y: 177
+  os: Linux
+- name: qovsrx6258
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.16
+    managed: true
+    nb_ips: 1
+  tags:
+  - 1d771bcf-5d3d-4abf-a4ad-e4efda75f0a6
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - a6d70459-8847-48d7-88ad-eb853e76440d
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  - 5eee31bf-a7cc-4caa-8ade-271878f3d78b
+  view_config:
+    position_x: -89
+    position_y: -34
+  os: Linux
+- name: rcbluv2151
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.17
+    managed: true
+    nb_ips: 1
+  tags:
+  - 1d771bcf-5d3d-4abf-a4ad-e4efda75f0a6
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - a6d70459-8847-48d7-88ad-eb853e76440d
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  - 5eee31bf-a7cc-4caa-8ade-271878f3d78b
+  view_config:
+    position_x: 90
+    position_y: -34
+  os: Linux
+- name: reyhth5902
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.18
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - a6d70459-8847-48d7-88ad-eb853e76440d
+  - ce8d46b2-5c91-4abe-b867-82343de0e008
+  - 4eb0403a-84be-4d4c-bfa9-5ca3006d9626
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  view_config:
+    position_x: 455
+    position_y: -34
+  os: Linux
+- name: eaineg0296
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.19
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - a6d70459-8847-48d7-88ad-eb853e76440d
+  - ce8d46b2-5c91-4abe-b867-82343de0e008
+  - 4eb0403a-84be-4d4c-bfa9-5ca3006d9626
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  view_config:
+    position_x: 620
+    position_y: -34
+  os: Linux
+- name: hwfknk8987
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.20
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - a6d70459-8847-48d7-88ad-eb853e76440d
+  - ce8d46b2-5c91-4abe-b867-82343de0e008
+  - 1dfe699e-c292-49ae-841d-41c2aa105815
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  view_config:
+    position_x: 455
+    position_y: 177
+  os: Linux
+- name: btwqbx3308
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.21
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - a6d70459-8847-48d7-88ad-eb853e76440d
+  - ce8d46b2-5c91-4abe-b867-82343de0e008
+  - 1dfe699e-c292-49ae-841d-41c2aa105815
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  view_config:
+    position_x: 620
+    position_y: 177
+  os: Linux
+- name: jsouyu6091
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.22
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - a6d70459-8847-48d7-88ad-eb853e76440d
+  - ce8d46b2-5c91-4abe-b867-82343de0e008
+  - a7af26e3-ad4d-4155-8db0-85ee99e7a7bc
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  view_config:
+    position_x: 455
+    position_y: 413
+  os: Linux
+- name: ilftry4668
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.23
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - a6d70459-8847-48d7-88ad-eb853e76440d
+  - ce8d46b2-5c91-4abe-b867-82343de0e008
+  - a7af26e3-ad4d-4155-8db0-85ee99e7a7bc
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  view_config:
+    position_x: 620
+    position_y: 413
+  os: Linux
+- name: lnavti4789
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.24
+    managed: true
+    nb_ips: 1
+  view_config:
+    position_x: -17
+    position_y: -1068
+  os: Linux
+  type: undefined
+  infra: true
+- name: rqdnnu5720
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.25
+    managed: true
+    nb_ips: 1
+  view_config:
+    position_x: 153
+    position_y: -1068
+  os: Linux
+  type: undefined
+  infra: true
+- name: wqafba9936
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.26
+    managed: true
+    nb_ips: 1
+  view_config:
+    position_x: -186
+    position_y: -1068
+  os: Linux
+  type: undefined
+  infra: true
+- name: oiuagx0504
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.27
+    managed: true
+    nb_ips: 1
+  view_config:
+    position_x: -489
+    position_y: -1068
+  os: Linux
+  type: undefined
+  infra: true
+- name: yyhgza8639
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.28
+    managed: true
+    nb_ips: 1
+  view_config:
+    position_x: 358
+    position_y: -1068
+  os: Linux
+  type: undefined
+  infra: true
+- name: ymosfn5318
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.29
+    managed: true
+    nb_ips: 1
+  tags:
+  - f81a77fb-f1d9-4026-bf47-56a14f99b656
+  - fd0b7321-1dc4-4fa6-b934-43f55e050488
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 0f6f35e1-542d-4d34-9832-6fec0075bab3
+  - e0b3fcdf-02b6-4c31-a2ab-eca7f22e4b6b
+  view_config:
+    position_x: 1158
+    position_y: 413
+  os: Linux
+- name: pscffc2473
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.30
+    managed: true
+    nb_ips: 1
+  tags:
+  - f81a77fb-f1d9-4026-bf47-56a14f99b656
+  - fd0b7321-1dc4-4fa6-b934-43f55e050488
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 0f6f35e1-542d-4d34-9832-6fec0075bab3
+  - e0b3fcdf-02b6-4c31-a2ab-eca7f22e4b6b
+  view_config:
+    position_x: 993
+    position_y: 413
+  os: Linux
+- name: xfqter0293
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.31
+    managed: true
+    nb_ips: 1
+  tags:
+  - f81a77fb-f1d9-4026-bf47-56a14f99b656
+  - fd0b7321-1dc4-4fa6-b934-43f55e050488
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 0f6f35e1-542d-4d34-9832-6fec0075bab3
+  - 71e07cb3-53e5-4d5a-ae61-39af41d92097
+  view_config:
+    position_x: 1158
+    position_y: 177
+  os: Linux
+- name: wdywjm2478
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.32
+    managed: true
+    nb_ips: 1
+  tags:
+  - f81a77fb-f1d9-4026-bf47-56a14f99b656
+  - fd0b7321-1dc4-4fa6-b934-43f55e050488
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 0f6f35e1-542d-4d34-9832-6fec0075bab3
+  - 71e07cb3-53e5-4d5a-ae61-39af41d92097
+  view_config:
+    position_x: 993
+    position_y: 177
+  os: Linux
+- name: oaprnh4334
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.33
+    managed: true
+    nb_ips: 1
+  tags:
+  - f81a77fb-f1d9-4026-bf47-56a14f99b656
+  - fd0b7321-1dc4-4fa6-b934-43f55e050488
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 0f6f35e1-542d-4d34-9832-6fec0075bab3
+  - 22915eed-bfe2-4fdd-838f-54cdde001293
+  view_config:
+    position_x: 993
+    position_y: -34
+  os: Linux
+- name: wamklx9039
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.34
+    managed: true
+    nb_ips: 1
+  tags:
+  - f81a77fb-f1d9-4026-bf47-56a14f99b656
+  - fd0b7321-1dc4-4fa6-b934-43f55e050488
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 0f6f35e1-542d-4d34-9832-6fec0075bab3
+  - 22915eed-bfe2-4fdd-838f-54cdde001293
+  view_config:
+    position_x: 1158
+    position_y: -34
+  os: Linux
+- name: jhdnik9190
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.35
+    managed: true
+    nb_ips: 1
+  tags:
+  - f81a77fb-f1d9-4026-bf47-56a14f99b656
+  - f92f5793-eb9f-4a5b-8441-0a1551c0f72b
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  - 811a3c6a-07c0-4f04-b327-8051830dd0d4
+  - 8489ff51-85a2-4d93-9406-730cfb009f34
+  view_config:
+    position_x: 1507
+    position_y: -34
+  os: Linux
+- name: tietcp3415
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.36
+    managed: true
+    nb_ips: 1
+  tags:
+  - f81a77fb-f1d9-4026-bf47-56a14f99b656
+  - f92f5793-eb9f-4a5b-8441-0a1551c0f72b
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  - 811a3c6a-07c0-4f04-b327-8051830dd0d4
+  - 8489ff51-85a2-4d93-9406-730cfb009f34
+  view_config:
+    position_x: 1672
+    position_y: -34
+  os: Linux
+- name: egkypw0514
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.37
+    managed: true
+    nb_ips: 1
+  tags:
+  - f81a77fb-f1d9-4026-bf47-56a14f99b656
+  - f92f5793-eb9f-4a5b-8441-0a1551c0f72b
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  - 811a3c6a-07c0-4f04-b327-8051830dd0d4
+  - 6d39eff3-0c60-4efb-b894-0525c01f3331
+  view_config:
+    position_x: 1507
+    position_y: 177
+  os: Linux
+- name: ugiurx6833
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.38
+    managed: true
+    nb_ips: 1
+  tags:
+  - f81a77fb-f1d9-4026-bf47-56a14f99b656
+  - f92f5793-eb9f-4a5b-8441-0a1551c0f72b
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  - 811a3c6a-07c0-4f04-b327-8051830dd0d4
+  - 6d39eff3-0c60-4efb-b894-0525c01f3331
+  view_config:
+    position_x: 1672
+    position_y: 177
+  os: Linux
+- name: xvytsw0504
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.39
+    managed: true
+    nb_ips: 1
+  tags:
+  - f81a77fb-f1d9-4026-bf47-56a14f99b656
+  - f92f5793-eb9f-4a5b-8441-0a1551c0f72b
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  - 811a3c6a-07c0-4f04-b327-8051830dd0d4
+  - 966c40b7-500e-4d8a-bef3-b08b8d865b04
+  view_config:
+    position_x: 1507
+    position_y: 413
+  os: Linux
+- name: jtgcoy1735
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.40
+    managed: true
+    nb_ips: 1
+  tags:
+  - f81a77fb-f1d9-4026-bf47-56a14f99b656
+  - f92f5793-eb9f-4a5b-8441-0a1551c0f72b
+  - 81b47635-658a-468d-8d62-bbdd540e6043
+  - 811a3c6a-07c0-4f04-b327-8051830dd0d4
+  - 966c40b7-500e-4d8a-bef3-b08b8d865b04
+  view_config:
+    position_x: 1672
+    position_y: 413
+  os: Linux
+- name: externals2
+  placement: external
+  network_settings:
+    ip_address: 192.168.10.38,192.168.10.39,192.168.10.40,192.168.10.41,192.168.10.42,192.168.10.43,192.168.10.44,192.168.10.45,192.168.10
+.46,192.168.10.47,192.168.10.48,192.168.10.49,192.168.10.50,192.168.10.51,192.168.10.52,192.168.10.53,192.168.10.54,192.168.10.55,192.168.
+10.56,192.168.10.57,192.168.10.58,192.168.10.59,192.168.10.60,192.168.10.61,192.168.10.62
+    managed: true
+    nb_ips: 25
+  view_config:
+    position_x: 1363
+    position_y: -928
+  os: Linux
+  type: undefined
+- name: oyoicr6976
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.41
+    managed: true
+    nb_ips: 1
+  view_config:
+    position_x: 503
+    position_y: -1068
+  os: Linux
+  type: undefined
+- name: tvumqw0205
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.42
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 22915eed-bfe2-4fdd-838f-54cdde001293
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 78d0527a-ffe7-40c3-8996-c34d13ab2f10
+  view_config:
+    position_x: -939
+    position_y: -34
+  os: Linux
+- name: dahhyj3645
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.43
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 22915eed-bfe2-4fdd-838f-54cdde001293
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 78d0527a-ffe7-40c3-8996-c34d13ab2f10
+  view_config:
+    position_x: -776
+    position_y: -34
+  os: Linux
+- name: opqqol5384
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.44
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 71e07cb3-53e5-4d5a-ae61-39af41d92097
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 78d0527a-ffe7-40c3-8996-c34d13ab2f10
+  view_config:
+    position_x: -939
+    position_y: 177
+  os: Linux
+- name: ratoxw0994
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.45
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 71e07cb3-53e5-4d5a-ae61-39af41d92097
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 78d0527a-ffe7-40c3-8996-c34d13ab2f10
+  view_config:
+    position_x: -776
+    position_y: 177
+  os: Linux
+- name: xeiuof9448
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.46
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 83c03525-1cea-4418-a929-b0fdaa3966f7
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 78d0527a-ffe7-40c3-8996-c34d13ab2f10
+  view_config:
+    position_x: -939
+    position_y: 413
+  os: Linux
+- name: jnbtmg5637
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.47
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 83c03525-1cea-4418-a929-b0fdaa3966f7
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 78d0527a-ffe7-40c3-8996-c34d13ab2f10
+  view_config:
+    position_x: -776
+    position_y: 413
+  os: Linux
+- name: pacdhv5336
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.48
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 22915eed-bfe2-4fdd-838f-54cdde001293
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 74ebba43-972a-4492-9df7-c83dfc1df5de
+  view_config:
+    position_x: -1408
+    position_y: -34
+  os: Linux
+- name: ldnjqc8541
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.49
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 22915eed-bfe2-4fdd-838f-54cdde001293
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 74ebba43-972a-4492-9df7-c83dfc1df5de
+  view_config:
+    position_x: -1245
+    position_y: -34
+  os: Linux
+- name: yyqubu1938
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.50
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 71e07cb3-53e5-4d5a-ae61-39af41d92097
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 74ebba43-972a-4492-9df7-c83dfc1df5de
+  view_config:
+    position_x: -1408
+    position_y: 177
+  os: Linux
+- name: dzbfuz8344
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.51
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 71e07cb3-53e5-4d5a-ae61-39af41d92097
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 74ebba43-972a-4492-9df7-c83dfc1df5de
+  view_config:
+    position_x: -1245
+    position_y: 177
+  os: Linux
+- name: usbrth1899
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.52
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 83c03525-1cea-4418-a929-b0fdaa3966f7
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 74ebba43-972a-4492-9df7-c83dfc1df5de
+  view_config:
+    position_x: -1408
+    position_y: 413
+  os: Linux
+- name: mfcpdh7351
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.53
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 83c03525-1cea-4418-a929-b0fdaa3966f7
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - 74ebba43-972a-4492-9df7-c83dfc1df5de
+  view_config:
+    position_x: -1245
+    position_y: 413
+  os: Linux
+- name: dgexax7440
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.54
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 22915eed-bfe2-4fdd-838f-54cdde001293
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - e2e5ef04-9927-4471-a901-c60e00ada8c5
+  view_config:
+    position_x: -1854
+    position_y: -34
+  os: Linux
+- name: gjpzjz0302
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.55
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 22915eed-bfe2-4fdd-838f-54cdde001293
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - e2e5ef04-9927-4471-a901-c60e00ada8c5
+  view_config:
+    position_x: -1690
+    position_y: -34
+  os: Linux
+- name: esiwqy5470
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.56
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 71e07cb3-53e5-4d5a-ae61-39af41d92097
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - e2e5ef04-9927-4471-a901-c60e00ada8c5
+  view_config:
+    position_x: -1854
+    position_y: 177
+  os: Linux
+- name: srzpko5936
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.57
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 71e07cb3-53e5-4d5a-ae61-39af41d92097
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - e2e5ef04-9927-4471-a901-c60e00ada8c5
+  view_config:
+    position_x: -1690
+    position_y: 177
+  os: Linux
+- name: fbuhdq4189
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.58
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 83c03525-1cea-4418-a929-b0fdaa3966f7
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - e2e5ef04-9927-4471-a901-c60e00ada8c5
+  view_config:
+    position_x: -1854
+    position_y: 413
+  os: Linux
+- name: mmnnjj7789
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.59
+    managed: true
+    nb_ips: 1
+  tags:
+  - e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  - 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  - 83c03525-1cea-4418-a929-b0fdaa3966f7
+  - 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  - e2e5ef04-9927-4471-a901-c60e00ada8c5
+  view_config:
+    position_x: -1690
+    position_y: 413
+  os: Linux
+flows:
+- id: 91633315-73da-48a9-bd7e-ed83d34b74e6
+  source: xvkkmq8228
+  destination: zckzgt8968
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 667b2fe4-2dbf-46be-8c56-4c8762b51bd3
+  source: zhaico7021
+  destination: zckzgt8968
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: e2dddace-5c43-4ea9-bff1-da4fc519a9e7
+  source: zckzgt8968
+  destination: ydimbe0598
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: fe67c03c-3da8-4a65-9181-2d99d3c5747d
+  source: tyzhta1564
+  destination: ydimbe0598
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 3d5da62e-1ab8-496e-a76b-71f7e728a9e3
+  source: zckzgt8968
+  destination: jjsdwz8951
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 9d7cf157-6ace-4c66-860f-a86a18240e8d
+  source: tyzhta1564
+  destination: jjsdwz8951
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: bad7633e-68bd-4e62-a297-051f3da79080
+  source: externals
+  destination: xvkkmq8228
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: a9d8dd63-c3d5-4276-b102-0c897bcc3dae
+  source: externals
+  destination: zhaico7021
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: ea37b52b-7fdb-4800-9544-a1855715f2e8
+  source: gukiqw9819
+  destination: hdxugs8842
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: 034d1eed-69fc-40d0-9a4e-c367c6d62006
+  source: qovsrx6258
+  destination: qtclqw9130
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 52e1483d-8095-4e3a-968f-b25e4d328cf7
+  source: rcbluv2151
+  destination: qtclqw9130
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 229891de-5264-45ef-88aa-aaad3ad69af5
+  source: qtclqw9130
+  destination: hdxugs8842
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: c2cc3017-39a7-467e-a8eb-4a9344693439
+  source: qtclqw9130
+  destination: rvejda0049
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: 9f73b10c-c412-4688-bd12-0c17c9138ccc
+  source: gukiqw9819
+  destination: rvejda0049
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: 4e8ff3bc-2d55-461b-812b-a9502c0366d5
+  source: externals
+  destination: qovsrx6258
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 95fa6ece-5a3d-4a45-b7bc-0095f197a606
+  source: externals
+  destination: rcbluv2151
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 62fbb2e1-f15a-48f3-b06e-2cca916809ce
+  source: btwqbx3308
+  destination: ilftry4668
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: 0e5ee7bb-ffc0-4b5b-9097-8fd399563f4a
+  source: reyhth5902
+  destination: hwfknk8987
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 139853d5-57c1-4e5b-8f2d-07aa6fd3794b
+  source: eaineg0296
+  destination: hwfknk8987
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 98d92d37-565d-4e65-9326-9d681422696e
+  source: hwfknk8987
+  destination: jsouyu6091
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: 39290c31-d0bf-47c3-b84e-8c53fe93e468
+  source: btwqbx3308
+  destination: jsouyu6091
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: cacddbc3-1dab-40b3-a621-5c5798d157af
+  source: externals
+  destination: reyhth5902
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 11d5d9a4-b03c-4526-ac33-eec4b3139f4d
+  source: externals
+  destination: eaineg0296
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 025a803b-4f25-4575-921c-ba710e2d6826
+  source: xvkkmq8228
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: d7e9f272-f0db-4d1c-95ae-f216e2847cc3
+  source: zhaico7021
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: cc1ce78c-51e6-40bc-ae2f-d2822645f841
+  source: zckzgt8968
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 0b78a74b-d7ff-4c89-86cb-ca47c1a76204
+  source: tyzhta1564
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 2c11b7c8-21fd-4218-a5bc-c76cef148ec6
+  source: ydimbe0598
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 32b3aa10-9b3f-48d9-9a29-c8da93cfe7a1
+  source: jjsdwz8951
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: ba3b485d-600c-4d72-ad04-ba7cf7be9925
+  source: rvejda0049
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 7c5326ee-ea04-4833-9b50-68484ee71677
+  source: hdxugs8842
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: bc0c9614-f025-4aca-931b-45afe7d6fb6f
+  source: gukiqw9819
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 4ad204cb-3183-4f91-b4b2-741595774019
+  source: qtclqw9130
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 29ce4d68-45ae-47ac-95c3-ea4d0a0008db
+  source: qovsrx6258
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: f9d59245-aba9-41e7-bf3d-b3690f84340d
+  source: rcbluv2151
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 2e1b579a-2bcf-420c-bf32-12dc51ae3515
+  source: reyhth5902
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 13f7bef3-b68b-452d-86e1-0aec4cc198cf
+  source: eaineg0296
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 9f11f311-383a-4e09-bd91-8791a373d4d8
+  source: hwfknk8987
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 504ce4fd-c6ff-48f2-b5e8-6a925307ca96
+  source: btwqbx3308
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: fd0c5771-e893-405a-b220-adc2be6ccaf3
+  source: jsouyu6091
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: a3bd50ea-fbc8-4c9e-a4a0-6a8b3654b773
+  source: ilftry4668
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 2d450cbf-3d22-4e0b-a8a2-771dd91c5ed3
+  source: xvkkmq8228
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8ecae2ba-42c0-4570-bf77-9cc9355e5cce
+  source: zhaico7021
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 800e2ae6-af31-4672-a0e7-08102099e041
+  source: zckzgt8968
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 93dac39a-fda5-4e88-8180-39ae7e4d5438
+  source: tyzhta1564
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: ead72c19-290d-41aa-ba2c-4e0eddbd2c79
+  source: ydimbe0598
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 9ea3f677-0835-4514-a25d-0cd7281718c4
+  source: jjsdwz8951
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 25f644ff-0949-4072-ad02-868f9f5e162f
+  source: rvejda0049
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 875c91fe-49ab-4a6d-88a0-a8e3920d4a7d
+  source: hdxugs8842
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 832d2828-29fa-4d26-aa3b-bd92d206dbd2
+  source: gukiqw9819
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: b47c5dc5-ff96-46be-8342-fb0f353aea6d
+  source: qtclqw9130
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: ca987ce0-8241-49f7-8bde-64d7723a483f
+  source: qovsrx6258
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: a0532cbd-b9ab-4886-aaea-965a937f73bc
+  source: rcbluv2151
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 11938510-73f5-4081-b0ff-267473a01c3f
+  source: reyhth5902
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: aba189a3-93ba-426a-89ff-a119eb646889
+  source: eaineg0296
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: da1f708f-e1a0-40e9-9be4-80fa443306ec
+  source: hwfknk8987
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: d0f89da4-87c7-440b-8098-104419c7f42d
+  source: btwqbx3308
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 008cff34-6698-4e33-bb82-d59e6b5d5dc8
+  source: jsouyu6091
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: c3fc1aa1-c157-4a6f-9acb-d4fd56488e73
+  source: ilftry4668
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 6260d615-779c-4954-a2ac-4b6c8fc00e11
+  source: xvkkmq8228
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 0ae63619-7b52-4330-9ac9-668246febca8
+  source: xvkkmq8228
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: f4210e9e-b71a-49f3-986e-367f84ba51b0
+  source: zhaico7021
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 338fe117-54ec-402b-9476-a6da01beeb49
+  source: zckzgt8968
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 611779f4-abbe-4667-a99f-467ef266363b
+  source: tyzhta1564
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 570561fc-3ad4-4508-808d-f4b429c9de2f
+  source: ydimbe0598
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 17f43b70-2acd-43c5-9b00-3f7034617289
+  source: jjsdwz8951
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 1668ec3e-f047-4747-af45-b9732bb47647
+  source: rvejda0049
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: b507e837-5886-499c-9c5c-6cda6fdee706
+  source: hdxugs8842
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: ee951a93-af2c-4d11-a414-7545f5ba9426
+  source: gukiqw9819
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: bb7193cd-9536-49a2-a0e8-e3f4edce52a8
+  source: qtclqw9130
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 522cd7d4-24af-46a9-aa95-bb6c03099a6a
+  source: qovsrx6258
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 7acad899-42d5-446e-9a19-5d830c1ab7d2
+  source: rcbluv2151
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 362575da-a120-4310-947c-d5f4db2b6015
+  source: reyhth5902
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: ea01bdeb-5322-4819-bcce-3b56077324ae
+  source: hwfknk8987
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 305fe180-ba4b-4634-b7af-f00f17365736
+  source: eaineg0296
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 40329014-d46b-434b-aa9c-2eb75efbe578
+  source: btwqbx3308
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: ba413cd0-e289-4152-bc8e-8e30aa2859ce
+  source: jsouyu6091
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 72b7950d-1add-4f19-ac40-89cbd9ebb484
+  source: ilftry4668
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 5c0dc2f4-9fda-4a1c-a9c4-6dee4512b4e8
+  source: lnavti4789
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: e8caab8c-25f3-4a88-984e-fd9b4d1d5880
+  source: rqdnnu5720
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 4249c794-9cbe-4990-a7d1-53000f13ed5b
+  source: wqafba9936
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: d1e55341-0213-4006-ad83-648c39d9cbe9
+  source: zhaico7021
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 135f3297-4ddc-4c52-976b-cae133b3430b
+  source: zckzgt8968
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: bd55dbc0-1a46-4578-b7cb-d45ed50b1d2b
+  source: tyzhta1564
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8edd9baf-0c89-4cd1-9829-e886fdd48ad8
+  source: ydimbe0598
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: baefcbbd-f58e-482f-bb18-a6368942483d
+  source: jjsdwz8951
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 4af4930d-4293-468c-a46a-362f8b060cdb
+  source: rvejda0049
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 9ca689f2-815c-454e-b01a-7b4b95093420
+  source: hdxugs8842
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 3736b89c-90cf-4543-a23c-9823364f445d
+  source: gukiqw9819
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: cce158b6-c76e-4cb3-b77f-9491adcf82a6
+  source: qtclqw9130
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 9c4f41a1-5ef1-451c-a679-2ad591bda5d8
+  source: qovsrx6258
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 53826eeb-b913-4b06-b217-4e7868e669bc
+  source: rcbluv2151
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: e2033f57-37e3-4e7a-b6fc-a502782abbed
+  source: reyhth5902
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: ee17c2e0-dfdf-4d11-840c-cc79879b55ae
+  source: eaineg0296
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: cfcfad2b-7e04-489d-811f-d43d54dbd545
+  source: hwfknk8987
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: b619c5ac-ce0c-4ae3-9968-6c2cd0da1a1f
+  source: btwqbx3308
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 0666875b-1298-4882-9348-89a740b6fffc
+  source: jsouyu6091
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 81a591ea-bc28-4373-85f7-c0624aac0a56
+  source: lnavti4789
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 590443ab-eefc-44f9-8ffe-56fb4b882dc7
+  source: ilftry4668
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: d6dbe7eb-a5ef-48f7-8b7d-114a590bd8d7
+  source: rqdnnu5720
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: d671070a-0662-4df1-9a34-36c9e946326a
+  source: oiuagx0504
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: fac0e7f2-98f9-40a5-879a-3c8f097d3cda
+  source: zhaico7021
+  destination: tyzhta1564
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 22028e95-2ad1-4ba4-ab66-aaaec2e9eec9
+  source: rcbluv2151
+  destination: gukiqw9819
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 000cd1fe-ddcd-42ec-936e-2d2a0ad383fb
+  source: eaineg0296
+  destination: btwqbx3308
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 036631f6-985d-46c7-96cc-392462766441
+  source: xvkkmq8228
+  destination: tyzhta1564
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: ee6f44a8-dc47-438d-8cca-0cc1550af26a
+  source: qovsrx6258
+  destination: gukiqw9819
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 62ba0547-03da-4746-9b16-5b3d30db8556
+  source: reyhth5902
+  destination: btwqbx3308
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 32261abd-bbd2-416c-b657-851482e5c058
+  source: xvkkmq8228
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 9235ffa8-24e8-4ad3-ac25-12794883d180
+  source: zhaico7021
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 329c82b3-3ef7-4524-ab38-c0e3270f5fc3
+  source: zckzgt8968
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: ada4f390-6a90-44bf-bed7-73fd9e230a37
+  source: tyzhta1564
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: b558d898-a2e4-461c-8b09-34c31b5b03fe
+  source: ydimbe0598
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 7bce2371-9637-41f7-bc6f-3c928ac9b44c
+  source: jjsdwz8951
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: eb9fa383-0777-4ab4-8684-17ca4ed93319
+  source: rvejda0049
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: f3558c86-8fce-4737-8cd1-8234fa0c8b2a
+  source: hdxugs8842
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 1a981429-1256-47a5-b1fe-f0468e58ed34
+  source: gukiqw9819
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 2cc3d480-b8bf-46ca-a008-ad5581b45448
+  source: qtclqw9130
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: c805f380-83f3-45a9-b9b1-40a2dc6e5226
+  source: qovsrx6258
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8f4e5e26-b94c-4414-9a0d-a1656bd4984d
+  source: rcbluv2151
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 41836453-a053-4422-ba62-9e8d1931ebed
+  source: reyhth5902
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: ed348909-790e-47eb-9f4b-a694cec01c5e
+  source: eaineg0296
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 1ef3256d-4c16-47b9-91c8-efafe50a512c
+  source: hwfknk8987
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 007eddbe-095a-4ad2-8560-7f4d0637394a
+  source: btwqbx3308
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 54dbfbc7-3e68-469f-8b92-2c957ec16204
+  source: jsouyu6091
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: c0fcfdac-0500-414d-832d-12d1f5d9bef2
+  source: ilftry4668
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: bfca364d-f140-4b76-8fae-28957a7c629c
+  source: yyhgza8639
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: b141d333-994b-432f-848c-9f251dc15c00
+  source: yyhgza8639
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: f593e82e-1c16-4ac5-9a72-4ed73bd1367a
+  source: xfqter0293
+  destination: ymosfn5318
+  protocol: TCP
+  port: 9042
+  interval: 1000
+  payload: APPID - CASSANDRA
+  data_format: template
+  type: baseline
+  children: 1
+- id: 36cd667b-03f5-48c5-875c-d37f2dd6bad3
+  source: oaprnh4334
+  destination: wdywjm2478
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 50ee1f0e-d7ef-4fad-9a6a-d707bcdc38aa
+  source: wamklx9039
+  destination: wdywjm2478
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8f1c0d7b-38ac-4cb0-87ca-0ef85f97ec92
+  source: wdywjm2478
+  destination: pscffc2473
+  protocol: TCP
+  port: 9042
+  interval: 1000
+  payload: APPID - CASSANDRA
+  data_format: template
+  type: baseline
+  children: 1
+- id: ebfce5b9-7279-4d71-8284-e2dc2c9265eb
+  source: xfqter0293
+  destination: pscffc2473
+  protocol: TCP
+  port: 9042
+  interval: 1000
+  payload: APPID - CASSANDRA
+  data_format: template
+  type: baseline
+  children: 1
+- id: 0d4911de-8a14-46a2-8c48-e904c9e548a5
+  source: externals
+  destination: oaprnh4334
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: d7742c80-b6c6-4050-a28f-d15adf413dd1
+  source: externals
+  destination: wamklx9039
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 7e5e219d-de74-45ec-b167-c002e82488bf
+  source: oaprnh4334
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: a7a260b7-19b6-42cd-9ed2-74cd12ef28ef
+  source: wamklx9039
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: ed34d324-c90b-43be-982c-87b2185c91b5
+  source: wdywjm2478
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 708b9cc8-6135-475b-88f1-6f05c87db608
+  source: xfqter0293
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 85e0284c-1024-4f95-a131-9e67809bc56c
+  source: pscffc2473
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: cc498002-bae3-4f09-8952-5ca19f12bcc2
+  source: ymosfn5318
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: dd2607ed-f276-4f40-805b-545f9ae7c919
+  source: oaprnh4334
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: aacb8ce7-2ce4-4899-b565-b224202fa7fa
+  source: wamklx9039
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 470c15ac-b25c-420c-8399-7116a1583c2e
+  source: wdywjm2478
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 4ea8f96b-925e-456e-aebb-739922650e93
+  source: xfqter0293
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: cce9e46c-cd31-4dd0-b8b3-ea8b89ac205c
+  source: pscffc2473
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 263be92e-02ff-4ee1-8c25-433353aaf5de
+  source: ymosfn5318
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 4327171a-4eee-47b9-86a9-213faaed887a
+  source: oaprnh4334
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 2c4ea0f9-06bb-4184-b73f-772983bd8838
+  source: wdywjm2478
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: d7902846-0bd7-4bd9-bade-9eaf6600ce5f
+  source: wamklx9039
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8f7707d6-d82e-4877-aae7-1b1138069a55
+  source: xfqter0293
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 5a400f49-c805-4c6b-bb01-999e4c408c78
+  source: pscffc2473
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 1eb982b0-1ba8-4f2b-a45d-954a0e47763b
+  source: ymosfn5318
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: f947d2a6-c984-4851-b5fa-3cd048a1a90b
+  source: oaprnh4334
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 1e9cac84-d07a-4043-844a-e6bdb3ecf5d7
+  source: wamklx9039
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: abd3978f-d20e-4b83-8ffc-fe9754a7f3d2
+  source: wdywjm2478
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: fa560e23-0a96-4bd6-9687-1938c5750255
+  source: xfqter0293
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 4c40bd2a-3ff0-43da-878a-c4714da5aa76
+  source: pscffc2473
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 20be348b-a75f-4a0d-8227-5e1c876f6816
+  source: ymosfn5318
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: aa1d187b-85f4-4bbc-a68e-63d868d4a611
+  source: wamklx9039
+  destination: xfqter0293
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 7b2fba7a-96a8-4fc0-ae30-6957c263f64b
+  source: oaprnh4334
+  destination: xfqter0293
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 5a77937a-fac9-4164-8e2c-448e7f4bab60
+  source: oaprnh4334
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 49e3f9d9-443e-4d23-bc90-1e0d3a3a34fa
+  source: wamklx9039
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 9ab912a0-200f-432e-8c54-68148929c94b
+  source: wdywjm2478
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: d4f21b2b-faf6-456f-8514-4a36a0c0806b
+  source: xfqter0293
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: dc4b88d5-eb80-4b30-acaa-1a17052e5533
+  source: pscffc2473
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: d40193d9-df9a-46a0-a1bc-532e5efe5e8f
+  source: ymosfn5318
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8bfc36ff-48aa-471d-a4c5-67e53b2370e2
+  source: jtgcoy1735
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: f0e40b7d-e120-4d2f-b199-0bd80085b7ed
+  source: ugiurx6833
+  destination: jtgcoy1735
+  protocol: TCP
+  port: 5432
+  interval: 1000
+  payload: APPID - POSTGRESQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: aadd3622-0b33-484b-8248-dcf0587ed95a
+  source: jhdnik9190
+  destination: egkypw0514
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.2
+  data_format: template
+  type: baseline
+  children: 1
+- id: e1fb1baa-ad9d-44b4-82e1-cef06f9138ed
+  source: tietcp3415
+  destination: egkypw0514
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.2
+  data_format: template
+  type: baseline
+  children: 1
+- id: da568027-9600-4850-bcb4-b03293e45fa4
+  source: egkypw0514
+  destination: xvytsw0504
+  protocol: TCP
+  port: 5432
+  interval: 1000
+  payload: APPID - POSTGRESQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 2cd3abb0-64bf-4987-bc87-ef65d91c0562
+  source: ugiurx6833
+  destination: xvytsw0504
+  protocol: TCP
+  port: 5432
+  interval: 1000
+  payload: APPID - POSTGRESQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: b3bd3d88-3223-4711-96a4-27517d119042
+  source: externals
+  destination: jhdnik9190
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 0564a296-12d4-4b22-884c-eb34609cc240
+  source: externals
+  destination: tietcp3415
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: b9b65733-937b-4dae-8c90-7612ccc29463
+  source: jhdnik9190
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: b26f30a4-a49c-4696-8e29-59df7a0ee5c2
+  source: tietcp3415
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: b0847ba1-8906-4a6b-baf9-4e0c3ad16863
+  source: egkypw0514
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 0c714a71-80c4-436b-8f58-afdd89b00c8e
+  source: ugiurx6833
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: f4183a41-8309-4c58-b62f-5894662ba2d0
+  source: xvytsw0504
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: a9811376-a154-4278-b9da-1dd47f89d22c
+  source: jtgcoy1735
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 1889b9dc-67ca-4332-9f80-fdc9ce216acf
+  source: jhdnik9190
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8bfc2e42-84c6-485e-8c44-6a5dfba3c7c4
+  source: tietcp3415
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 2a19779c-4cb7-4dcd-bb56-a4c6427d80ba
+  source: egkypw0514
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 6935691e-16aa-48ec-801c-1dc2648b149a
+  source: ugiurx6833
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 05e68a98-6b99-4ff1-83d8-fe491ee8b640
+  source: xvytsw0504
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 982e89cf-bfef-455c-8770-832006c3e5bb
+  source: jtgcoy1735
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 6eb64e37-e889-4bc7-842a-d25f3e69d189
+  source: jhdnik9190
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 2986a3a9-5fc7-4ab1-8d75-3b5b8dc13c5c
+  source: egkypw0514
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 7f99185a-9e71-41da-af32-cfbbb66c5d94
+  source: tietcp3415
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: d8b6b547-17c4-45cf-bb6b-7a7a4679972c
+  source: xvytsw0504
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 063042bb-20c4-4028-a4c3-0e4df5ae95f5
+  source: jtgcoy1735
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 34db0358-4e25-454a-afed-fd58b79a14b8
+  source: jhdnik9190
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 1562d236-69dd-48bd-8c8f-98b4909539c2
+  source: tietcp3415
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: f0671c69-9ed9-42bf-aba3-f497465aa6db
+  source: egkypw0514
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 88b3863a-c0b4-4ec2-af25-6697db903734
+  source: ugiurx6833
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 0b88526f-53e3-4fe2-9da1-f3861fec09e7
+  source: xvytsw0504
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: c0ac3686-9ea2-46ee-818a-2bc96a10c09e
+  source: jtgcoy1735
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 5e782457-ef70-4c31-9f75-dd707fe635b0
+  source: tietcp3415
+  destination: ugiurx6833
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.2
+  data_format: template
+  type: baseline
+  children: 1
+- id: 6343c2bf-6a70-49ec-ba25-5ecc68651ceb
+  source: jhdnik9190
+  destination: ugiurx6833
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.2
+  data_format: template
+  type: baseline
+  children: 1
+- id: f8dba39c-996f-44b2-9419-c48a3e5cb1a2
+  source: jhdnik9190
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: e7c11f97-6b9d-443f-8859-74fb68589034
+  source: tietcp3415
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: d36af0d5-8cc2-4a9f-b351-b14040c44bc8
+  source: egkypw0514
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 45736631-b452-4d1e-8b00-23a72e229425
+  source: ugiurx6833
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: 5d730f37-e9be-4817-ae4d-291e0ea3e233
+  source: xvytsw0504
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+- id: b1dc0177-d400-42b0-aca8-16021f5bc0b8
+  source: egkypw0514
+  destination: ydimbe0598
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 421747cb-8404-4a16-892c-dffc35e3765e
+  source: externals2
+  destination: xvkkmq8228
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 3e108b37-ca29-4db9-bf5d-8d7a60d8a613
+  source: externals2
+  destination: zhaico7021
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: dbe0ed9c-115c-4f1c-b8d3-a9f26293910a
+  source: externals2
+  destination: qovsrx6258
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 703d69b6-87d6-4f0e-9d39-ec5eefc04068
+  source: externals2
+  destination: rcbluv2151
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 4c31b427-4f9b-420d-a1eb-1f39e5f83f80
+  source: externals2
+  destination: reyhth5902
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 415b518d-343d-4d33-b149-6f2ee41cb625
+  source: externals2
+  destination: eaineg0296
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 56d93670-f8e6-49fa-8e2d-011ba351cdb3
+  source: externals2
+  destination: oaprnh4334
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 46192e83-94ad-4ceb-8d49-91f58c191adb
+  source: externals2
+  destination: wamklx9039
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 469a62c4-7008-4e65-8270-14198e94f4d2
+  source: externals2
+  destination: jhdnik9190
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: dc3a43f4-94d6-414a-8a15-0809867eafed
+  source: externals2
+  destination: tietcp3415
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+- id: 6530a8c8-2b9e-4cd2-bfe6-8194b5955dbb
+  source: gukiqw9819
+  destination: pscffc2473
+  protocol: TCP
+  port: 9042
+  interval: 1000
+  payload: APPID - CASSANDRA
+  data_format: template
+  type: baseline
+  children: 1
+- id: 431388da-2cde-4cce-93eb-df3191949a15
+  source: zckzgt8968
+  destination: jsouyu6091
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: 7cba6f5b-478f-4e12-b622-bded01a51e02
+  source: tyzhta1564
+  destination: rvejda0049
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: 25f7e3c8-e312-45b0-9a29-650c04023205
+  source: tyzhta1564
+  destination: xvytsw0504
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - POSTGRESQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 939fad39-3700-405d-bd7d-1c109ca7c6ab
+  source: qtclqw9130
+  destination: ydimbe0598
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: cdfa91b2-11e8-41f4-82e1-217af3bfe5cd
+  source: egkypw0514
+  destination: jtgcoy1735
+  protocol: TCP
+  port: 5432
+  interval: 1000
+  payload: APPID - POSTGRESQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 232ec239-5d01-4c46-8048-9a111027d665
+  source: ugiurx6833
+  destination: oyoicr6976
+  protocol: TCP
+  port: 389
+  interval: 1000
+  payload: APPID - LDAP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 054e1b63-0683-4864-afcc-16f1d5efcf4e
+  source: tvumqw0205
+  destination: opqqol5384
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 80.096212ms
+- id: 262f7834-3392-4584-9809-2fedca45ee33
+  source: dahhyj3645
+  destination: opqqol5384
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.805441ms
+- id: 40b668a0-09c0-4ad3-8498-1745ad8246ea
+  source: opqqol5384
+  destination: jnbtmg5637
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.15871ms
+- id: 2e9e5db0-1506-4eaf-8f62-948f14318f99
+  source: ratoxw0994
+  destination: jnbtmg5637
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.846433ms
+- id: 9c51ff68-c4a8-4ab6-8a72-74b6ca9ea8c2
+  source: opqqol5384
+  destination: xeiuof9448
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 2.069832ms
+- id: 295c4c62-5c5b-4da9-a555-cb54e2a8e255
+  source: ratoxw0994
+  destination: xeiuof9448
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.406071ms
+- id: f8c65e11-7a74-40ed-9396-659f63e3e2a0
+  source: externals
+  destination: tvumqw0205
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+  duration: 20.734366ms
+- id: 57b17a51-50eb-4534-9ca3-c30db9a77085
+  source: externals
+  destination: dahhyj3645
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+  duration: 22.357963ms
+- id: 54dbc3d8-9c0a-4215-bf2c-5bfbb1bd4640
+  source: tvumqw0205
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 12.881757ms
+- id: df5eeb30-1c22-4958-a0df-3aea0e07330c
+  source: dahhyj3645
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 59.739173ms
+- id: 96a24d8f-7a6c-44ab-9157-79bba39a9fb4
+  source: opqqol5384
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 9.881174ms
+- id: 0897b710-4bb0-4ce4-b9fb-35b7d1c47da3
+  source: ratoxw0994
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 9.674025ms
+- id: 0d6ad087-a0cd-4ce5-a0f7-0d633e6f1e90
+  source: jnbtmg5637
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 24.109386ms
+- id: 01feee5b-3075-4a10-b50c-b0ee3099cbf6
+  source: xeiuof9448
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 16.049741ms
+- id: a1a98874-a7d0-433d-a9d6-3f2642f8cdbd
+  source: tvumqw0205
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 45.607022ms
+- id: 1e6be563-0ee8-4c8c-9a51-1d713a2a62f3
+  source: dahhyj3645
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 4.503328ms
+- id: a99af701-4b8a-40cc-86fb-b997fb2cfffd
+  source: opqqol5384
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 18.1674ms
+- id: e4f40d3b-30c2-46ae-a77e-7261a351bd8d
+  source: ratoxw0994
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 10.995741ms
+- id: 36019a4b-9d04-436f-b838-c5f5fd7bef50
+  source: jnbtmg5637
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 60.581642ms
+- id: 23f4f5f1-f591-4aec-b325-028f3c17cf50
+  source: xeiuof9448
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 9.116543ms
+- id: b3c3344f-13be-4196-bc05-f89e2414b6f8
+  source: tvumqw0205
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 301ns
+- id: 05269377-6565-448a-951e-bf942c26d72a
+  source: tvumqw0205
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 742.888748ms
+- id: fab7f298-e3e4-4c44-92bf-134610b3533f
+  source: dahhyj3645
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 423.319143ms
+- id: 62030449-1e19-4efc-9620-b4cb5788e7fd
+  source: opqqol5384
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 565.317383ms
+- id: d58c81dc-5852-4e1c-a9fb-c2912972670d
+  source: ratoxw0994
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 748ns
+- id: b00d071c-fce8-4f66-b6d0-b8c19f1cda7e
+  source: jnbtmg5637
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 651.616038ms
+- id: 1e3bcd9d-5785-4965-84f6-b96243a446f0
+  source: xeiuof9448
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 369.013122ms
+- id: 6670f056-b98d-48a0-a2d0-01335545f06b
+  source: dahhyj3645
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 595.111254ms
+- id: 4a54bcf6-5845-426d-bb48-e700edc19dd1
+  source: opqqol5384
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 487.665371ms
+- id: 7c39f2fa-e2c1-4dd0-bcdf-f10d89e027dd
+  source: ratoxw0994
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 679ns
+- id: 7e34631c-9989-4382-b05e-09244f15c910
+  source: jnbtmg5637
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 698.399608ms
+- id: 7f9e1bee-24f7-4f4e-938f-e550433a2a1b
+  source: xeiuof9448
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 762.926493ms
+- id: c2eaca7c-0b5d-4358-80fc-de80b1928ede
+  source: dahhyj3645
+  destination: ratoxw0994
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 3.143451ms
+- id: 5e8d2e55-f3e3-44a1-a629-6ddd7efc4b41
+  source: tvumqw0205
+  destination: ratoxw0994
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 19.877263ms
+- id: 7d7f05da-9e4b-4be3-a7bc-43123b46903b
+  source: tvumqw0205
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 8.38162ms
+- id: ff83bf95-9757-4cbb-ba8b-3c48a5fd58c1
+  source: dahhyj3645
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 12.356166ms
+- id: d2094711-3b97-4601-94a6-542e33bcf9f3
+  source: opqqol5384
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 7.334675ms
+- id: 55fcf85a-eef7-45e7-ad64-c0f1dab83c6c
+  source: ratoxw0994
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 26.163768ms
+- id: dad186e7-cd07-4551-9f48-baa964ea68f1
+  source: jnbtmg5637
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 32.713864ms
+- id: 914d674c-f02d-416a-9e47-46ce39add5b8
+  source: xeiuof9448
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 11.557137ms
+- id: bcdaccb4-d3f9-4f08-9988-36237b02225a
+  source: egkypw0514
+  destination: jnbtmg5637
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.471854ms
+- id: f625c4b8-a3b9-46d5-81f5-9bdd5332113d
+  source: externals2
+  destination: tvumqw0205
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+  duration: 189.642078ms
+- id: 6e552daf-316f-4625-b115-4bda809153d4
+  source: externals2
+  destination: dahhyj3645
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+  duration: 76.593335ms
+- id: bb2248c7-719a-4b7a-8652-70ce93c46174
+  source: opqqol5384
+  destination: jsouyu6091
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: 929ffc5e-b23b-403a-9f88-746c9639f2d9
+  source: ratoxw0994
+  destination: rvejda0049
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: 21231478-0446-48d2-ad84-3bb8052c710c
+  source: ratoxw0994
+  destination: xvytsw0504
+  protocol: TCP
+  port: 5432
+  interval: 1000
+  payload: APPID - POSTGRESQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 1d5af285-6889-4625-8d73-ba4a568d9bb8
+  source: qtclqw9130
+  destination: jnbtmg5637
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.672629ms
+- id: d4957e10-053e-48f9-9cbe-12874500f72d
+  source: pacdhv5336
+  destination: yyqubu1938
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 80.096212ms
+- id: 411b2e37-cc64-4f6a-a6de-dbffcad68f2d
+  source: ldnjqc8541
+  destination: yyqubu1938
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.805441ms
+- id: bac11088-4405-4a95-bc09-b29c691f24f1
+  source: yyqubu1938
+  destination: mfcpdh7351
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.15871ms
+- id: 35f0b431-e619-4aec-8320-7b46ddc51146
+  source: dzbfuz8344
+  destination: mfcpdh7351
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.846433ms
+- id: ece7d057-1ebb-4496-9690-07930eb27677
+  source: yyqubu1938
+  destination: usbrth1899
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 2.069832ms
+- id: e93862eb-5135-4157-96c8-bef773522683
+  source: dzbfuz8344
+  destination: usbrth1899
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.406071ms
+- id: f6cd0f7e-709d-4393-8548-84510f9be0d1
+  source: externals
+  destination: pacdhv5336
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+  duration: 20.734366ms
+- id: 9b6f8273-e361-45a3-a299-b69102512c6e
+  source: externals
+  destination: ldnjqc8541
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+  duration: 22.357963ms
+- id: 3908aa40-6d7f-4ba8-9257-7577d9c59777
+  source: pacdhv5336
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 12.881757ms
+- id: 7d6e412a-81a4-4f60-b0b4-dc3f4be806c9
+  source: ldnjqc8541
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 59.739173ms
+- id: a984c348-39de-423d-b0ac-db9e58935d86
+  source: yyqubu1938
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 9.881174ms
+- id: 3cb9b9b3-0314-4b1a-b75f-41e2fee8b772
+  source: dzbfuz8344
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 9.674025ms
+- id: 16f71118-8851-469e-9b34-40499dee45a0
+  source: mfcpdh7351
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 24.109386ms
+- id: 4488522e-2601-4cc2-ba47-71f84f56148e
+  source: usbrth1899
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 16.049741ms
+- id: 7b23a863-bc28-43f8-9447-7a768bf9092c
+  source: pacdhv5336
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 45.607022ms
+- id: 97e9fdfa-ffaa-4bd1-a235-b0cbceedde96
+  source: ldnjqc8541
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 4.503328ms
+- id: 09d2c1be-e1b1-43ee-acc5-b18ab910f5ac
+  source: yyqubu1938
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 18.1674ms
+- id: c2ef7de5-35f9-4dff-abab-b74c57c89865
+  source: dzbfuz8344
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 10.995741ms
+- id: d2a85af1-8e32-4810-b92e-b6420f766001
+  source: mfcpdh7351
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 60.581642ms
+- id: a3cb8efe-592b-47d3-b508-93dad5d3f530
+  source: usbrth1899
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 9.116543ms
+- id: 05a9d23e-0011-4b27-a564-611f33a77030
+  source: pacdhv5336
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 301ns
+- id: 882c77c2-31fd-4b2c-9ccd-4f60cf4cfe18
+  source: pacdhv5336
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 742.888748ms
+- id: 345f7ac4-ac44-4380-a5e8-44aa81409e58
+  source: ldnjqc8541
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 423.319143ms
+- id: bfe6ad3c-334d-475c-b3e7-c32e1441070c
+  source: yyqubu1938
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 565.317383ms
+- id: a37bf292-84d3-44ae-8646-e0d9d9ca2e5d
+  source: dzbfuz8344
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 748ns
+- id: 166c512a-4206-4bc8-97bc-606a14691b0e
+  source: mfcpdh7351
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 651.616038ms
+- id: da61392e-8922-4429-b39b-8e25d7f27829
+  source: usbrth1899
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 369.013122ms
+- id: 686f8dfc-d231-44a5-a9a2-716339474a7d
+  source: ldnjqc8541
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 595.111254ms
+- id: 7374fa42-2a45-499a-bc99-2217b17261c4
+  source: yyqubu1938
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 487.665371ms
+- id: 8606822a-581e-46a8-8cf7-088903222d12
+  source: dzbfuz8344
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 679ns
+- id: 3b02658d-f07b-4721-929b-aaf3bab02b9f
+  source: mfcpdh7351
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 698.399608ms
+- id: 1fe54864-bb38-47ac-9831-c7242e8d17be
+  source: usbrth1899
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 762.926493ms
+- id: 470c9804-2a9e-4353-b1d8-97366e8870a4
+  source: ldnjqc8541
+  destination: dzbfuz8344
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 3.143451ms
+- id: 483617ff-db6c-46fa-98b6-9c619ec9453d
+  source: pacdhv5336
+  destination: dzbfuz8344
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 19.877263ms
+- id: 608bfd99-e3bb-4aa1-ac4e-256d79f1a27d
+  source: pacdhv5336
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 8.38162ms
+- id: 8541ec10-1b92-4084-87c0-0bf6202aebc6
+  source: ldnjqc8541
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 12.356166ms
+- id: f74f96f9-acab-4e44-b731-6e91db0b6d73
+  source: yyqubu1938
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 7.334675ms
+- id: 97686ffe-70d1-42fd-ad9b-1fa550ac32c1
+  source: dzbfuz8344
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 26.163768ms
+- id: 490f0faf-5a92-4ba6-80f1-05ba0c04b608
+  source: mfcpdh7351
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 32.713864ms
+- id: a4a77b08-1fc5-4e84-b316-76fd31fc36d9
+  source: usbrth1899
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 11.557137ms
+- id: e36ce2ff-dca7-4dc0-875c-eb8d21ffae9e
+  source: egkypw0514
+  destination: mfcpdh7351
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.471854ms
+- id: bd51c8a7-945d-4075-bec2-f2d8da162440
+  source: externals2
+  destination: pacdhv5336
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+  duration: 189.642078ms
+- id: d5c38cea-3557-47d9-b7b8-5de9a22f74e4
+  source: externals2
+  destination: ldnjqc8541
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+  duration: 76.593335ms
+- id: ff92dcdb-2b54-49e3-9440-44124163f5d6
+  source: yyqubu1938
+  destination: jsouyu6091
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: 0317eb16-b553-451b-a30e-725684a740e2
+  source: dzbfuz8344
+  destination: rvejda0049
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: 7e6efcfb-61e2-4477-85e3-e4f8cffee3b5
+  source: dzbfuz8344
+  destination: xvytsw0504
+  protocol: TCP
+  port: 5432
+  interval: 1000
+  payload: APPID - POSTGRESQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 72c1bcff-3a0a-46c2-88a5-a8c200444091
+  source: qtclqw9130
+  destination: mfcpdh7351
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.672629ms
+- id: f1459000-b665-424f-8b2a-eec0473ca820
+  source: mmnnjj7789
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 698.399608ms
+- id: 8d1e2f71-8766-4955-ae05-f6ad73214769
+  source: dgexax7440
+  destination: esiwqy5470
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 80.096212ms
+- id: 77443025-963f-4cbe-ac43-f38b4e1d8bf8
+  source: gjpzjz0302
+  destination: esiwqy5470
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.805441ms
+- id: df13cd97-9f12-47c3-a503-626f2ca04f97
+  source: esiwqy5470
+  destination: mmnnjj7789
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.15871ms
+- id: 9bdd6181-d44e-4211-ade9-354b2b042336
+  source: srzpko5936
+  destination: mmnnjj7789
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.846433ms
+- id: 1d2dcd0c-3894-4ccb-82b3-df4da7fa64f8
+  source: esiwqy5470
+  destination: fbuhdq4189
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 2.069832ms
+- id: 06f9d729-3484-4f13-a8ec-eacd342a5af7
+  source: srzpko5936
+  destination: fbuhdq4189
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.406071ms
+- id: 0482cad0-132d-4801-9eb0-0bf7d3074242
+  source: externals
+  destination: dgexax7440
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+  duration: 20.734366ms
+- id: 1525c6e2-7ebd-4085-a13d-c0c77ad0a4e9
+  source: externals
+  destination: gjpzjz0302
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+  duration: 22.357963ms
+- id: 8b138de5-f83c-421b-a9a1-76c35d44bbc7
+  source: dgexax7440
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 12.881757ms
+- id: 9bdaba10-e9aa-4f84-b533-6b3b2517ce32
+  source: gjpzjz0302
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 59.739173ms
+- id: ede8f0d7-12aa-4b3d-a562-ac6d3f7a19e3
+  source: esiwqy5470
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 9.881174ms
+- id: eb60e747-4f23-4955-a73b-612d6223df3a
+  source: srzpko5936
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 9.674025ms
+- id: 728f04af-b12a-4712-b1e1-4b4fae38a1b2
+  source: mmnnjj7789
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 24.109386ms
+- id: 63768ec2-216a-4b61-b324-5d0de466be3d
+  source: fbuhdq4189
+  destination: lnavti4789
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 16.049741ms
+- id: 8e1d0000-817a-4566-86fe-84556fc06ad8
+  source: dgexax7440
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 45.607022ms
+- id: b2635b7a-030a-4771-8ffb-5b64d2bc143f
+  source: gjpzjz0302
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 4.503328ms
+- id: b970e258-e2e3-445f-80c7-ffb1c28e088d
+  source: esiwqy5470
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 18.1674ms
+- id: ae3a4cef-3669-4aac-acd2-5b8c3d8290b5
+  source: srzpko5936
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 10.995741ms
+- id: 386418bd-86a6-4caa-a3ad-28f6f38fafac
+  source: mmnnjj7789
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 60.581642ms
+- id: db0cb8b0-2979-442d-8c3c-702a7a8aae30
+  source: fbuhdq4189
+  destination: rqdnnu5720
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 9.116543ms
+- id: b4220de2-26be-4183-8906-623744b57ff2
+  source: dgexax7440
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 301ns
+- id: 13b03e88-59a9-41cc-82c7-018466112406
+  source: dgexax7440
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 742.888748ms
+- id: 80179edd-7dec-4ec0-ab1f-f41074d1fb36
+  source: gjpzjz0302
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 423.319143ms
+- id: b4916400-67d3-491a-a806-ad06c049529d
+  source: esiwqy5470
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 565.317383ms
+- id: cab5ca0a-1433-4d3a-833a-2cab96aba2b8
+  source: srzpko5936
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 748ns
+- id: aecfd2f3-480a-4e93-a1bf-752c120366fa
+  source: mmnnjj7789
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 651.616038ms
+- id: 1224b2b3-7675-49d8-b6ea-8d645c67dd14
+  source: fbuhdq4189
+  destination: oiuagx0504
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 369.013122ms
+- id: a23eafd3-8ab1-4d32-bd89-3321d16c76eb
+  source: gjpzjz0302
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 595.111254ms
+- id: e444f50a-1354-4852-b4a6-5d5eb032af7f
+  source: esiwqy5470
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 487.665371ms
+- id: ffa7cd5d-150a-4848-8b83-7e2b8007656c
+  source: srzpko5936
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 679ns
+- id: 38595565-2bcd-4031-9b7d-28d97494fd65
+  source: fbuhdq4189
+  destination: wqafba9936
+  protocol: UDP
+  port: 53
+  interval: 1000
+  payload: APPID - DNS
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 762.926493ms
+- id: 4803e5a4-6d7b-4761-a2ad-402121cba03c
+  source: gjpzjz0302
+  destination: srzpko5936
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 3.143451ms
+- id: cbc32ebb-7066-4411-89b2-dedba8836382
+  source: dgexax7440
+  destination: srzpko5936
+  protocol: TCP
+  port: 80
+  interval: 1000
+  payload: APPID - HTTP
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 19.877263ms
+- id: 4e65634b-7fbc-4451-ba22-d8e2503311a8
+  source: dgexax7440
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 8.38162ms
+- id: 4cf6233b-9c31-4436-81d4-062500bb3a26
+  source: gjpzjz0302
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 12.356166ms
+- id: 1303237c-4a79-4678-98c5-edbdde84a6f1
+  source: esiwqy5470
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 7.334675ms
+- id: 035cdd41-7f93-49ed-b3da-baff2bd9884b
+  source: srzpko5936
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 26.163768ms
+- id: bb6ec633-8aa1-4856-be21-fedb7f16ca3e
+  source: mmnnjj7789
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 32.713864ms
+- id: 979ddd80-aec9-47c4-a9b0-59040132ade6
+  source: fbuhdq4189
+  destination: yyhgza8639
+  protocol: UDP
+  port: 123
+  interval: 1000
+  payload: APPID - NTP 3
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 11.557137ms
+- id: fb542754-ddcc-4f26-9fa1-8e012cf7732c
+  source: dzbfuz8344
+  destination: pscffc2473
+  protocol: TCP
+  port: 9042
+  interval: 1000
+  payload: APPID - CASSANDRA
+  data_format: template
+  type: baseline
+  children: 1
+- id: b5bb3c97-39af-4d6b-a7e2-9511e4c96ecd
+  source: egkypw0514
+  destination: mmnnjj7789
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.471854ms
+- id: 05dc8658-8d71-4cdf-a5c1-5ee169e846dc
+  source: externals2
+  destination: dgexax7440
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+  duration: 189.642078ms
+- id: f7e1068c-dc3a-4dbc-b0dc-1d1ee1403c87
+  source: externals2
+  destination: gjpzjz0302
+  protocol: TCP
+  port: 443
+  interval: 1000
+  payload: APPID - TLS v1.3
+  data_format: template
+  type: baseline
+  children: 25
+  duration: 76.593335ms
+- id: c895bee5-b610-47d4-9d56-ea5749595d40
+  source: esiwqy5470
+  destination: jsouyu6091
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: ce85aa04-1441-4840-a5b6-bd44551ac8d4
+  source: srzpko5936
+  destination: rvejda0049
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+- id: 8c3c5d82-0af5-42b5-aa3f-df62eeb19c46
+  source: srzpko5936
+  destination: xvytsw0504
+  protocol: TCP
+  port: 5432
+  interval: 1000
+  payload: APPID - POSTGRESQL
+  data_format: template
+  type: baseline
+  children: 1
+- id: 25fa6c02-1683-43a7-919d-158a6de0bad8
+  source: qtclqw9130
+  destination: mmnnjj7789
+  protocol: TCP
+  port: 3306
+  interval: 1000
+  payload: APPID - MySQL
+  data_format: template
+  type: baseline
+  children: 1
+  duration: 1.672629ms
+- id: 85f97cbb-2997-468b-be2c-f974fb3632e6
+  source: egkypw0514
+  destination: oyoicr6976
+  protocol: UDP
+  port: 389
+  interval: 1000
+  payload: APPID - LDAP
+  data_format: template
+  type: baseline
+  children: 1
+- id: 435887e6-3042-44f7-b7b2-274337294ba0
+  source: xfqter0293
+  destination: oyoicr6976
+  protocol: TCP
+  port: 636
+  interval: 1000
+  payload: APPID - LDAPS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 53af0a74-a48d-4854-801b-efbe388400bb
+  source: wdywjm2478
+  destination: oyoicr6976
+  protocol: UDP
+  port: 636
+  interval: 1000
+  payload: APPID - LDAPS
+  data_format: template
+  type: baseline
+  children: 1
+- id: 40d1ef06-58b0-476f-b52a-600331883479
+  source: gukiqw9819
+  destination: jsouyu6091
+  protocol: TCP
+  port: 1521
+  interval: 1000
+  payload: APPID - ORACLE
+  data_format: template
+  type: baseline
+  children: 1
+campaign:
+  name: default
+  blocking: true
+  flow_ids: []
+tags:
+- id: e532fef3-e0b6-446a-b8c5-4bf19fd1ec48
+  scope: region
+  value: NAM
+  color: '#7e3feb'
+- id: f81a77fb-f1d9-4026-bf47-56a14f99b656
+  scope: region
+  value: EMEA
+  color: '#ef7800'
+- id: 7dff22a4-25cc-48ed-8bc3-63e85669dd0a
+  scope: zone
+  value: US-South
+  color: '#df00e8'
+- id: a6d70459-8847-48d7-88ad-eb853e76440d
+  scope: zone
+  value: US-West
+- id: fd0b7321-1dc4-4fa6-b934-43f55e050488
+  scope: zone
+  value: UK-Lon
+- id: f92f5793-eb9f-4a5b-8441-0a1551c0f72b
+  scope: zone
+  value: FR-Paris
+- id: 81b47635-658a-468d-8d62-bbdd540e6043
+  scope: environment
+  value: Prod
+- id: 18c22a3f-9e49-4fea-be87-29d71fd2b978
+  scope: environment
+  value: Dev
+- id: 34bca44e-6fd8-4228-8071-b6268965f9f5
+  scope: application
+  value: SAP
+- id: 088234ad-ebc6-4d50-9e94-90b2278118f4
+  scope: application
+  value: Exchange
+- id: 1d771bcf-5d3d-4abf-a4ad-e4efda75f0a6
+  scope: application
+  value: Jira
+- id: 78d0527a-ffe7-40c3-8996-c34d13ab2f10
+  scope: application
+  value: Confluence
+- id: ce8d46b2-5c91-4abe-b867-82343de0e008
+  scope: application
+  value: Sharepoint
+- id: 0f6f35e1-542d-4d34-9832-6fec0075bab3
+  scope: application
+  value: ServiceNow
+- id: 811a3c6a-07c0-4f04-b327-8051830dd0d4
+  scope: application
+  value: PeopleSoft
+- id: 74ebba43-972a-4492-9df7-c83dfc1df5de
+  scope: application
+  value: Lotus Domino
+- id: e2e5ef04-9927-4471-a901-c60e00ada8c5
+  scope: application
+  value: Workday
+  color: '#ff0000'
+- id: 22915eed-bfe2-4fdd-838f-54cdde001293
+  scope: application tier
+  value: Nginx
+- id: 5eee31bf-a7cc-4caa-8ade-271878f3d78b
+  scope: application tier
+  value: Apache
+- id: 86d79249-383d-4bc9-8a23-2b1559e28abd
+  scope: application tier
+  value: Caddy
+- id: 4eb0403a-84be-4d4c-bfa9-5ca3006d9626
+  scope: application tier
+  value: HA Proxy
+- id: 8489ff51-85a2-4d93-9406-730cfb009f34
+  scope: application tier
+  value: Tomcat
+- id: 6d39eff3-0c60-4efb-b894-0525c01f3331
+  scope: application tier
+  value: WebLogic
+- id: 6151f865-7f81-4a2e-ad44-75b44f509fb3
+  scope: application tier
+  value: WebSphere
+- id: dd34dc3b-5187-4710-bed4-cd3154af77db
+  scope: application tier
+  value: Jetty
+- id: 71e07cb3-53e5-4d5a-ae61-39af41d92097
+  scope: application tier
+  value: Node.js
+- id: 1090c56b-cb78-45f1-b71c-f7175bd62544
+  scope: application tier
+  value: Puma
+- id: cf16f320-cc1d-48f7-bb19-603757b2b36b
+  scope: application tier
+  value: Unicorn
+- id: 1dfe699e-c292-49ae-841d-41c2aa105815
+  scope: application tier
+  value: JBoss
+- id: 68ea3fb6-e23d-4e72-942c-dd383e1aa406
+  scope: application tier
+  value: Redis
+- id: 4b45337d-71b2-42a0-8269-6e484c15c649
+  scope: application tier
+  value: Memcached
+- id: b2bbd5a7-e7d6-4553-9f97-723825d1bfb2
+  scope: application tier
+  value: RabbitMQ
+- id: ff97af6e-78ed-4ed5-9a25-9f7fcde28670
+  scope: application tier
+  value: Pulsar
+- id: 994a4c01-c5b6-4ffc-a8b7-2c260ba06bb6
+  scope: application tier
+  value: ElasticSearch
+- id: 966c40b7-500e-4d8a-bef3-b08b8d865b04
+  scope: application tier
+  value: Postgres
+- id: 83c03525-1cea-4418-a929-b0fdaa3966f7
+  scope: application tier
+  value: MySQL
+- id: a7af26e3-ad4d-4155-8db0-85ee99e7a7bc
+  scope: application tier
+  value: Oracle
+- id: b71f1b24-329e-4b86-a4f6-18143ff31e31
+  scope: application tier
+  value: MongoDB
+- id: e0b3fcdf-02b6-4c31-a2ab-eca7f22e4b6b
+  scope: application tier
+  value: Cassandra
+certificates: []
+nsx_api_calls: []

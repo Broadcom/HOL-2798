@@ -1,0 +1,317 @@
+name: atp
+vms:
+- name: LON.PROD.IT.AD.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.2
+    managed: true
+    nb_ips: 1
+  tags:
+  - 6ebe27a5-4f6f-422f-bd38-b77240f9b9ef
+  push_tags: true
+  view_config:
+    position_x: -886
+    position_y: 91
+  os: Linux
+  type: undefined
+  infra: true
+- name: LON.PROD.IT.VDI.14
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.3
+    managed: true
+    nb_ips: 1
+  tags:
+  - 6ebe27a5-4f6f-422f-bd38-b77240f9b9ef
+  push_tags: true
+  view_config:
+    position_x: -447
+    position_y: -265
+  os: Linux
+  type: undefined
+- name: InternetIceID
+  placement: internet
+  network_settings:
+    ip_address: 192.0.0.2
+    managed: true
+    nb_ips: 1
+  tags:
+  - f8d9963a-848d-4240-babc-f53b4c385326
+  view_config:
+    position_x: -365
+    position_y: -522
+  os: Linux
+- name: InternetC2C
+  placement: internet
+  network_settings:
+    ip_address: 192.0.0.3
+    managed: true
+    nb_ips: 1
+  tags:
+  - f8d9963a-848d-4240-babc-f53b4c385326
+  view_config:
+    position_x: 61
+    position_y: -532
+  os: Linux
+- name: LON.PROD.IT.BAC.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.4
+    managed: true
+    nb_ips: 1
+  tags:
+  - 6ebe27a5-4f6f-422f-bd38-b77240f9b9ef
+  push_tags: true
+  view_config:
+    position_x: -178
+    position_y: 44
+  os: Linux
+  type: undefined
+- name: LON.PROD.IT.FIL.01
+  placement: default
+  network_settings:
+    ip_address: 10.0.0.5
+    managed: true
+    nb_ips: 1
+  tags:
+  - 6ebe27a5-4f6f-422f-bd38-b77240f9b9ef
+  push_tags: true
+  view_config:
+    position_x: 216
+    position_y: 49
+  os: Linux
+  type: undefined
+flows:
+- id: a58660ea-5974-450c-8659-2c8d1a78ea87
+  source: LON.PROD.IT.VDI.14
+  destination: InternetIceID
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: MPS - IcedID OneNote Lure
+  description: A user on a VDI desktop was tricked into clicking a link in an email
+    This triggered the download of a malicoius OneNote file.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 9e1c8a62-95b3-455d-b111-be9e65ade28e
+  source: LON.PROD.IT.VDI.14
+  destination: InternetIceID
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IcedID  DLL (renamed to .jpg)
+  description: An IcedID trojan is downloaded
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 13e1d7d5-13dd-4ba3-9fac-6a1453dec2a6
+  source: LON.PROD.IT.VDI.14
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 109683001 - NSX - (Command and Control) Detect possible IcedID C&C
+    communication
+  description: A command and control session gets established, giving the attacker
+    control over this VDI desktop.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: fedc28b1-b98e-4f94-98c3-ecfa55664530
+  source: LON.PROD.IT.VDI.14
+  destination: LON.PROD.IT.AD.01
+  protocol: TCP
+  port: 445
+  interval: 0
+  payload: IDS - 106534500 - NSX - Detect Potential AD Account Enumeration
+  description: The attacker used credentials from the admin user on the VDI desktop
+    to discover Active Directory and enumerate the computer and user inventory.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 9c135470-b806-4323-aa92-bcd7f4f20a5f
+  source: LON.PROD.IT.VDI.14
+  destination: LON.PROD.IT.AD.01
+  protocol: TCP
+  port: 80
+  interval: 0
+  payload: SCRIPT - Horizontal Port Scan (NMAP) - 10.0.0.0/24
+  description: 'The attacker then went on to discover the enironment, running a port
+    scan against a file server and backup server. '
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 224737ff-2321-45f0-83a9-ffb2dd0c1cbc
+  source: LON.PROD.IT.VDI.14
+  destination: LON.PROD.IT.BAC.01
+  protocol: TCP
+  port: 3389
+  interval: 240000
+  payload: APPID - RDP
+  description: They then proceeded to use the Remote Desktop Protocol (also named
+    the Ransomware Distribution Protocol by some), to move laterally and gain access
+    to these server.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: f188bcfc-7eae-41ab-b358-bb1dd4628edf
+  source: LON.PROD.IT.VDI.14
+  destination: LON.PROD.IT.FIL.01
+  protocol: TCP
+  port: 3389
+  interval: 240000
+  payload: APPID - RDP
+  description: They then proceeded to use the Remote Desktop Protocol (also named
+    the Ransomware Distribution Protocol by some), to move laterally and gain access
+    to these server.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: fd8fea76-5e7e-40ad-a073-39e2ce7e993f
+  source: LON.PROD.IT.BAC.01
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 2032362 - ET MALWARE Cobalt Strike Beacon Activity
+  description: The Cobalt Strike post-exploit toolkit was deployed and command and
+    control initiated.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: bd8ecd02-84c9-4c26-a1e6-bc38a3da8af2
+  source: LON.PROD.IT.FIL.01
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 2032362 - ET MALWARE Cobalt Strike Beacon Activity
+  description: 'The Cobalt Strike post-exploit toolkit was deployed and command and
+    control initiated. '
+  data_format: template
+  type: on-demand
+  children: 1
+- id: b2e72061-07b1-43ff-b2c2-83684ae6e6f5
+  source: LON.PROD.IT.BAC.01
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 2032957 - ET MALWARE Cobalt Strike Malleable C2 (Unknown Profile)
+  description: 'The Cobalt Strike post-exploit toolkit was deployed and command and
+    control initiated. '
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 35523c0e-59c1-4703-849d-09d49b6f88f0
+  source: LON.PROD.IT.FIL.01
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 2032957 - ET MALWARE Cobalt Strike Malleable C2 (Unknown Profile)
+  description: The Cobalt Strike post-exploit toolkit was deployed and command and
+    control initiated.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: b9de567c-7d5f-4e32-ae6f-92a52f479cf3
+  source: LON.PROD.IT.BAC.01
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 1107300 - NSX - (Lateral Movement) Detect SSL/TLS Certificate Observed
+    (AnyDesk Remote Desktop Software)
+  description: The attacker was then observed installing an Anydesk server on both
+    workloads, giving them persistent access.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 1948411d-439e-4b1c-aa65-d99bba59a213
+  source: LON.PROD.IT.FIL.01
+  destination: InternetC2C
+  protocol: TCP
+  port: 443
+  interval: 0
+  payload: IDS - 1107300 - NSX - (Lateral Movement) Detect SSL/TLS Certificate Observed
+    (AnyDesk Remote Desktop Software)
+  description: The attacker was then observed installing an Anydesk server on both
+    workloads, giving them persistent access.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 91bbd234-1e5f-4c45-a37a-1cf4c9de9fac
+  source: LON.PROD.IT.FIL.01
+  destination: LON.PROD.IT.VDI.14
+  protocol: TCP
+  port: 22
+  interval: 5000
+  payload: NTA - SSH upload
+  description: The attacker exfiltrated critical data out of the fileserver.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 554b1f08-7842-4f60-a845-ef14ebfefe2f
+  source: LON.PROD.IT.BAC.01
+  destination: InternetIceID
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: MPS - Nokoyama Ransomware
+  description: And finally, deployed the Nokoyawa ransomware to both servers, encrypting
+    the files and leaving behind a demand for payout along with a bitcoin address.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 35331c22-5397-46b6-9f76-f5790e05a899
+  source: LON.PROD.IT.VDI.14
+  destination: InternetIceID
+  protocol: TCP
+  port: 22
+  interval: 5000
+  payload: NTA - SSH upload
+  description: The attacker exfiltrated critical data out of the fileserver.
+  data_format: template
+  type: on-demand
+  children: 1
+- id: 59305119-b3a7-491c-889c-95e0644aeeb3
+  source: LON.PROD.IT.FIL.01
+  destination: InternetIceID
+  protocol: TCP
+  port: 443
+  interval: 5000
+  payload: MPS - Nokoyama Ransomware
+  description: And finally, deployed the Nokoyawa ransomware to both servers, encrypting
+    the files and leaving behind a demand for payout along with a bitcoin address.
+  data_format: template
+  type: on-demand
+  children: 1
+campaign:
+  name: default
+  blocking: false
+  flow_ids:
+  - a58660ea-5974-450c-8659-2c8d1a78ea87
+  - 9e1c8a62-95b3-455d-b111-be9e65ade28e
+  - 13e1d7d5-13dd-4ba3-9fac-6a1453dec2a6
+  - fedc28b1-b98e-4f94-98c3-ecfa55664530
+  - 9c135470-b806-4323-aa92-bcd7f4f20a5f
+  - 224737ff-2321-45f0-83a9-ffb2dd0c1cbc
+  - f188bcfc-7eae-41ab-b358-bb1dd4628edf
+  - fd8fea76-5e7e-40ad-a073-39e2ce7e993f
+  - bd8ecd02-84c9-4c26-a1e6-bc38a3da8af2
+  - b2e72061-07b1-43ff-b2c2-83684ae6e6f5
+  - 35523c0e-59c1-4703-849d-09d49b6f88f0
+  - b9de567c-7d5f-4e32-ae6f-92a52f479cf3
+  - 1948411d-439e-4b1c-aa65-d99bba59a213
+  - 91bbd234-1e5f-4c45-a37a-1cf4c9de9fac
+  - 35331c22-5397-46b6-9f76-f5790e05a899
+  - 554b1f08-7842-4f60-a845-ef14ebfefe2f
+  - 59305119-b3a7-491c-889c-95e0644aeeb3
+tags:
+- id: 6ebe27a5-4f6f-422f-bd38-b77240f9b9ef
+  scope: environment
+  value: LON.PROD
+certificates: []
+nsx_api_calls: []

@@ -1,0 +1,12 @@
+---
+
+  - include_vars: vm_tagging_variables.yml
+  
+
+  - name: Initiate VM Tagging | Loop VM
+    include_tasks: 
+      file: ./vm_tagging.yaml
+    loop: "{{ vm_tags }}"
+    loop_control:
+      loop_var: VM
+

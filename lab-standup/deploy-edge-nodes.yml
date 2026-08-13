@@ -1,0 +1,191 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: False
+  vars_files:
+    - environment.yml
+  tasks:  
+    - name: Create transport zone
+      vmware.ansible_for_nsxt.nsxt_transport_zones:
+        hostname: "{{nsxt_hostname}}"
+        username: "{{nsxt_username}}"
+        password: "{{nsxt_password}}"
+        validate_certs: False
+        resource_type: "PolicyTransportZone"
+        display_name: "{{ edge_transport_zone_display_name }}"
+        description: "Transport Zone for WLD1 Edge Nodes"
+        tz_type: "VLAN_BACKED"
+        uplink_teaming_policy_names:
+        - "{{ edge_uplink_policy1 }}"
+        - "{{ edge_uplink_policy2 }}"
+        state: "present"
+      delegate_to: localhost
+    
+    - name: deploy Edge Node 1
+      vmware.ansible_for_nsxt.nsxt_transport_nodes:
+        hostname: "{{nsxt_hostname}}"
+        username: "{{nsxt_username}}"
+        password: "{{nsxt_password}}"
+        validate_certs: False
+        display_name: "{{edge_hostname1}}"
+        description: "Edge1 for production workloads"
+        host_switch_spec:
+          resource_type: StandardHostSwitchSpec
+          host_switches:
+          - host_switch_profiles:
+            - name: "VCF-edge_EC-01_uplink-profile-13"
+              type: UplinkHostSwitchProfile
+            host_switch_name: "nsxDefaultHostSwitch"
+            host_switch_mode: "STANDARD"
+            pnics:
+            - device_name: "fp-eth0"
+              uplink_name: "uplink1"
+            - device_name: "fp-eth1"
+              uplink_name: "uplink2"
+            ip_assignment_spec:
+              resource_type: StaticIpListSpec
+              ip_list: 
+                - "172.27.13.6"
+                - "172.27.13.7"
+              default_gateway: "172.27.13.1"
+              subnet_mask: "255.255.255.0"
+            transport_zone_endpoints:
+            - transport_zone_name: "{{edge_transport_zone_display_name}}"
+            - transport_zone_name: "{{transport_zone_display_name}}"
+        node_deployment_info:
+          resource_type: EdgeNode
+          display_name: "{{ edge_hostname1 }}"
+          deployment_type: VIRTUAL_MACHINE
+          fqdn: "edge1-wld.vcf.sddc.lab"
+          ip_addresses:
+            - "10.0.0.55"
+          node_settings:
+            allow_ssh_root_login: True
+            enable_ssh: True
+            dns_servers:
+            - "{{dns_server}}"
+            ntp_servers:
+            - "{{ntp_server}}"
+            hostname: "{{ edge_hostname1 }}"
+            search_domains:
+            - "{{search_domain}}"
+          deployment_config:
+            form_factor: "MEDIUM"
+            node_user_settings:
+              cli_password: "{{nsxt_password}}"
+              root_password: "{{nsxt_password}}"
+            vm_deployment_config:
+              placement_type: VsphereDeploymentConfig
+              vc_name: "{{vc_hostname}}"
+              vc_username: "{{vc_username}}"
+              vc_password: "{{vc_password}}"
+              compute: "{{vc_wld1_cluster}}"
+              storage: "{{vc_wld1_datastore}}"
+              management_network: "{{mgmt_dpg}}"
+              data_networks:
+              - "{{edge_dpg1}}"
+              - "{{edge_dpg2}}"
+              management_port_subnets:
+              - ip_addresses:
+                - "10.0.0.55"
+                prefix_length: "24"
+              default_gateway_addresses:
+              - "{{default_gateway}}"
+              reservation_info:
+                cpu_reservation:
+                  reservation_in_shares: "LOW_PRIORITY"
+                memory_reservation:
+                  reservation_percentage: "25"
+        state: "present"
+      delegate_to: localhost
+    
+    - name: deploy Edge Node 2
+      vmware.ansible_for_nsxt.nsxt_transport_nodes:
+        hostname: "{{nsxt_hostname}}"
+        username: "{{nsxt_username}}"
+        password: "{{nsxt_password}}"
+        validate_certs: False
+        display_name: "{{ edge_hostname2 }}"
+        description: "Edge2 for production workloads"
+        host_switch_spec:
+          resource_type: StandardHostSwitchSpec
+          host_switches:
+          - host_switch_profiles:
+            - name: "VCF-edge_EC-01_uplink-profile-13"
+              type: UplinkHostSwitchProfile
+            host_switch_name: "nsxDefaultHostSwitch"
+            host_switch_mode: "STANDARD"
+            pnics:
+            - device_name: "fp-eth0"
+              uplink_name: "uplink1"
+            - device_name: "fp-eth1"
+              uplink_name: "uplink2"
+            ip_assignment_spec:
+              resource_type: StaticIpListSpec
+              ip_list: 
+                - "172.27.13.8"
+                - "172.27.13.9"
+              default_gateway: "172.27.13.1"
+              subnet_mask: "255.255.255.0"
+            transport_zone_endpoints:
+            - transport_zone_name: "{{edge_transport_zone_display_name}}"
+            - transport_zone_name: "{{transport_zone_display_name}}"
+        node_deployment_info:
+          resource_type: EdgeNode
+          display_name: "{{ edge_hostname2 }}"
+          deployment_type: VIRTUAL_MACHINE
+          fqdn: "edge2-wld.vcf.sddc.lab"
+          ip_addresses:
+            - "10.0.0.56"
+          node_settings:
+            allow_ssh_root_login: True
+            enable_ssh: True
+            dns_servers:
+            - "{{dns_server}}"
+            ntp_servers:
+            - "{{ntp_server}}"
+            hostname: "{{ edge_hostname2 }}"
+            search_domains:
+            - "{{search_domain}}"
+          deployment_config:
+            form_factor: "MEDIUM"
+            node_user_settings:
+              cli_password: "{{nsxt_password}}"
+              root_password: "{{nsxt_password}}"
+            vm_deployment_config:
+              placement_type: VsphereDeploymentConfig
+              vc_name: "{{vc_hostname}}"
+              vc_username: "{{vc_username}}"
+              vc_password: "{{vc_password}}"
+              compute: "{{vc_wld1_cluster}}"
+              storage: "{{vc_wld1_datastore}}"
+              management_network: "{{mgmt_dpg}}"
+              data_networks:
+              - "{{ edge_dpg1 }}"
+              - "{{ edge_dpg2 }}"
+              management_port_subnets:
+              - ip_addresses:
+                - "10.0.0.56"
+                prefix_length: "24"
+              default_gateway_addresses:
+              - "{{default_gateway}}"
+              reservation_info:
+                cpu_reservation:
+                  reservation_in_shares: "LOW_PRIORITY"
+                memory_reservation:
+                  reservation_percentage: "25"
+        state: "present"
+      delegate_to: localhost
+    
+    - name: Create Edge Cluster
+      vmware.ansible_for_nsxt.nsxt_edge_clusters:
+        hostname: "{{ nsxt_hostname }}"
+        username: "{{ nsxt_username }}"
+        password: "{{ nsxt_password }}"
+        validate_certs: False
+        display_name: "{{ edge_cluster }}"
+        members:
+          - transport_node_name: "{{ edge_hostname1 }}"
+          - transport_node_name: "{{ edge_hostname2 }}"
+        state: present
+      delegate_to: localhost

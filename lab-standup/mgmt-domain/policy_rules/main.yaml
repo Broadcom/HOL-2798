@@ -1,0 +1,10 @@
+---
+
+  - include_vars: fw_policies_variables.yml
+
+  - name: Initiate Policy and Rule Creation | Loop Policies
+    include_tasks: 
+      file: ./policy_rules.yaml
+    loop: "{{ Firewall }}"
+    loop_control:
+      loop_var: DFW

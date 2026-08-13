@@ -1,0 +1,221 @@
+---
+# ══════════════════════════════════════════════════════════════════════════════
+# SSP Ansible Deployment — HOL-2770
+#
+# Copy this file to group_vars/all.yml and fill in your environment values.
+# For production use, store sensitive values (passwords, certificates) using
+# Ansible Vault:  ansible-vault encrypt_string 'MySecret' --name 'admin_password'
+# ══════════════════════════════════════════════════════════════════════════════
+lab_pw: "{{ lookup('file', '/home/holuser/creds.txt')}}"
+
+
+# ── Bundle sources ─────────────────────────────────────────────────────────────
+sspi_ova_url: "http://build-squid.example.com/Security-Services-Platform-Installer.ova"
+ssp_bundle_url: "http://build-squid.example.com/Security-Services-Platform.tar"
+
+# ── vCenter credentials ────────────────────────────────────────────────────────
+vcenter_server: "vc-mgmt-a.site-a.vcf.lab"
+vcenter_user: "administrator@wld.sso"
+vcenter_password: "{{ lab_pw }}"
+vcenter_certificate: |
+  -----BEGIN CERTIFICATE-----
+  MIIDMzCCAhugAwIBAgIUL+27D2H2YrYIDguBYT+eKrPq/2swDQYJKoZIhvcNAQEL
+  BQAwITEfMB0GA1UEAxMWdmNmLmxhYiBSb290IEF1dGhvcml0eTAeFw0yNjAzMjcy
+  MTE1MDRaFw0zNjAzMjQyMTE1MzNaMCExHzAdBgNVBAMTFnZjZi5sYWIgUm9vdCBB
+  dXRob3JpdHkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDaRjVLqzvl
+  js+VY694toAexrPhYSQlMwEn+rwQ+lut18Gtf8k238HPaIpLug3YmUq4esbzfUwS
+  u+iv6ovsHLG6rOBMs/5L0s90V8d5HewOtYvQrMccn9NphcHOmBGCAFn0bkf1dRW5
+  AIRqb2pkSTt0+ltzjA/tfLYHPZ+0pM9+8R7czoyEcy7p9T8t1Sddyopcvw8/sklo
+  aSIXWJnjh8nwkhuJ3nEUbfPV10TLtYWmRHOEvFZ8xgHBe42oxKYfCDAf9jbeGLGA
+  pE6+1/4Z1IZmxvmT7j+NY+rS6v2UllYlHrjw4T5ZG4WFj2fWBY6gAxMpW55lA1aJ
+  TM8toOhbfBm7AgMBAAGjYzBhMA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTAD
+  AQH/MB0GA1UdDgQWBBSbRXPV2WCEoBxFMqHzk8t26GDyPDAfBgNVHSMEGDAWgBSb
+  RXPV2WCEoBxFMqHzk8t26GDyPDANBgkqhkiG9w0BAQsFAAOCAQEAE4NmOOMfkTy2
+  BQbPSxb58/mPEC4ahK3Dv5B6UkYmlLzcqbwrOLajKON8EvSDT1D4/13nhkPPv/xb
+  miY6nNdR107s69btGhDu+wI599PElhW9g7ZESw5I4G5R6r1nsSVSUCx6fFAz1N2O
+  2NczVk44JaptAy+Cu7AJtgKKhv5jwp/rmdR/PEzvoX7wx6ReeI4OZ6hhlQkNxd4b
+  1M3JRQmQpL/+XKBzfSF/SwisQKlCylJ9wQCTTSjElgL+MmKH8aUkUDAYh+5jvxJY
+  T7RnIToZ7sQdg69FtmbzrBlW7x3tjcoCMgkbtlSj+XiucpoTP5Q+hwjdkzMlvFRX
+  pCHk9Tkcow==
+  -----END CERTIFICATE-----
+
+# ── Compute placement ──────────────────────────────────────────────────────────
+datacenter_name: "dc-mgmt-a"
+datastore_name: "vsan-mgmt-01a"
+resource_pool_path: "Resources"    # resource pool for the SSPI VM
+esxi_host: "esxi-host.example.com"
+vm_name: "sspi-01"
+cluster_name: "Cluster"
+resource_pool_name: "SSP"                  # resource pool for SSP platform VMs
+storage_policy_name: "vSAN Default Storage Policy"
+enable_resource_reservation: false
+
+# ── Network placement ──────────────────────────────────────────────────────────
+portgroup_name: "mgmt"
+dvs_name: "vds01-mgmt-01a"
+dvs_id: "dvs-28"                           # managed-object ID of the DVS
+
+# OVF network map key — must match the OVF descriptor network name.
+sspi_ovf_network_name: "VM Network"
+
+# ── SSPI appliance credentials ─────────────────────────────────────────────────
+sspi_username: "admin"                     # SSPI API username
+admin_password: "{{ lab_pw }}"                # vault recommended
+grub_password: "{{ lab_pw }}"                 # vault recommended
+sysadmin_password: "{{ lab_pw }}"              # vault recommended
+audit_password: "{{ lab_pw }}"                # vault recommended
+
+# ── SSPI appliance network ─────────────────────────────────────────────────────
+sspi_fqdn: "ssp-i.site-a.vcf.lab"
+sspi_ip: "10.1.0.10"
+sspi_netmask: "255.255.255.0"
+sspi_gateway: "10.1.0.1"
+internal_cluster_cidr: "10.10.0.0/16"
+dns_servers:
+  - "10.0.0.2"
+dns_search_domain: "site-a.vcf.lab"
+ntp_servers:
+  - "10.1.1.1"
+ssh_enabled: true
+
+# ── SSP platform shared network settings ──────────────────────────────────────
+ntp_server: "10.1.1.1"
+search_domain: "site-a.vcf.lab"
+
+# ── SSP platform instances ─────────────────────────────────────────────────────
+# Add one dict per platform instance. The loop in sspi_api will iterate over
+# this list and call sspi_platform once per entry.
+platforms:
+  - instance_name: "lab"
+    platform_subnet: "10.1.0.0/24"
+    platform_gateway: "10.1.0.1"
+    node_pool_start: "10.1.0.51"
+    node_pool_end: "10.1.0.66"
+    service_pool_start: "10.1.0.68"
+    service_pool_end: "10.1.0.79"
+    ingress_fqdn: "ssp.site-a.vcf.lab"
+    kafka_fqdn: "ssp-m.site-a.vcf.lab"
+    ssp_admin_password: "{{ lab_pw }}"         # vault recommended
+    ssp_audit_password: "{{ lab_pw }}"         # vault recommended
+    # Optional sizing overrides (defaults shown):
+    # system_form_factor: "LARGE"
+    # system_ssp_type: "ATP"
+    # controller_count: 3
+    # worker_count: 5
+
+  # Uncomment to add a second instance:
+  # - instance_name: "staging"
+  #   platform_subnet: "10.1.0.0/24"
+  #   platform_gateway: "10.1.0.1"
+  #   ...
+
+# ── Derived URLs (computed from variables above) ───────────────────────────────
+sspi_base_url: "https://{{ sspi_ip }}"
+ssp_base_url: "https://{{ platforms[0].ingress_fqdn }}"
+ssp_username: "admin"
+
+# ── Telemetry (CEIP) ───────────────────────────────────────────────────────────
+ceip_acceptance: false
+telemetry_agreement_displayed: true
+
+# ── Backup — SFTP server ───────────────────────────────────────────────────────
+backup_server_address: "10.0.0.2"
+backup_server_port: 22
+backup_username: "backupuser"
+backup_password: "{{ lab_pw }}"                # vault recommended
+backup_ssh_public_key: "ssh-rsa AAAA..."
+backup_location: "/backups/ssp"
+backup_passphrase: "{{ lab_pw }}"              # vault recommended
+
+# ── Backup — recurring schedule ────────────────────────────────────────────────
+backup_recurring_enabled: true
+backup_schedule_type: "WEEKLY"             # WEEKLY or INTERVAL
+backup_weekly_days:
+  - "SUNDAY"
+backup_weekly_hour: 2
+backup_weekly_minute: 0
+# backup_interval_hours: 168              # used when backup_schedule_type=INTERVAL
+
+# ── NSX Manager site onboarding ────────────────────────────────────────────────
+nsx_site_name: "nsx-wld01-a"
+nsx_site_hostname: "nsx-wld01-a.site-a.vcf.lab"
+nsx_site_username: "admin"
+nsx_site_password: "{{ lab_pw }}"             # vault recommended
+nsx_site_certificate: |
+  -----BEGIN CERTIFICATE-----
+  MIIE+TCCA2GgAwIBAgIJAPmK94RfxhSYMA0GCSqGSIb3DQEBCwUAMIGfMQswCQYD
+  VQQDDAJDQTEXMBUGCgmSJomT8ixkARkWB3ZzcGhlcmUxFTATBgoJkiaJk/IsZAEZ
+  FgVsb2NhbDELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3JuaWExITAfBgNV
+  BAoMGHZjLW1nbXQtYS5zaXRlLWEudmNmLmxhYjEbMBkGA1UECwwSVk13YXJlIEVu
+  Z2luZWVyaW5nMB4XDTI2MDYwNTEyMTg0N1oXDTI4MDUyNTEyMTg0N1owgYkxEjAQ
+  BgNVBAcTCVBhbG8gQWx0bzETMBEGA1UECBMKQ2FsaWZvcm5pYTELMAkGA1UEBhMC
+  VVMxGzAZBgNVBAsTElZNd2FyZSBFbmdpbmVlcmluZzEPMA0GA1UEChMGVk13YXJl
+  MSMwIQYDVQQDExpuc3gtd2xkMDEtYS5zaXRlLWEudmNmLmxhYjCCASIwDQYJKoZI
+  hvcNAQEBBQADggEPADCCAQoCggEBAKsVTLKnV5/XJaTG2Ba4q8CXT7rHhCEVyLhd
+  nLuLMXf995mWekPuTB5OeFoL0BEBpSqDM1YqmoNX1SvTisvytnMwAtbFEKxJm61e
+  xW3+d+uBQFXXe/oP0e+CtulxcudAzMIb7l3kUb0faf4ABV4itUnL4swVMiC2Zb0y
+  93bRFtIp15HsrcTQ4Y1uIFbqw6i0+J6hj+HccMgswI7A/4eqFb/jd5oNdHVmztlb
+  uqQcgu9EaYdthUqj6ZqDz7q8TJwHm5YTYXm+bONTceDvbJANLuXOaMWxqUNwbcAX
+  kY2TQbfHWlYuqxHq8993DLdhwtwpXnBxz8N7VhqJZ+VvdtNRxS0CAwEAAaOByzCB
+  yDAgBgNVHSUBAf8EFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIw
+  ADArBgNVHREEJDAighpuc3gtd2xkMDEtYS5zaXRlLWEudmNmLmxhYocECgEBGDAf
+  BgNVHSMEGDAWgBSk5VEdxN03OvlqFxaM0Q25wjZETjBIBggrBgEFBQcBAQQ8MDow
+  OAYIKwYBBQUHMAKGLGh0dHBzOi8vdmMtbWdtdC1hLnNpdGUtYS52Y2YubGFiL2Fm
+  ZC92ZWNzL2NhMA0GCSqGSIb3DQEBCwUAA4IBgQBFlYzfdowivti6rPxD7BVHXDM/
+  UevTdDy+Ce/EnicoZ9f6eoZqfSFuJzCkNns3HhdykWVJ4cHwWo0MMypu09WUii1x
+  roBCe+HOXwTWHGFco1UiRTNpIcmHl5oJ6J2NVqJzZpiuMuZgT581aUF8qLmdEaLJ
+  M9N1tjILbvAc1O+cKT2mKh5bPcInjjeqs5/0XQKodnqzmfUQpyGOYqUW0dEfXrYO
+  r66iwOzOvXVwYzCHJbLUjP7sHmzZ25VZBvP8pW5NvfSWrrPfybR3vhUA4NIdjLsx
+  SPSHHnn/cqC6ZWKO5TYM1jgMsY5ws5oDnCUmShOFJ3aC5NwaQaaqugCSGCF4d6kG
+  8oZOVxfeFHDP4zD2E5ykLxDPu/lAtXxrb0Gs2JkGYMkB2x6+z+ET48q8VF2JjQFZ
+  c3YDiJSx1FxYPeFWguW39F7+bTivV8hcZCy9YOeOVYhb4Sx+GDEvfXCJzJ+mjv1y
+  Iszw/ZXRkyo9ElxfF76mUWo1zQFcnTFrY3I1EFk=
+  -----END CERTIFICATE-----
+  -----BEGIN CERTIFICATE-----
+  MIIFCDCCA3CgAwIBAgIJANolcg4N2mSbMA0GCSqGSIb3DQEBCwUAMIGfMQswCQYD
+  VQQDDAJDQTEXMBUGCgmSJomT8ixkARkWB3ZzcGhlcmUxFTATBgoJkiaJk/IsZAEZ
+  FgVsb2NhbDELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3JuaWExITAfBgNV
+  BAoMGHZjLW1nbXQtYS5zaXRlLWEudmNmLmxhYjEbMBkGA1UECwwSVk13YXJlIEVu
+  Z2luZWVyaW5nMB4XDTI2MDYwMjAxMjYxNVoXDTM2MDUzMDAxMjYxNVowgZ8xCzAJ
+  BgNVBAMMAkNBMRcwFQYKCZImiZPyLGQBGRYHdnNwaGVyZTEVMBMGCgmSJomT8ixk
+  ARkWBWxvY2FsMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEhMB8G
+  A1UECgwYdmMtbWdtdC1hLnNpdGUtYS52Y2YubGFiMRswGQYDVQQLDBJWTXdhcmUg
+  RW5naW5lZXJpbmcwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQDMc2ih
+  im7JoDMBUyyA5x5okHztmaU4gULdkzAsqYw4art7i42VEg/dywH9O7kCVe60+xg2
+  rt+8ExPRgHHFnMA5sdk5av2xEoRMx3FLQc+P4QaDb4sH9+fKdzoaKqyddrM7fy8r
+  LSIDrv9eKcV6sgCD0rJLjnxPTHi9EtX74KVOY+2CoZQSgJnFqJqGs+InSZHsKpxV
+  4nGHUipqBCrVqJX+QLQ8JIHnAIWSQ36Lq9LUt4hL7WOcgdooVmC9Ayuv4UwpKHu6
+  z21iEaDobftvM5Mh+MwkrSX9ry3pTSk0qdRSKXIUPIm2lAQxtTmGWA8txBmz3NFS
+  S6nUIX0pNoMcthokUZ1xj1m+3oUnbR7gWRJ7R9XJHlDc1MGM0pl4RlzhKu9Uhj7Y
+  dyW4jdupS/6JUp5QT3CrpKUAd5OmDmxrCTWMZh/YIXrvwADJXFp8sCtNgkWNdv0A
+  q1p/9MHQKvUbgGcNVDDwzKvUH42p2gIn1xQab5fvXjnkqOM2G40R3kalAkkCAwEA
+  AaNFMEMwHQYDVR0OBBYEFKTlUR3E3Tc6+WoXFozRDbnCNkROMA4GA1UdDwEB/wQE
+  AwIBBjASBgNVHRMBAf8ECDAGAQH/AgEAMA0GCSqGSIb3DQEBCwUAA4IBgQCgmgOJ
+  O8LX9sjQizoCgP+a9lwHOn+tT2cEtWBao+7MztgFEl/REyfkDuxyut8VMPsKW0a8
+  gqJoAaVNTtOPev/JQyYTxkEcDVEd8h6DEkLFZ4e/cxp8gS2UgePc2MFnQJX8jftA
+  HDRwh2HgdW19rB+nIbBM38zUntYipDVqo2LyQBDlPzzU3dwUig2oOsD9x3LzTpuk
+  iR2lKfI9AO/oYk8MGgKZwwcUkYQgTd3E9FkU7ywpwlHDq7lFRhFT5e5xPM2nB+ho
+  nNfrAPH7JG5tYDeRRuF2V7sq0EfRhQuXi6Oh+3UDrI26OSr9xAWz3KkEHXk9I825
+  /4ZcihMwI1JHYzKa5w4Sg+pgZeW9sPKnaWI2MBKWDiNAaNfeMlEb1gIGn03y2Vm4
+  UC3uU2VxDEvO/Hk3aJltTmjIqqtuakgWFE/b7tI3T/FCu4ejiW7cFZJF8YQ5CV5n
+  wlfTp3lec8nT28MvN58/VBYpOZBOuLvvr/EX9Jiv075nrbmZ0drPZGNG68g=
+  -----END CERTIFICATE-----
+nsx_site_force: false
+
+# ── Cloud Connector ────────────────────────────────────────────────────────────
+cloud_connector_region: "west.us"          # see GET /ssp/lcm/cloud-connector/regions
+
+# ── Malware Prevention ─────────────────────────────────────────────────────────
+malware_analysis_mode: "CLOUD"             # CLOUD or ON_PREM
+malware_file_metadata_sharing: true
+malware_file_sharing: true
+
+# ── Timeouts (minutes) ─────────────────────────────────────────────────────────
+boot_timeout_minutes: 30
+api_timeout_minutes: 20
+provider_timeout_minutes: 90
+bundle_timeout_minutes: 90
+platform_timeout_minutes: 90
+ssp_readiness_timeout_minutes: 90
+site_timeout_minutes: 90
+feature_timeout_minutes: 90
